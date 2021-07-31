@@ -1,0 +1,19 @@
+
+
+.full-width-xs 					{ margin: 0 -#{$gut-xs} }
+html.fit-screen .fit-con 		{ padding:$gut-xs }
+
+
+.con 												{ padding-left:$gut-xs; padding-right:$gut-xs;
+	
+	@if ( $gl-gut != $gut-xs ) 						{
+		
+		> [class*="row"]:not(.ns):not(.nsc) 		{ margin-left:-$gut-xs; margin-right:-$gut-xs;
+			> [class*="col"] 						{ padding-left:$gut-xs; padding-right:$gut-xs }
+		}	
+	}
+}
+.gut-x 												{  padding-left:$gut-xs; padding-right:$gut-xs } 
+.con-sm  											{ padding-left:$gut-xs; padding-right:$gut-xs; max-width:$case-max;  width:100%; margin-left:auto; margin-right:auto;
+	&.np,&.row:not(.nsc) 							{ padding-left:0; padding-right:0 }
+}

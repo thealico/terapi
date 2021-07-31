@@ -1,0 +1,24 @@
+
+/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+@ Modal > Format > Unibble Paylas */
+
+.modal.format-paylas 				{
+	.sag 							{ 
+		.inner 						{ position:absolute; left:0 ; top:0 ; height:100%; padding:1.5rem; flex-wrap:nowrap }
+		.metin 						{ width:calc( 100% + 18px );padding-right:18px }
+		.col 						{ width:100%}
+		.b 							{ overflow:hidden; height:70%;  flex-shrink:2 }
+		.a,.c 						{ min-height:15%;  flex-grow:1 }
+		.b > div 					{ height:100%; overflow:auto}
+		.c 							{ padding-top:16px }
+		.a 							{ padding-bottom:16px }
+	}
+	h1 								{ color:#00c5be; font-size:22px; font-weight:700 }
+	time 							{ color:#93887d }
+	.bar 							{
+		.actions 					{ margin-right:6px }
+		.share 						{ font-size:28px;
+			a 						{ margin:0 2px; height:29px; line-height:34px}
+		}
+	}
+}

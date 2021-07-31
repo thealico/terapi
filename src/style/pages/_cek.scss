@@ -1,0 +1,173 @@
+.cek 								{
+
+	.con-us 						{ z-index:1  }
+
+	.con-as 						{ z-index:0  }
+
+	.con-us .b .cxt-b 				{
+	
+		i 							{ font-size:15px; top:2px }
+		.a i						{ color: #636363; }
+		.b i						{ color: #118ae2 }
+		.c i						{ color: #f97357 }
+		// .d i						{ color: #f8b136; font-size:17px; top:2px }
+		// .e i						{ color: #6bb240; top:1px }
+		// .f i						{ color: #f82419; font-size:22px; left:3px; top:2px }
+
+		.t-archive 					{
+			a 						{ height: 97px; background: #fbfbfb; border-radius: 0 0 6px 6px; align-items: flex-end;
+				span 				{ padding-bottom: 15px;}
+				b 					{ font-size: 13px; margin-bottom: 7px;display:block; font-family: 'Gotham Rounded'; font-weight:500 }
+				summary 			{ font-size: 11px;font-family: 'Ubuntu';text-align: justify;color: #777777;letter-spacing: 0.5px;line-height: 14px;width: 87%; }
+				s 					{ height: auto; top: 20px;bottom: auto; right: 13px;
+					i 				{ font-size:14px }
+				}
+			}
+		}
+	}
+
+
+	
+	.app-head .dt-ctrl 				{ visibility: hidden;right: -100%; transition: .3s; }
+
+	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+	@  Sticky icin head ayarlari  */
+
+	&.stick-150 .app-head   	 	{ box-shadow: unset  }
+	&.stick-85 .app-head .dt-ctrl 	{ visibility: visible;right:0 }
+	
+
+	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+	@  Data Table */
+
+	.dt-cek 								{
+	
+		
+		.thead-wrap							{ height:18px;
+			.stick.on 						{ box-shadow: 0 2px 12px rgba(0,0,0,.4); animation: thead .3s;   position: fixed; left:0; top:50px; transform:translateY(0px); height:36px; background:#fafafa; border-bottom:1px solid #eaeaea; width:100%; z-index:5;
+				> s 						{ display: none  }
+				.thead 						{ color:#555}
+			}
+			.stick.of 						{ transform: translateY(-40px) }
+		}
+
+		@keyframes thead {
+			0% {
+
+				transform: translateY(-40px);
+			}
+			100% {
+				
+		    	transform: translateY(0px);
+			}
+		}
+		
+		&.of-durum  						{ --td2: auto }
+		&.of-durum .td3 					{ display: none }
+
+		.td-durum 							{ font-weight:600; color:#555; 
+			
+			// div 							{ display:flex; justify-content:flex-end; align-items:center; font-size:11px ; }
+			// div > i 						{ font-size:15px; color:#666; margin-left:8px }
+
+			.ss-clockwise 					{ font-size:14px; top:2px; margin-left:8px }
+		
+			// .icon-tick-af 				{ color:#64ae37 }
+			// .icon-ref-9 					{ color:#00c7af }
+			
+			// .alert 							{ margin-right: 40px; font-size:10px; 
+			// 	.ss-alert 					{ font-size:9.5px; top:2px; margin-right:12px; }
+			// 	.icon-god 					{ color:#fdbd00; font-size:12px; top:1.5px; margin-right:6px; }
+			// 	.icon-sad 					{ color:#fdbd00; font-size:12px; top:1.5px; margin-right:6px; }
+			// 	.ss-right 					{ color:#999; font-size:7px; top:1px; margin-left:3px; }
+			// }
+			
+			// .f-1 							{}
+			// .f-2 							{ .alert{color:#2da6ff } > i { color:#2da6ff } }
+			// .f-3 							{ .alert{color:#e32121 } > i { color:#e32121 } }
+			// .f-5 							{ > i { color:#64ae37 } color:#52922a  }
+			// .f-4 							{ > i { color:#00c7af } }
+			// .f-7 							{ > i { color:#ff827b; font-size:19px; top:2px } }
+		}
+
+		
+		// &:not(.of-durum) .tbody 			{
+
+		// 	li.f-2 							{ .td6,.td4{ font-weight:600; color:#2da6ff }}
+		// 	li.f-3 							{ .td6,.td4{ font-weight:600; color:#e32121 }}
+		// }
+		
+		.tbody > li							{
+ 			
+ 			.td-durum   					{ margin-left:7px; display:flex; justify-content:flex-end; align-items:center }
+ 			.td-durum i  					{ margin-left:7px }
+
+
+ 			&[rel='1'] .ss-clockwise 		{ color:#6f6f6f }
+ 			&[rel='2']  					{ li.d { color:#118ae2;  font-weight:600 } }
+ 			&[rel='3'],&[rel='8'] 			{ li.d { color:#f97357;  font-weight:600 } }
+ 			
+ 			&[rel='5']  					{ li.d { color:#118ae2;  font-weight:600 } }
+ 			&[rel='6']  					{ li.d { color:#51b36b;  font-weight:600 } }
+ 			&[rel='7']  					{ li.d { color:#efa04c;  font-weight:600 } }
+
+ 			&[rel='8'] .td-durum i 			{ font-size: 15px; top: 2px;}
+ 			&[rel='7'] .td-durum i 			{ font-size: 19px; top: 2px;}
+ 			&[rel='6'] .td-durum i 			{ font-size: 15px; top: 0px; }
+ 		}
+ 		
+		.tbody 								{
+			
+			/*
+				.td4 						{ color:$color-2; font-weight:600 }
+				.td3 						{
+					.nf	 					{ color:$color-2;
+
+						s 					{ text-decoration: line-through }
+						i 					{ font-size:9px; top:1px; margin: 0 8px 0 10px	 } 
+					}
+				}
+			*/
+		}
+
+	}
+
+
+
+	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+	@  Of Body */
+
+	.of-body.note 				{ text-align:center; height: var(--app-body);
+
+		.name 					{ width:100%; font:300 13px 'Gotham Narrow'; letter-spacing:.8px; text-align:center; font-size:12px;
+			span 				{ display:block; margin-bottom:6px }
+		}
+
+		.us 					{ 
+			h3 					{ font: 400 26px 'Gotham'}
+			p 					{ font: 300 19px 'Gotham' }
+			a span 				{ top:-1px }
+			figure 				{ @include circle(80px); background:#dadada;
+				i 				{ font-size: 41px; height: 24px;top: -10px;line-height: 1;display: block; color: #fff; }
+				s 				{ width: 0; height: 0;border-style: solid;border-width: 20px 15px 0 15px;border-color: #dadada transparent transparent transparent; }
+				s 				{ position:absolute; right: 21px; bottom: -9px;transform: rotate(19deg); }				    
+			}
+			> span a			{ color: $color-1; top:15px;  font-size:11px; font-weight:400;
+
+			}
+		}
+
+		.as 					{ width:100%; top:90px; font-family:Gotham; font-size:11px;
+			div  				{ max-width:850px; margin:0 auto; color:#555;  }
+			h5 					{  letter-spacing:.8px }
+			p 					{ line-height:18px; text-align:center;  }
+			b 					{ font-weight:500}
+		}
+
+
+
+	}
+
+
+
+}

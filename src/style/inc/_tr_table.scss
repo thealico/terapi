@@ -1,0 +1,234 @@
+
+/*
+ @ table reset and default params */
+
+
+table 								{ border-spacing: 0; border-collapse: collapse;
+	
+	thead.c 						{
+		th 							{ text-align:center}
+	}
+	
+	tbody.c 						{
+		td 							{ text-align:center}
+	}
+	
+	tbody,thead 					{
+		td,th 						{ text-align: left;
+			&.l 					{ text-align: left }
+			&.c 					{ text-align: center }
+			&.r 					{ text-align: right }
+			&.b 					{ font-weight: bold }
+			&.w-4 					{ font-weight: 400 }
+			&.w-6 					{ font-weight: 600 }
+			&.w-5 					{ font-weight: 500 }
+			&.f-12 					{ font-size: 12px }
+			&.f-11 					{ font-size: 11px }
+		}
+	}
+	
+	 // vadesi gecen borc icin turuncu renk
+	
+	tbody td .icon-franc 			{ font-size: 9px; top:-.5px }
+
+
+
+	.t-val.eksi 					{ color:#ff6035 } 
+
+	.td-vb 							{ color:#ff6035;
+		
+		.count 						{ color:#fff; background:#a0a0a0;  padding:3px 2px 0 2px; min-width:15px; text-align:center; height:12px; border-radius:3px; position:absolute;     transform: translate(3px,-10px); font:500 8px/1 Gotham; letter-spacing: .5px;
+			s 						{ width:0; height:0; border-style:solid; border-width: 7px 7px 0 0; border-color: #a0a0a0 transparent transparent; transform: rotate(18deg); position: absolute; left:5px; bottom:-5px; z-index: -1 }
+		}
+	} 		
+
+	.td-id 							{ color:#7b7b7b }		// acik gri id 
+
+	.f-end 							{ display:flex; justify-content:flex-end ;
+		span 						{ top:1px; }
+	}
+
+	.in.end 						{ display:flex; justify-content:flex-end; align-items:center}
+}
+
+
+
+table.f 							{ width:100%; font-size: 13px; 
+	
+	th 								{ font-size: 12px }
+	th,td 							{ padding:0 3px }
+	
+	tbody 							{
+		tr 							{ border-bottom : 1px solid #e8e7e7; cursor:pointer;
+			&:last-child 			{ border-bottom : 0 }
+		}	
+		&:not(.v) tr 				{ height:50px }
+		&.v 						{
+			tr 						{ height: var(--tr) }
+		}	
+	}
+
+	tr > *:first-child 				{ padding-left:$gl-gut  }
+	tr > *:last-child 				{ padding-right:$gl-gut }
+	
+	tr > *:nth-child(1) 			{ width: var(--t1) }
+	tr > *:nth-child(2) 			{ width: var(--t2) }
+	tr > *:nth-child(3) 			{ width: var(--t3) }
+	tr > *:nth-child(4) 			{ width: var(--t4) }
+	tr > *:nth-child(5) 			{ width: var(--t5) }
+	tr > *:nth-child(6) 			{ width: var(--t6) }
+	tr > *:nth-child(7) 			{ width: var(--t7) }
+	tr > *:nth-child(8) 			{ width: var(--t8) }
+	tr > *:nth-child(9) 			{ width: var(--t9) }
+	tr > *:nth-child(10) 			{ width: var(--t10) }
+	tr > *:nth-child(11) 			{ width: var(--t11) }
+	tr > *:nth-child(12) 			{ width: var(--t12) }
+	tr > *:nth-child(13) 			{ width: var(--t13) }
+	tr > *:nth-child(14) 			{ width: var(--t14) }
+	tr > *:nth-child(15) 			{ width: var(--t15) }
+
+}
+
+.tr-table.f-1 						{ border:1px solid #e6e6e6;  border-radius:10px; 
+
+	&:not(.scr-x) 					{ overflow:hidden }
+
+	tbody tr 						{ border-bottom:1px solid #e6e6e6; }
+	thead tr 						{ background:#fcfcfc; height:50px; color:#555;  border-bottom:1px solid #e6e6e6	 }
+}
+
+
+
+
+
+
+
+
+
+/*
+.tablo 								{ width:100%; font-family:$font-2;
+	tr 								{ border-bottom: 1px solid #e8e7e7; height:42px }
+	tbody tr:last-child 			{ border-bottom:0 }
+	
+	th,td 							{ border-left: 1px solid #e8e7e7; padding:0 10px }
+	tr > *:first-child 				{ border-left: 0  }
+ 	thead th 						{ font-weight: normal }
+ 	&.head-top thead th 			{ font-weight: bold; color:#22568c }
+	&.head-sid tr > *:first-child 	{ font-weight: bold; color:#22568c }
+
+	thead tr th						{ background: #f5f5f5  	}
+	thead tr th:first-child			{ border-radius: 6px 0 0 0 	}
+	thead tr th:last-child			{ border-radius: 0 6px 0 0 	}
+	tbody tr:nth-child(2n+0) td		{ background: #f7f7f7  	}
+	td i 							{ display: none }
+}
+
+*/
+
+//.tablo-wrap 						{ border:1px solid #e8e7e7; border-radius: 6px; overflow-y: hidden; overflow-x: auto; @include touchscroll() }
+
+/*
+
+@media #{$gl-xs} 							{ 
+	
+	.tablo-mobil-xs 						{ overflow:hidden;
+		.tablo-in 							{ min-width: unset!important }
+	}
+	.tablo-mobil-xs table 	 			{ display:block; 
+
+		tbody,tfoot,thead,tr,td,th  	{ display:block }
+
+		thead                     		{ display:none }
+		tbody tr                  		{ height:auto; padding:0 0 4px 0;
+			td,
+			&:nth-child(2n+0) td 		{ background: none; border-left:0; }
+			&:nth-child(2n+0) 			{ background: #f7f7f7 }
+
+			td.head 							{ background: #f1f1f1;  border-bottom:1px solid #e8e7e7; margin-bottom: 4px; height: 38px; display: flex; align-items: center;
+				i 								{ display: none; }
+			}
+
+			td:not(.head)					{ padding-left:45%; border-bottom:1px solid #e8e7e7;	padding-top: 10px; padding-bottom: 10px;
+				&:last-child         		{ margin-bottom:0; border-bottom:0 }
+				&:before             		{ 
+					position:absolute;
+					font-weight:700;
+					width:40%;
+					left:10px;
+					top:0;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					content:attr(data-title);
+				}
+				i 								{ display: inline;  margin-right: 6px }
+			}        
+		}
+	}
+}
+
+@media #{$gl-ms} 							{ 
+	
+	.tablo-mobil-ms 						{overflow:hidden;
+		.tablo-in 							{ min-width: unset!important  }
+	}
+	.tablo-mobil-ms table 	 			{ display:block;
+		
+		tbody,tfoot,thead,tr,td,th  	{ display:block }
+
+		thead                     		{ display:none }
+		tbody tr                  		{ height:auto; padding:0 0 4px 0;
+			td,
+			&:nth-child(2n+0) td 		{ background: none; border-left:0; }
+			&:nth-child(2n+0) 			{ background: #f7f7f7 }
+
+			td.head 							{ background: #f1f1f1;  border-bottom:1px solid #e8e7e7; margin-bottom: 4px; height: 38px; display: flex; align-items: center;
+				i 								{ display: none; }
+			}
+
+			        
+		}
+		
+		&.head-sid.head-top  					{
+			tbody tr  								{ 
+				td:not(.head)						{ border-bottom:1px solid #e8e7e7;	padding-top: 7px; padding-bottom: 7px;
+					&:last-child         		{ border-bottom:0 }
+				}
+			}	
+		}
+
+		&.head-sid:not(.head-top)  			{
+			tbody tr  								{ 
+				td:not(.head)						{ padding-top: 7px; padding-bottom: 7px;
+				}
+			}	
+		}
+
+		&.head-top 									{
+			
+			tbody tr  								{
+				td:not(.head)						{ padding-left:45%; 	padding-top: 10px; padding-bottom: 10px;
+					&:last-child         		{ margin-bottom:0; }
+					&:before             		{ 
+						position:absolute;
+						font-weight:700;
+						width:40%;
+						left:10px;
+						top:0;
+						padding-top: 10px;
+						padding-bottom: 10px;
+						content:attr(data-title);
+					}
+					i 									{ display: inline; margin-right: 6px }
+				}
+			}
+		}
+
+
+		&:not(.head-sid) 							{
+			tbody tr  								{ padding:8px 0;
+				td:not(.head) 						{ padding-top: 6px; padding-bottom: 6px  }
+			}	
+		}
+	}
+}
+*/

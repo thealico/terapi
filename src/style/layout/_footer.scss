@@ -1,0 +1,36 @@
+footer 							{ background:#3f4863; color:white;
+	a 							{ color:white; 
+		&:hover 				{ color:#b0c0f1 }
+	}
+	.one 						{
+		h5 						{ font-size:30px; font-weight:300; color:#7583ad; top:-11px;
+			span 				{ color:white; font-weight:700 }
+		}
+	}
+	.two 						{
+		ul li 					{ margin-bottom:8px;
+			&:last-child 		{ margin-bottom: 0 }
+		}
+		h5 						{ font-size:22px; font-weight:700; margin-bottom:15px }
+	}
+
+	
+	.f3 						{
+		li 						{ background: rgba(255,255,255,.15); border-radius:4px; width:32px; height:32px; @include flex_mc(); font-size:15px }
+		.face i 				{ top:2px}
+		.inst i 				{ top:1px}
+		.yutb i 				{ top:2px}
+	}
+	
+}
+
+
+
+/*
+@  responsive  */
+
+// @media #{$gl-lg} { @import "@home/lg" } 	//	1280
+// @media #{$gl-md} { @import "@footer/md" } 	//	1024
+// @media #{$gl-sm} { @import "@footer/sm" }   	//	0768
+// @media #{$gl-xs} { @import "@footer/xs" }  	//	0568
+// @media #{$gl-ms} { @import "@footer/ms" }    //	0360

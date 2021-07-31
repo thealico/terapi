@@ -1,0 +1,158 @@
+/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+@ Modal Default Layout  */
+
+.modal 									{ width:100%; height:100%;  position:fixed; top:0; left:0; z-index:10;  display:none; 
+	
+	.modal-back,.modal-anim  			{ width:100%; height:100%; }
+
+	.modal-back  						{ transition: background .5s;  background: rgba(0,0,0,0) }	
+	.modal-anim  						{ @include flex_mc() }	
+
+	.modal-content  					{ max-width:80%; width:90%; max-height:90%; overflow:hidden }	
+	.modal-close.t1 					{ position:absolute; right:0px; top:0; z-index:10; 
+		a 								{ width:46px; height:46px; display:flex; align-items:center; justify-content:center; color:white; @include flex_mc()}
+		i 								{ line-height: 21px; font-size: 24px; height: 14px; display:block; }
+		&.out 							{
+			span 						{ font-size:9px; top:-2px; color:white; letter-spacing:.8px }
+		}
+	}
+	
+	.modal-body 						{ height:100%; width:100%;  overflow-x:hidden; overflow-y:scroll; -webkit-overflow-scrolling: touch; }
+
+	&[index='10'] 						{ z-index: 10 }
+	&[index='11'] 						{ z-index: 11 }
+	&[index='12'] 						{ z-index: 12 }
+	&[index='13'] 						{ z-index: 13 }
+	&[index='14'] 						{ z-index: 14 }
+	&[index='15'] 						{ z-index: 15 }
+}
+
+.modal.on 								{ display:block;
+	
+	
+	&[efek='1'] .modal-anim				{ transition:.5s; transform: translate(0, 100% ) }
+
+	&.on-start 							{ visibility:visible; 
+		
+		&[efek='1']						{ 
+			.modal-back 				{ background: rgba(0,0,0,.4)  }
+			.modal-anim					{ transform: translate(0, 0%) }
+		}
+		
+		&[efek='2'] 					{ background: rgba(30,30,30,.8);
+			.modal-content				{ animation:zoomIn .6s }
+		}
+		
+	}
+
+	&.on-close 							{ 
+
+		.modal-back 					{ background: rgba(0,0,0,0)!important }
+		
+		&[efek='1']						{ 
+			.modal-anim					{ transform: translate(0,100%) }
+		}
+
+		&[efek='2']						{ 
+			.modal-content				{ animation:zoomOut.6s  }
+		}
+	}
+}
+
+
+/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+@ Modal Httml On  */
+
+//html main 							{ transition: filter .9s }
+
+html.on-modal:not(.m-in)  				{ .app-load,.app-menu { filter:blur(3px) } }
+html.on-modal 							{ -webkit-tap-highlight-color: transparent; }
+html.on-modal body						{  height: auto!important; overflow:hidden }
+
+
+
+
+
+
+/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+@ Modal > Ajax  */
+
+.modal.ajax  							{ 
+	
+	&.in 								{ display:flex!important; align-items:center; justify-content:center;}
+	.modal-content 						{ min-height:200px; background:white; background-repeat:no-repeat; background-position:center center; }
+	//.data 							{ display:none; opacity:1; transition:opacity .3s; }
+	&.load .data						{ opacity:0  }
+	&.load .modal-content 				{ background-image:url('img/loader.gif') }
+}
+
+
+@import "nav";
+@import "cek";
+@import "catalog";
+@import "numune";
+@import "cek_banka";
+@import "cek_trans";
+@import "cek_add";
+@import "cari";
+@import "imza";
+@import "dekont";
+@import "urun";
+
+/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+@ Modal > Format Ilan  */
+
+
+/*
+.modal.format-ilan						{ 
+	.modal-content 						{ max-width:580px; height:90%; }
+	.modal-inner 						{ padding:22px }
+	.data 								{ height:100%; width:100%; overflow:hidden }
+	.modal-close.in 					{ display:none;  
+		a 								{ background: #fd5858;   width: 36px;  height: 36px; border-radius: 0 0 0 8px; border-left: 1px solid rgba(0,0,0,.5); border-bottom: 1px solid rgba(0,0,0,.5)}
+	} 
+} */
+
+
+/*
+.modal.format-mesaj 					{
+	.modal-content 						{ max-width:520px; max-height:350px; height:90% }
+	.modal-content .data 				{ overflow:auto }
+	.modal-mesaj 						{ min-height:350px }
+	section 							{ padding:20px }
+	.modal-close.out 					{ display:none }
+	blockquote 							{ font:normal 15px $font-3; color:#565555 }
+	
+	.modal-close.in 					{ z-index:2;
+		a  								{ width:32px; height:38px; display:block; @include flex_mc();  color:#c9c8c8; 
+			i 							{ @include icon_fit(16px,'pika')}
+			&:hover 					{ color:#777 }
+		}
+	}
+	.form 								{
+		textarea 						{ padding-left:8px }
+	}
+	h3 									{ font-weight:900 }
+} */
+
+
+/*
+.modal.format-dropdown					{ 
+	&.in 								{ display:flex!important; align-items:center; justify-content:center;}
+	.modal-content 						{ min-height:200px; background:white; background-repeat:no-repeat; background-position:center center; }
+	 
+	.data 								{ display:none; opacity:1; transition:opacity .3s; } 
+	&.load .data						{ opacity:0  }
+	&.load .modal-content 				{ background-image:url('img/loader.gif') }
+} */
+
+
+
+// @media #{$gl-lg} { @import "@media/lg" } 	//	1280
+// @media #{$gl-md} { @import "@media/md" } 	//	1024
+// @media #{$gl-sm} { @import "@media/sm" }  	//	0768
+// @media #{$gl-xs} { @import "@media/xs" }  	//	0568
+// @media #{$gl-ms} { @import "@media/ms" }     //	0360
+
+
+

@@ -1,0 +1,49 @@
+/*
+ @ reset */
+
+*       { margin:0; padding:0; list-style-type: none; outline-width: 0; outline-style: none; position: relative;  box-sizing: border-box }
+* 		{ -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none  }
+
+
+i,em 	{ font-style:normal; }
+u,s     { text-decoration: none }
+img     { display:block; margin:0; width:100% }
+a 		{ text-decoration: none }
+a img   { border:0 }
+fieldset{ border:0 }
+address { font-style: normal }
+
+.hypens { hyphens: auto; -webkit-hyphens: auto; -moz-hyphens: auto }
+ 
+/*
+ @ html 5 */
+ 
+section,header,footer,article,time,aside,nav {
+    display:block; 
+}
+
+input,textarea 					{ -webkit-user-select: auto; -moz-user-select: auto; -ms-user-select: auto; user-select: auto  }
+input,button,select,textarea 	{
+	
+	font:300 14px 'Open Sans','Arial';
+	-webkit-appearance: none;
+	-moz-appearance:none;
+	appearance:none;
+	outline-width:0;
+	border-radius:0;  
+	color:#444;
+	border:0;
+
+	
+	/*
+	
+		&:focus { outline:0!important;}
+		&:active {
+			outline: none!important;
+			border: none;
+		} 
+		
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+	*/
+
+}

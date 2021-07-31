@@ -1,0 +1,125 @@
+.home 										{
+
+	.sec-cover								{  background:#c2c8d8 url(img/cover-bg.jpg) no-repeat center center; background-size:auto 100%; height:600px;
+
+		.txt 								{ width:580px }
+		hgroup 								{ font-size:37px;  }
+		h2 									{ color:$color-b; font-size:37px; font-weight:800}
+		h3 									{ color:$color-a; font-size:34px; font-weight:800 }
+		p 									{ font-size:22px; color:#2b3860; }
+	}
+
+	.sec-team.f-1 							{
+		h4 									{ font-size:30px; text-align:center;}
+		li a 								{ background:$color-a; font-size:16px;  height:100%; min-height: 60px; text-align:center; color:white; padding:10px; @include flex_mc(); border-radius:6px;
+			&:hover 						{ background:#627094}
+		}
+	}
+
+	.sec-team.f-2 							{
+
+		.col div 							{ background:#f4f4f4; border-radius:8px; text-align:center; padding:25px;
+			h3 								{ font-weight:400; font-size:18px }
+			h4 								{ font-weight:600; font-size:16px }
+			figure 							{ border-radius:50% }
+			.btn  							{ min-width:125px; height:42px; font-size:15px; font-weight:500 }
+			.connect 	  					{ padding-bottom:23px; display:block; font-weight:500;
+				&.on 						{ color:$color-b}
+				&.of 						{ color:red}
+				i.ss-ban 					{ font-size:17px; top:4px; margin-right:2px;}
+			}
+		}	
+	}
+
+	.sec-post.f-1  							{ background:#f4f4f4;
+		.con > h3 							{ font-size:30px; font-weight:600 }
+		article a 							{ background:white; border-radius:10px; padding:20px ; display:block; }
+		figure 								{ border-radius:6px; margin-bottom:35px;  background:#efeff1  }
+		h4 									{ color:#333; font-size:26px; font-weight:400; }
+	}
+
+
+
+
+	
+
+	.more 									{ width:100%; color: #436aa7;font:500 16px 'Ubuntu';  display:block;
+		a 									{ color: #436aa7 }
+		span 								{ margin-bottom:18px; display:block }
+		i 									{ font-size: 11px; top: 1px; left: 5px;}
+		hr  								{ background:$line-1; border:0; height:1px; width:100% }
+	}
+	
+
+	.sec-posts.f-1 							{
+		figure 								{ background:#f9f9f9; border-radius:4px }
+		h3 									{ font-size:19px }
+		a 									{ display:block; height:100%; padding-bottom:50px }
+		summary 							{ text-align:justify; line-height:26px; }
+		span 								{ display: block }
+		.more 								{ bottom:10px    }
+	}
+
+
+	.box-tre								{ background:#f3f3f3;
+		h3 									{ font:700 23px 'Source Sans Pro'; color:#222 } 
+		
+		.col.f-1 							{
+
+			h3 								{ color:#222 }
+			.more 							{ color:#333 }
+		}
+
+		.col.tre 							{ 
+			h3 								{ color:#fff }
+
+		}
+	}
+
+	.sec-irt 								{ background: linear-gradient(160deg,#493275 0,#694f9c 5%,#6b5ca5 26%,#503f73 92%) ;color:#fff; font-size:16px;
+		address 							{ line-height:25px; margin-bottom:30px }
+		ul 									{ font-size:15px; letter-spacing:1.2px;
+			li  							{ margin-bottom:8px}
+			i 								{ font-size:14px ; top:-1px; margin-left:5px}
+		}
+
+		h4 									{ font-size: 23px ; border-bottom:1px solid rgba(255,255,255,.2); border-top:1px solid rgba(255,255,255,.2); padding:14px 2px  }
+		.two 								{
+			p 								{ font-size:16px; text-align:justify }
+		}
+		.more 								{ color: white;
+			a 								{ color: white; &:hover{ opacity:.8} }
+		}
+	}
+
+	.sec-posts.f-2 							{
+		li 									{ border-bottom:1px solid #ddd; padding:18px 0; 
+			&:first-child 					{ padding-top:0 }
+			&:last-child 					{ border:0 }
+			h4 								{ font-size:20px; font-weight:600; margin-bottom:15px }
+			time 							{ font-size:12px; color:#080808  }
+		}
+	}
+
+	.sec-posts.f-3 							{
+		ul 									{
+			h5 								{ font-size:12px; margin-bottom:10px; background: #ececec;border-radius: 5px; padding: 4px 12px;letter-spacing: 0.5px;font-weight: 600;}
+			> li 							{ padding:0 0 15px 0;
+				&:last-child				{ border:0 }
+				li 							{ display:flex; margin-bottom:8px;
+					div:nth-child(1) 		{ width:80px ; font-weight:bold;
+						span 				{ padding-left:12px; top:5px; color:#de5f4a  }	
+					}
+					div:nth-child(2) 		{ flex:1; border-left:1px solid #d8d8d8; padding:2px 14px }
+					h4 						{ font-size:18px; font-weight:600; margin-bottom:3px}
+					span 					{ font-size:12px; color:#222}
+				}
+			}
+		}
+	}
+
+
+	
+
+
+}

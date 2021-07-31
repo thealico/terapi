@@ -1,0 +1,10 @@
+.buton-prevnext 			{ 
+	a 						{ border:1px solid #333; background:#333; color:#fff; font:800 14px $font-2; display:block; height:41px; @include flex_mc(); padding-top:2px;
+		&:hover 			{ background:white; color:#333 }
+	}
+	&.t-1 					{
+		a 					{ border-color:$renk-gray-3; background:#fff; color:#555; border-radius:4px;
+			&:hover 		{ color:#000 } 
+		}
+	}
+}

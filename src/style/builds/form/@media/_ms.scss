@@ -1,0 +1,25 @@
+.form								{
+	
+
+	input[type="text"],
+	input[type="password"],
+	input.text,select				{ 
+		&.md.response 				{ height: 46px }
+	}
+	select.md.response 				{ padding-top:2px }
+
+
+	.form-result					{ display:none; text-align:center; font-size:12px; /*  border-top: 1px dashed #ddd;   border-bottom: 1px dashed #ddd;*/
+		.note 						{ display:block; padding:8px 0 }
+	}
+
+	.cricle-wrap 					{ display: block;
+		input 						{ width:100% }
+		.cricle  					{
+		
+		}
+	}
+
+
+
+}

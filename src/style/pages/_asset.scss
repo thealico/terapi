@@ -1,0 +1,27 @@
+
+
+
+/*
+@ Assets > List -> Basic Table  */
+
+
+.dt-asset 								{
+	//.f-td a 							{ display: flex }
+	
+	&.t-1 								{
+		.td-1 							{ @include colsize(115px) }	
+	}
+		
+	.td-2 h4 							{ margin-bottom: 6px }	
+	.td-2 p 							{ font-size:12px;
+		em 								{ margin:0 4px }
+		.pr 							{
+			s 							{ font-size:11px}
+			s:nth-child(2) 				{ margin: 0 3px  }
+			
+		}
+		.file-time 						{ color:#929292; margin-left:12px;
+			i 							{ color:#f4c04f; font-size:13px; top:3px; margin:0 3px 0 0  }
+		}
+	}
+}

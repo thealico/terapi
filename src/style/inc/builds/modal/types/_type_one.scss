@@ -1,0 +1,25 @@
+
+/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+@ Modal > Type one */
+
+.modal  .type-one 						{
+
+	.modal-header 						{ border:0; text-align:center; padding-top:34px;
+		h4 								{ font-weight:700; margin:0; padding:0; font-size:34px;  }
+		i.c 							{ margin:0 auto}
+		.close 							{ top:8px; right:8px}
+	}
+	.modal-body 						{ margin:0 auto; padding-bottom:26px;
+		ul li 							{ margin-bottom:12px;
+			&:last-child 				{ margin-bottom:0 }
+			label 						{ font-weight:400; }
+			.hatirla label 				{ padding-left:5px;}
+		}
+		.buton 							{ width:100% }
+		nav.row > [class*="col-"] 		{ margin-bottom:14px }
+		.checks > div 					{ margin-bottom:8px;
+			label 						{ padding-left:5px}
+		}
+		
+	}
+}

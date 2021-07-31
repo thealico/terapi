@@ -1,0 +1,63 @@
+
+.pager 					{
+
+/* 	a  					{ border:1px solid #eee; width:36px; margin:0 2px; text-align: center; color:#888; font-weight:600; font-size:17px; height:44px;  @include flex_mc();
+		&.on,
+		&:hover 	 		{ background:#323231; color:white; border-color:#323231  }
+		&.on     		{ height:50px; top:-6px;
+			i      		{ position: absolute; top:1px; font-size:10px; top:-12px }
+			span   		{ top:2px; }
+		}
+		> i      		{ top:3px; }
+		&.prev    		{ margin-right: 16px }
+		&.next    		{ margin-left: 16px }
+	} */
+
+	a  					{ background:#e9e9e9; width:54px; border-radius: 4px; color:#676666; height:50px;  @include flex_mc();
+		&.on,
+		&:hover 	 		{ color:#111;   }
+		> i      		{ height: 13px; font-size:13px }
+		&.prev    		{ border-radius: 0 4px 4px 0  }
+		&.next    		{ margin-left: 7px  }
+		&.prev span		{ left:144px; width: 141px }
+		&.next span		{ left:90px; width: 130px }
+		span 				{ visibility: hidden; color:#999; top:19px; transition:.3s; opacity: 0;  font-weight: 600; font-size: 11px; letter-spacing: .1px; position: absolute; }
+		&:hover 			{
+			span 			{ visibility: visible; opacity:1 }
+			&.prev span { left:128px;   }
+			&.next span { left:70px; }
+		}
+	}
+
+	.form 				{ margin-right:0;
+		> span 			{  left:280px; top:18px; width: 125px; visibility: hidden; color:#999; transition:.3s; opacity: 0;  font-weight: 600; font-size: 11px; letter-spacing: .1px; position: absolute; }
+		&:hover > span { visibility: visible; opacity:1; left:258px; }
+		.f4 				{ width:128px;
+			.dropdown 	{ width:28px }
+			.dropdown i	{ color:#dcb42a }
+			select 		{ font:800 14px $font-1; height:50px; border-color:#e9e9e9; color:#686868; border-radius: 4px 0 0 4px; text-indent: 10px; }
+		}
+	}
+}
+
+ 
+.pager-two  				{ padding-right:3px;
+	
+	.row						{ 
+		a						{ width:44px; height:44px; color:#4b4949; font-size:17px; font-weight:700;  background:#f1f1f1; border-radius:4px; margin-right:5px; text-align:center;
+			.on,&:hover 	{ color:#f28c6a }			
+			i 					{ top:1px }
+			&:nth-child(3)	{ margin-left:30px }
+		}
+	}
+	
+	p 							{ text-align:right;
+		a 						{ color:#717171; margin-left: 10px;
+			&:hover 			{ color:#333; text-decoration:underline}
+		}
+		i 						{ color:#c2c2c2; font:400 16px 'Arial';padding:0 8px }
+		span 					{ color:#808080; font-family:$font-3;
+			em 				{ color:#c2c2c2; padding:0 4px; font-size:11px; top:-1px }
+		}
+	}
+} 

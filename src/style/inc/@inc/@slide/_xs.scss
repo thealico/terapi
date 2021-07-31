@@ -1,0 +1,12 @@
+.slide										{
+	.ctrl.t3 								{ 
+		a 									{ background:rgba(255,255,255,.7); width:28px; height:38px;  
+			i								{ @include icon_fit(16px,'standard') }
+			&:hover 						{ background:rgba(255,255,255,1);  color:$renk-03 }
+		}
+		.prevbox   							{ left:-2px; }
+		.nextbox   							{ right:-2px }
+		//.next 								{ right:-9px }
+	 	// .prev 								{ left:-9px }
+	}
+}	

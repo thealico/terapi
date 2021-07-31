@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Gotham Rounded';
+    src: url('subset-GothamRounded-Light.woff2') format('woff2'),
+        url('subset-GothamRounded-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+

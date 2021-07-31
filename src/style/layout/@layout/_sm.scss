@@ -1,0 +1,22 @@
+body							{  min-width:320px; overflow-x: hidden }
+
+
+
+.full-width-sm 					{ margin: 0 -#{$gut-sm} }
+html.fit-screen .fit-con 		{ padding:$gut-sm }
+
+
+.con 												{ padding-left:$gut-sm; padding-right:$gut-sm;
+	
+	@if ( $gl-gut != $gut-sm ) 						{
+		
+		> [class*="row"]:not(.ns):not(.nsc) 		{ margin-left:-$gut-sm; margin-right:-$gut-sm;
+			> [class*="col"] 						{ padding-left:$gut-sm; padding-right:$gut-sm }
+		}	
+	}
+}
+.gut-x 												{  padding-left:$gut-sm; padding-right:$gut-sm } 
+
+.con-sm  											{ padding-left:$gut-sm; padding-right:$gut-sm; max-width:$case-max;  width:100%; margin-left:auto; margin-right:auto;
+	&.np,&.row:not(.nsc) 							{ padding-left:0; padding-right:0 }
+}

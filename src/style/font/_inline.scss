@@ -1,0 +1,37 @@
+$path :'';
+
+@include font-face('Open Sans', #{$path}open-sans/OS300,300,null,woff2);
+@include font-face('Open Sans', #{$path}open-sans/OS400,400,null,woff2);
+@include font-face('Open Sans', #{$path}open-sans/OS600,600,null,woff2);
+@include font-face('Open Sans', #{$path}open-sans/OS700,700,null,woff2);
+
+@include font-face('Source Sans Pro', #{$path}source-sans/SS300,300,null,woff2);
+@include font-face('Source Sans Pro', #{$path}source-sans/SS400,400,null,woff2);
+@include font-face('Source Sans Pro', #{$path}source-sans/SS600,600,null,woff2);
+@include font-face('Source Sans Pro', #{$path}source-sans/SS700,700,null,woff2);
+
+@include font-face('Ubuntu', #{$path}ubuntu/U300,300,null,woff2);
+@include font-face('Ubuntu', #{$path}ubuntu/U400,400,null,woff2);
+@include font-face('Ubuntu', #{$path}ubuntu/U500,500,null,woff2);
+
+@include font-face('Gotham Narrow', #{$path}gotham-narrow/GN300,300,null,woff2);
+@include font-face('Gotham Narrow', #{$path}gotham-narrow/GN400,400,null,woff2);
+@include font-face('Gotham Narrow', #{$path}gotham-narrow/GN500,500,null,woff2);
+
+@include font-face('Gotham Rounded', #{$path}gotham-round/GR300,300,null,woff2);
+@include font-face('Gotham Rounded', #{$path}gotham-round/GR400,400,null,woff2);
+@include font-face('Gotham Rounded', #{$path}gotham-round/GR500,500,null,woff2);
+
+@include font-face('Gotham', #{$path}gotham/G100,100,null,woff2);
+@include font-face('Gotham', #{$path}gotham/G300,300,null,woff2);
+@include font-face('Gotham', #{$path}gotham/G400,400,null,woff2);
+@include font-face('Gotham', #{$path}gotham/G500,500,null,woff2);
+
+@include font-face('Brandon', #{$path}brandon/B300,300,null,woff);
+@include font-face('Brandon', #{$path}brandon/B400,400,null,woff2);
+@include font-face('Brandon', #{$path}brandon/B600,600,null,woff2);
+@include font-face('Brandon', #{$path}brandon/B700,700,null,woff2);
+@include font-face('Brandon', #{$path}brandon/B800,800,null,woff2);
+
+
+// $type : eot ttf woff woff2 svg;

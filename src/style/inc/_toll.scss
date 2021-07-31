@@ -1,0 +1,21 @@
+/*
+@ unset tab-color   */
+
+.no-tabcolor  					{
+	&:not(.all) 				{ -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
+	&.all 						{ input,select,label,a { -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important  } }
+}
+
+
+/*
+@ click-ripple */
+
+.ripple 						{ background: var(--normal) radial-gradient(circle, transparent 1%, var(--normal) 1%) center/15000%; background-position: center;transition: background 0.6s;
+	&:active  					{ background-color: var(--active); background-size: 100%; transition: background 0s }
+}
+
+
+dd.chf 							{ display:inline;
+
+	i 							{ position:absolute;transform: translate(-50%, -1%); left: 50%;}
+}

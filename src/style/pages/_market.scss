@@ -1,0 +1,517 @@
+.market 						{ background:#f5f5f5;
+	
+	.con-us .nt > li  			{ margin-right:34px;
+		&:last-child 			{ margin: 0 }
+	}
+
+
+	&.guest:not(.g-ut) .app-head{
+		
+		.tit 					{ width:135px; height:100%; 
+			img  				{ position: absolute; top: 20%; }
+		}
+	}
+
+	&.load 						{ pointer-events:none; opacity:.8 }
+
+	.app-body 					{ transition: background .3s }
+
+	&.on.urun .app-body 		{ background: linear-gradient(#FFFFFF 120px, #f1efef 200px);  }
+
+	
+	.info-urun 					{ position:fixed; top:0; left:0; width:100%; height:100%;  
+		h3 						{ color: #1c1b1b; font-size: 23px; font-weight: 300  }
+		p 						{ color: #313131; font-size: 16px; line-height: 30px }
+		p b 					{ font-weight:400 }
+		li 						{ background: url('img/figur-urun.png') no-repeat; background-size: 100% auto; margin:0 7px; width:137px; height:182px }
+		s 						{ background:#ddd; height:1px; width:32px; margin:0 auto; display: block }
+		.in 					{ transform: translate(0,100%); height: 100% ; transition:.8s ; background: linear-gradient(#FFFFFF 0%, #f5f5f5 40%); }
+	}
+
+	.nav-info 					{ color:#313131; font-size:13px; text-align:center;}
+
+	.nav-title 					{ color: #313131; font:400 11px/15px 'Gotham Narrow'; letter-spacing:.7px; text-align:center;
+	
+	}
+	
+	.nav-slice 					{
+		
+		li:nth-child(1) 		{ min-width:110px}
+		li:nth-child(2) 		{ min-width:110px}
+		li:nth-child(3) 		{ min-width:115px}
+
+		
+	}
+
+
+	.con-as 						{ z-index:1;
+		
+	}
+	
+
+	.con-us 						{ z-index:2;
+		.a							{ font-size:15px }
+		.sort						{ display: flex;
+
+			a 						{ width: 28px; height: 23px; margin-left:10px;
+
+			}
+			a i 					{ background:#bebcbc; border-radius:2px; }
+			a.on i 					{ background:#787474 }
+
+			.duz 					{ display:flex; flex-flow: row wrap; justify-content:space-between; width: 22px; 
+				i 					{ width: 100%; height: calc(50% - 3px);
+					&:nth-child(1) 	{ margin-bottom:5px }
+				}
+			}
+
+			.box 					{ display:flex; margin-left:12px; flex-flow: row wrap; justify-content:space-between; width:25px;
+				i 					{ width: calc(50% - 1px); height: calc(50% - 1px); border-radius:2px;
+					
+					&:nth-child(1) 	{ margin-bottom:2px }
+					&:nth-child(2) 	{ margin-bottom:2px }
+				}
+			}
+		}
+
+		.f-search 				{
+			i 					{ font-size:16px; top:2px }
+		}
+	}
+	
+
+	.list-cover 				{
+		.in 					{ display: block; }
+		img 					{ z-index:0 }
+		.txt 					{ z-index:3 ;padding: 0 10px; width:100%; bottom:18px;
+			h4,.star 			{ color:white }
+			h4 					{ text-transform:uppercase; font: 700 16px 'Brandon'; letter-spacing:.6px }
+			.star 				{ display:flex; justify-content:center; align-items:center; }
+			.star i				{ margin:0 6px; }
+			.star s 			{ height:1px; display:block; border-radius:1px;
+				&.sol 			{ width:16px; background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); }
+				&.sag 			{ width:16px; background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);}
+			}
+
+		}
+		.lyr-1 					{ z-index:1; background: rgba(0,0,0,.35);  }
+		.lyr-2 					{ z-index:2; top:auto; bottom:0; opacity:.7; background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); height:50%; }
+	}
+	
+
+	&.iade .list-urun  			{
+		li .kusak 				{ opacity:1; animation-delay:3s; animation-duration:.8s; animation-fill-mode: both; animation-name: hidekusak;
+			
+		}
+		
+		
+	}
+}
+
+body:not(.iade) .on-iade,	
+body.iade .of-iade 					{ display:none}
+
+
+
+html[mod='4'][cari='not'] .market 	{
+	
+	.con-us 					  	{ display: none }
+	.con-as 					  	{ margin-top:0 }
+	.of-body 						{ max-height: var(--app-body) }
+}
+
+
+.market.reyon 					{
+	
+	/*
+	@ bu kodlar yapmak istedigimiz yetismedigi icin gecici yazildi
+	@ reyon adımında calismayacak yada calismayan alanlari 
+	@ kapatiyor */
+
+	.tab .item-flt 				{ display: none }
+	.tab .item-ryn a 			{ border-radius: 0 6px 6px 0;  }
+	.nav-info  					{ display: none }
+	.app-head .sag .cari-link	{ display: none }
+	.app-head .sol .cxt-urun-filter 	{ display: none }
+	.con-us .find-urun					{ display: none }
+}
+
+
+
+@mixin _urun_on_nav() 	 {
+
+	nav 				 { width: 42px;
+		button.arti 	 { height: 48px;
+			span 		 { position: absolute; @include flex_mc();padding-top:2px; height:28px; top: 0; right: 0;  border-radius: 0 0 0 5px; width:28px; border-left:1px solid #f0efef; border-bottom:1px solid #f0efef }	
+		}
+		
+	}
+	
+	
+} 
+
+@mixin _urun_nav() 		{ padding: 4px 4px 0 0;
+	
+	.uw  				{ border-color:#f0efef; }
+	button 				{ color:white }
+	.eksi 				{ display:block; background:#cecece }
+	.arti 				{ background:#7fda74 }
+	> .uc 				{ display: block }
+	.ok 				{ display: block }
+
+
+} 
+
+
+.list-urun 						{
+
+	li > a 						{ z-index:1; background:white; border-radius:6px; overflow:hidden; display:block; padding:8px 8px 0 8px; @include toll_no_tab_color(); }
+	div 						{ z-index:1; border-top:1px solid #e8e6e6; height:84px; margin-top:8px; padding:11px 1px 12px 1px ;  }
+	h4 							{ color:#1f1d1d; display:flex; width:87%; font-size:12.5px;  font-weight:400; margin-bottom:2px;
+		.ut 					{ @include strcut-line(1) }
+	}
+
+	figure 						{ z-index: 0;}
+	figure img.mask 			{ z-index: 1; }
+	figure img.lazy 			{ z-index: 0; }
+
+	
+	.tag 						{ font-size:10.5px; font-family:ubuntu; letter-spacing:.5px; color: #999;font-weight:400;  }
+	.tag.one 					{ text-align: right ; display:flex; position: absolute;  top:-20px }
+	.tag.one.r 					{ right:0  }
+	
+	.tag.one:not(.r) 			{ left:0;
+		.id  					{ order:1 } 
+		.gr  					{ order:2 } 
+	}
+
+	.tag.two 					{ display:block; text-align:left; font-size:9px; letter-spacing:.2px; margin-bottom:2px }
+	
+	.gr 						{
+		em 						{ padding:0 6px 6px }
+		i 						{ top:.5px; margin-right:1px; font-size:8px}
+	}
+
+	.tag.tre 					{ text-align: right ; position: absolute;  bottom:3px; display:flex;
+		.unit 					{ font-size:9px; letter-spacing:.2px; margin-bottom:2px }
+		.unit em 				{ padding:0 6px}
+		.stok 					{ font-size:9px;
+			i 					{ margin-right: 3px; font-size:8px; }
+		}
+		&.r 					{ right:0 }
+		&:not(.r) 				{ text-align: left; left:0;
+			
+			.stok 				{ order:1 }
+			.unit 				{ order:2 }
+		}
+
+		.gr  					{
+			i 					{ color:#ea9337 }
+		}
+	}
+
+	.pins 					{ display:flex; justify-content:flex-end; position: absolute; bottom:7px ; right:0; 
+		i 					{ margin-left:3px; @include circle(8px) }
+		.pirim 				{ background:#9233ff }
+	}
+
+	
+
+	.tag.for 					{ position:absolute; bottom:8px; width:100%;  overflow-x:scroll; overflow-y:hidden; opacity:.5; transition:.1s;
+		&::-webkit-scrollbar 	{ display: none }
+		ol 						{ display:flex; min-width:250px;
+
+			li 					{ letter-spacing: -.3px; display:flex; /*flex: 1 1 0%; */ 
+				&:first-child 	{ padding-left:0 ; b { padding-left:0 ; color:#20ad4c } }
+			}
+			span 				{ padding:0 0 0 4px }
+			b 					{ color:#585858;letter-spacing: -.4px;  /* width:25px; */}
+			u 					{ padding-left:1.5px}
+			i 					{ margin:0 3px 0 1px; top:-1px; display:none }
+			//s 					{ position:absolute; right:0; font-size:8px; top:2px; }
+			s 					{ padding:0 6px; font-size:8px; top:2px; }
+		}
+	}
+	
+	.tag.fiv 					{ display:flex; align-items:center; height:100%;  transition:.3s; opacity:0; left:-42px;
+		ol 						{ border:1px solid #f2f0f0; border-left:0; background:#fdfcfc; border-radius:4px; left:-10px; padding:8px; text-align:right;
+			li 					{ border-bottom:1px dashed #ddd; padding:8px 3px;
+				&:hover 		{ color:#333;}
+				&:last-child 	{ border: 0}
+				&.ba 			{ color:#ec3030}
+				
+			}
+		}
+	}
+
+
+	> li :hover 				{
+		.tag.for  				{ opacity:1 }
+		.tag.fiv  				{ opacity:1; left:0 }
+	}
+
+	nav 						{ position: absolute; z-index:2;  right: .75rem; top: 0;  width: 34px; 
+		
+		button					{ display: block; background:white; z-index:1; font:500 19px 'Gotham Rounded'; width:100%; height:28px; @include flex_mc(); 
+			&.arti				{ border-radius: 6px 6px 0 0; color:#999 } 
+			&.eksi 				{ display:none; margin-top:1px;  border-radius: 0 0 6px 6px; right:0; color:#ec6d2e; font-size:22px }
+		}
+		.ok 					{ position: absolute; display:none; z-index:0; top: 13px; left:-7px; transform: rotate(44deg);width: 0; height: 0;border-style: solid;border-width: 7px 14px 7px 0; border-color: transparent #7eda74 transparent transparent; }
+		.uc 					{ position: absolute; display:none;  z-index:0; right:46px; color:#444; font:normal 11px 'Ubuntu'; top:12px;
+			u,b 				{ font-weight:500; font-style:normal; }
+			u 					{ margin-left: 2px;letter-spacing: 1px;font-weight:300; color:#929191 }
+		}
+		
+		.uw 					{ overflow:hidden; display:block; width:100%  }
+		.add 					{ display: none; position: absolute; z-index: 2; font-size: 8px; top: 7px; color: #2f9c22; }
+
+
+		
+
+	}
+
+	li[rel*='2']:not(.on-basket){
+		button.arti span		{ color:white;
+			&:after 			{ color: #8ba95e;font-family: SSStandard;font-style: normal;font-weight: 400;text-decoration: none;text-rendering: optimizeLegibility;content: '✓'; font-size: 9px; left: -12px; text-indent: -10px; }
+		}
+		nav .uc 				{ top:9px; display:block }
+	}
+
+
+	.sub 						{ display:flex; font-weight:400; font-size:13px }
+	.key                      	{ position: absolute; right:2px; color:#999; bottom:4px; letter-spacing: .7px; font:normal 9px 'monospace'; visibility:hidden; }
+	.last-price 				{ color:#e74646; }
+	//.last-price i 				{ font-weight:700; font-size:10px; top:-.5px }
+	.last-price i.ss-upright 	{ font-size:7px; top:-.5px; left:2px; color:#555 }
+
+	.prev-price					{ color:#888; margin-left:10px;  text-decoration:line-through; }
+
+	li.idm.zam 					{
+		.prev-price		 		{ display: none }
+	} 
+	
+	.kusak 						{ position: absolute; left:-8px; top:-8px; font-size:62px; height:1em; width:1em;z-index: 2; opacity: 1 ;
+		
+		&.t-idm 				{ background:url('img/kusak-idm.png') no-repeat 0 0 ; background-size:100% auto;   }
+		&.t-fyt 				{ background:url('img/kusak-fyt.png') no-repeat 0 0 ; background-size:100% auto;   }
+		&.t-iade 				{ background:url('img/iade.png') no-repeat 0 0 ; background-size:100% auto;   }
+		&.t-oneri 				{ background:url('img/kusak-oneri-n.png') no-repeat 0 0 ;  font-size:78px; background-size:100% auto;   }
+
+	}
+
+	li.on-basket .kusak.t-oneri { background-image:url('img/kusak-oneri-y.png') }
+	
+	&.t-iade 					{
+		figure img 				{ filter: grayscale(65%); }
+	}
+	
+	.t-countdown 				{ position:absolute; right:-3px; top:-6px; z-index:1;font-weight:400; font-size:9px ; font-family:Gotham;
+		i 						{ color:#f8c013; font-size:11px;  margin-left:5px; top:2.5px }
+	}
+
+	s.basket 					{ width:30px; visibility:hidden; height:34px; background:url('img/pat.png') no-repeat 0 0; z-index:1; @include flex_mc(); color:white; position:absolute; right:0; top:0 }
+	
+	textarea 					{ width:100%; background:#aba9b6; color:white; font-size:11px; font-family:monospace;height:180px; border-radius:4px; margin-top:16px; }
+	.on-basket s.basket 		{ visibility: visible }
+	.on-basket .t-countdown  	{ right: 38px; top: 6px; }
+	
+
+	&.of-fiyat li 				{
+		div 					{ height:63px; }
+		.sub 					{ display: none }
+		.tag .unit 				{ display: none }
+		.tag.tre 				{ bottom:8px;
+			.stok i				{ color:#ea9337 }
+		}
+	}
+
+	
+	//  hide mod scroll sona gelince acilir 
+
+	li.s								{ display: none }
+	
+	//  bu kosullarda scroll hide modu iptal et hepsini ac
+
+	&.iscat,&.iskey,&[rel],&[sort]{
+
+		li.s 							{ display: block }
+	}
+
+	// filter category
+
+	&.iscat li:not(.oncat) 				{ display: none }
+		
+	// filter seach key
+
+	&.iskey li:not(.onkey) 				{ display: none }
+
+	// filter relatioon
+
+	&[rel='10']  li:not([rel*='10']),
+	&[rel='11']  li:not([rel*='11']), 
+	&[rel='12']  li:not([rel*='12']) 	{ display: none }
+
+
+	// filter relatioon
+
+	/*
+	 @ 01 : Indirim
+	 @ 04 : Aksiyon
+	 @ 05 : Yiliz
+	 @ 63 : Ozel Fiyat
+	 @ 02 : Oneri Urun
+	*/
+
+	&[rel='1']  li:not([rel='1']),
+	&[rel='2']  li:not([rel='2']),
+	&[rel='4']  li:not([rel='4']),  							
+	&[rel='5']  li:not([rel='5']), 								
+	&[rel='63'] li:not([rel='63']) 		{ display: none }
+
+	
+	// filter sort
+
+	&[sort='7'] li:not([sort='7']), 
+	&[sort='5'] li:not([sort='5']), 		
+	&[sort='6'] li:not([sort='6']) 		{ display: none }
+
+	
+	// idm (aks,akt,yld) degil ise
+
+	&:not([rel='1']):not([rel='4']):not([rel='5']){
+		
+		li {
+			
+			&[rel='1'],
+			&[rel='4'],
+			&[rel='5'] 					{ 
+				h4 						{ font-weight: 600  }
+				.t-idm 					{ display: none }
+				.last-price				{ display: none }
+				.prev-price				{ color:#e74646;  font-weight:600; margin-left:0; text-decoration:underline; }
+			}
+
+			&.on-basket:not(.buy-idm) nav 	{ @include _urun_nav();  }
+			
+			&.on-basket.buy-idm,
+			&:not(.on-basket) 				{ @include _urun_on_nav() }
+			&.on-basket.buy-idm 			{ nav .add { display: block } }
+		}
+
+	}
+	
+	&[rel='63'],&[rel='1'],&[rel='4'],&[rel='5'],&[rel='2']{ 
+		.t-oneri,
+		li.idm .kusak 					{ opacity:1; animation-delay:1s; animation-duration:.7s; animation-fill-mode: both;  }
+		
+		li.idm .kusak 					{ animation-name: hidekusak-xs   }
+		.t-oneri  						{ animation-name: hidekusak-md }
+
+	}
+
+	
+	
+	// idm (aks,akt,yld) ise
+
+	&[rel='1'],&[rel='4'],&[rel='5']	{ 
+		
+		li 								{
+
+			
+			&.on-basket.buy-idm nav 	{ @include _urun_nav()    }
+			&.on-basket:not(.buy-idm) 	{ nav .add { display: block } }
+			
+			&.on-basket:not(.buy-idm),
+			&:not(.on-basket )   		{ @include _urun_on_nav() }
+		}
+	}
+
+
+
+}
+
+
+
+html[mod='4']:not(.cari) 	{
+
+	.list-urun 				{
+		div 				{ height:92px }
+	}
+}
+
+
+
+
+@keyframes showkusak {
+  0% {
+	left:-38px;
+	top:-38px;
+  }
+  
+  100%{
+	
+	left: -8px;
+    top: -8px;
+  }
+}
+
+@keyframes hidekusak-xs {
+  0% {
+	left:-8px;
+	top:-8px;
+  }
+  
+  100%{
+	
+	left: -38px;
+    top: -38px;
+  }
+}
+
+@keyframes hidekusak-md {
+  0% {
+	left:-8px;
+	top:-8px;
+  }
+  
+  100%{
+	
+	left: -47px;
+    top: -47px;
+  }
+}
+
+
+.info 							{ display: none; z-index:3;}
+
+html.on-info-1 					{ 
+	
+	.info-urun 					{ display: block }
+
+	&.st-info 					{
+		.info-urun  .in 			{ transform: translate(0,0%);  box-shadow:0 0 4px rgba(179, 179, 179, 0.5) }
+	}
+
+	&.of-info 					{
+		.info-urun  .in 			{ transform: translate(0,100%) }
+	}
+}
+
+
+
+@media #{$gl-xs} 				{
+
+	.market  					{
+		
+		.list-cover .in 		{ border-radius:6px; overflow:hidden }
+		.list-cover .txt h4 	{ font-size:12px }
+
+		.tab .context   		{
+			.cxt-b 				{  --w:307px!important;  transform:unset;  left: unset; right:0  }
+			.cxt-b .ok 			{  transform:unset; left: unset; right: 40px }
+		}
+		.list-urun nav .uc  	{ font-size:10px; right:42px }
+		.list-urun nav 			{ width:32px; right: .65rem }
+	}
+}
+

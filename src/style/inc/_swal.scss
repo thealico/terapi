@@ -1,0 +1,116 @@
+body.swal2-shown 				{ padding-right:0!important}
+
+.sw-money	 					{ width:365px; border-radius:10px; background:#f8f8f8; font:300 13px 'Gotham';
+	.swal2-title	 			{ font-size:18px }
+	
+	#swal2-content 				{ color:#7b7a7a; text-align:center; font-size:11px; padding:0 8px 4px 8px; }
+	.swal2-input 				{ border:0; box-shadow:unset;  text-align:center;margin:0; padding:0; height:100px; font:300 40px 'Gotham'; }
+	.swal2-confirm 				{ background:#258ecf; padding:16px 24px; color:white; width:100% }
+	.swal2-actions 				{ margin:0}
+}
+
+.sw-kasa 						{
+	#swal2-content 				{ text-align: justify; }
+}
+
+.sw-just 						{
+	#swal2-content 				{ text-align: justify; }
+}
+
+html.swal2-shown .modal,
+html.swal2-shown main 			{ filter:blur(3.5px) }
+
+.sw-toast.t-3 										{ top:6%!important; right:3%!important;
+	
+	.swal2-popup 									{ background:#f3f3f3; animation-duration: .3s; animation-fill-mode: both!important;  padding:16px 15px; border-radius:34px  }
+	.swal2-popup.swal2-toast.swal2-show 			{ animation-duration:.8s; animation-name: bounceIn }
+	.swal2-popup.swal2-toast.swal2-hide 			{ animation-name: fadeOut; }
+		
+	.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring 	{  width: 28px;	height: 28px }
+	.swal2-icon.swal2-success .swal2-success-ring 	{ top: -4px; left: -4px }
+	.swal2-icon.swal2-error .swal2-x-mark 			{ left:-.5px }
+}
+
+.sw-fatura 						{
+	
+	button.text 				{ background:none; border:0!important; font-size:12px; color:#555; &:hover{ background: none!important ; border:0 } }
+	.swal2-styled.swal2-cancel  { background-color: #7cd1f9; color: #fff }
+	.swal2-actions 				{ justify-content: flex-start }
+}
+
+.sw-err 						{
+	
+	.swal2-confirm   			{ color:#ff8383; background:#ffefef }
+	.swal2-popup 				{ background:#ff8383; color:white }
+	#swal2-content 				{ color:white; font-size: 14px }
+}
+
+
+/*
+@ swal ios 
+*/
+.sw-ios 						{ overflow: hidden; width: 280px; height:auto; background:#f9f9f9; border-radius:18px; padding:19px 0 0 0 ;
+	&.sw-popup 					{}
+	.swal2-actions 				{ padding: 0 }
+	.swal2-content 				{ padding: 0 20px; font:normal 11.5px 'Gotham'; text-align:center; color:black }
+	#swal2-content 				{ text-align: center ; color:#222;}
+	.swal2-header 				{ padding:7px 20px 0 20px  }
+
+	.swal2-actions				{ margin: 0; height:32px; border-top:1px solid #d9d9d9 }
+
+	
+
+	.swal2-actions 				{ height:50px;
+		button 					{ padding:0 ; width:100%; margin:0; border:0; height:100%; border-radius:0; background:none; font: bold 14px 'Open Sans' }
+		button 					{ @include toll_ripple (#f9f9f9,#e8e8e8) }
+		//button:hover 			{ border-color:unset; border:0  }
+		
+		button:nth-child(1) 	{ border-radius: 0 0 0 18px;  }
+		button:nth-child(2) 	{ border-left:1px solid #d9d9d9!important;    border-radius: 0 0 18px 0;  }
+		.swal2-confirm 			{ color:#258ecf; &.remove { color:#ec602a } }
+		.swal2-cancel 			{ color:#767676; &.remove { color:#ec602a } }
+
+		button.blue				{ color:#258ecf; &.remove { color:#ec602a } }
+		button.gray				{ color:#767676; &.remove { color:#ec602a } }
+	}
+	
+	 //.swal2-icon 				{ margin:0 0 10px 0; width: 60px; height: 60px;}
+
+	 
+	 // .swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{    top: 33px;left: 16px;width: 15px;}
+	 // .swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{ top: 28px;right: 9px; width: 27px }
+	 // .swal2-icon.swal2-success .swal2-success-fix 		{ top:-6px;left: 23px;width: 4px; height: 85px;}
+	 // .swal2-icon.swal2-success [class^=swal2-success-circular-line]{    width: 60px;height: 100px} 
+	 // .swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{     top: -19px; left: 26px;     border-radius: 0 60px 60px 0;}
+	 
+	 // .swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{ top: -19px;left: -26px;     border-radius: 60px 0 0 60px;}
+
+	// .swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{ top: 24px; right: 7px; width: 24px; }
+	// .swal2-icon.swal2-success [class^=swal2-success-line][class$=tip] { top: 28px; left: 12px; width: 13px;}
+
+	&.sw-confirm 				{
+		.swal2-actions 			{ justify-content: space-between; 
+			button 				{ width: 50%;   }
+		}
+	}
+
+	.swal2-input 				{ box-shadow: unset; margin:0 }
+	&.sw-login 					{
+		.swal2-input 			{ border: 0; margin:4px 0 12px 0;   text-align:center; letter-spacing:3px; font:bold 24px 'Arial'!important ; height:60px; @include placeholder(#999,1,bold 30px 'Arial');  }
+	}
+
+	&.sw-login-note 			{
+		.swal2-content  		{ @include flex_mc(); width:74%; margin:0 auto; padding:30px 0  }
+	}
+
+	&.sw-note 					{ 
+		.swal2-content  		{ width:100%; margin:0 auto; padding:6px 25px 25px 25px ; font-size:13px;  }
+	}
+
+
+	.swal2-title 				{ color:#111; font:700 15px 'Gotham';  margin-bottom:2px}
+	
+
+
+}
+

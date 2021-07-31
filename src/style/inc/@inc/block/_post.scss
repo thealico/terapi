@@ -1,0 +1,64 @@
+
+.post 										{
+	
+	.b 										{ color:#0e0e0e; font:700 20px $font-2; letter-spacing: -.6px; line-height: 1.3 }
+	p 										{ color:#333; font-weight: 300 }
+	.ps-time 								{ display:flex; align-items:center; color:#010101; font:300 14px $font-3; margin-bottom:7px;
+		i 									{ color:#dcb42a;font-size: 13px; top:2px ; }
+		i.r 								{ margin-left:4px }
+		i.l 								{ margin-right:4px }
+	}
+	.ps-con 								{ padding-top:10px }
+	.ps-desc 								{ padding-top:7px;hyphens: auto; font-size:15px; line-height:1.4; text-align:justify;text-justify: distribute }
+	
+	&.f-1 									{
+		.ps-con 							{ padding-top: 0  }
+		.ps-time 							{ margin-top:7px; margin-bottom:0  }
+	}
+	figure 									{
+		&.vert 				 				{ background:#444 }
+		a 									{ display:block; height:100%; width:100% ;  }
+		img.real 							{ transition:.3s }
+		.t-info 							{ @include plb(); @include fw(); color:white; z-index: 4; padding: 12px 16px; display:flex; justify-content:flex-end; text-align:right;  
+			span 							{ display: block }
+			.t-label 						{ font:800 13px $font-1; letter-spacing: .9px  }
+			.t-media 						{ color:#e6c927; font-size:16px ; height: 16px; margin-bottom:7px; right:1px; }
+			.ss-play 						{ font-size:14px }
+		}
+		.mask-grands 						{ z-index: 2; background:linear-gradient(to bottom, rgba(10,0,0,0) 0%,rgba(10,0,0,0.45) 100%);  height: 50%; top:unset; bottom:0 }
+		.mask-filtre 						{ z-index: 3; opacity: .4; background-image: url("img/pattern/brushed-alum-dark.png"); } 
+		hr 									{ border:0; background: none  } 
+	}
+	
+
+	&:hover 								{ 
+		figure img.real 	 				{ transform: scale(1.09)  }
+		figure img.real.vert 	 			{ transform: translate(-50%,-50%) scale(1.09)  }
+		
+	}
+
+	&.t-un-cover 							{ background:#f9f9f9; padding: 25px; height: 100%; @include flex_mc(); text-align: center; 
+		
+		> s 								{ position: absolute; width:1px; height: 42px; background: #d7d7d7;
+			s 								{ position: absolute; background: #d7d7d7;  height: 1px; width: 30px }
+			&.us 							{ left:20px; top:20px; 
+				s 							{ top:0; left:0 } 
+			}
+			&.as 							{ right:20px; bottom:20px; 
+				s 							{ bottom:0; right:0 } 
+			};
+		}
+		.b 									{ font-size:22px;
+			a 								{ color:#313131; font-weight: normal }
+		}
+		.ps-time 							{ justify-content: center}
+		.ps-con 							{ padding: 0 12px  }
+		p 									{ font-size: 13px; text-align: center}
+
+	}
+}
+
+.ua-chrome 									{
+	.post .ps-desc 							{ word-break: break-all; word-spacing:-2px }
+	.post.t-un-cover .ps-desc 				{ word-break: unset; word-spacing: unset }
+}

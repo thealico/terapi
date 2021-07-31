@@ -1,0 +1,7 @@
+// Ilk Gelistirme Ortamı  : Arabam Sekil
+// Yer : Drop menu
+
+.tab-con 					{ 
+	> * 					{ display:none  }
+	> .on 					{ display:block }
+}

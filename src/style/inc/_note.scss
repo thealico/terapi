@@ -1,0 +1,40 @@
+.note.t-1 					{ text-align:center; height: var(--app-body);
+
+	.us 					{ top:-20px;
+		h3 					{ font:500 15px 'Gotham Narrow'; margin-bottom: 6px }
+		h3.t-1 				{ font:400 22px 'Gotham'; margin-bottom: 8px }
+		
+		p 					{ font: 300 20px/28px 'Gotham' }
+		figure 				{ @include circle(80px); background:#ddd;
+			i 				{ font-size: 28px; height:24px;top:2px;  line-height:1; display:block; color:white; }
+			s 				{ width: 0; height: 0; border-style: solid; border-width: 20px 15px 0 15px; border-color: #ddd transparent transparent transparent; }
+			s 				{ position:absolute; right: 21px; bottom: -9px;transform: rotate(19deg); }				    
+		}
+
+		.u-3 				{ font:400 13px 'Ubuntu'; color:$color-1; top:40px;
+			span 			{ display:inline-block; color:#777 }
+		}
+
+	}
+
+	.as 					{ width:100%; top:90px; font-family:Gotham; font-size:11px;
+		div  				{ max-width:850px; margin:0 auto; color:#555;  }
+		h5 					{  letter-spacing:.8px }
+		p 					{ line-height:18px; text-align:center;  }
+	}
+
+	.alert.plb 				{ bottom: 5%; font-size:11px; line-height:16px; width:100%;
+		i 					{ color:#e66330 }
+		b 					{ font-weight:600 }
+		a 					{ color:$color-1 }
+	}
+
+	.subnote 				{ position: fixed; left:0; bottom:14%; width:100%; font-size:11px; text-align:center;
+		&.frk				{
+			i 				{ color:#e2a027; font-size:13px }
+			b,i 			{ display: block }	
+			b				{ font:600 11px 'Open Sans' ; letter-spacing:.5px }	
+		}
+	}
+
+}

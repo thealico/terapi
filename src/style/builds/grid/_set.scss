@@ -1,0 +1,97 @@
+// @ Flexbox Grid Version 1.5.0  - https://github.com/thealico/flexboxgrid
+// @ Front-end Developer by Ali Akman (alico) 
+// @ http://alico.me  */
+
+$set                 : (
+
+   'columns'         : 12,
+   'gut'             : (
+      'd'            : 1rem,						
+      's'            : (.6rem,.3rem),					
+      'b'            : (1.5rem,2.5rem)	
+   ),
+   'screen'   			: (
+      'lg'           : 80em,
+      'md'           : 64em,  
+      'sm'           : 48em,
+      'xs'           : 35.5em,
+      'ms'           : 23.5em
+   ),
+   'options'         :  (
+      'offset'       :  true,
+      'space'        :  true,
+      'order'        :  true,
+   ),
+   'screen-rule'  	: 'max',
+   'select'          : (
+      'row'          : '[class*="row"]',                        
+      'col'      		: '[class*="row"] > [class*="col"]',      
+      'col-'         : '[class*="row"] > [class*="col-"]',     
+      'colcol'       : '[class*="row"] > .col',                
+      'colrow'       : '[class*="row"][class*="col"]',         
+      'colone'       : '[class*="col"]'                        
+   )
+);
+
+
+// -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+
+@function map($map, $keys...) {
+   @each $key in $keys {
+      $test : map-get($map, $key);
+      @if $test == null {
+         @return 'key error';
+      }
+      $map: map-get($map, $key);
+   }
+   @return $map;
+}
+
+// -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+
+$select-colone    : map($set,'select','colone');
+$select-colrow    : map($set,'select','colrow');
+$select-colcol    : map($set,'select','colcol');
+$select-col-      : map($set,'select','col-');
+$select-row       : map($set,'select','row');
+$select-col       : map($set,'select','col');
+
+$set-column       : map($set,'columns');
+$set-screen-rule  : map($set,'screen-rule');
+
+$gut-s            : map($set,'gut','s');
+$gut-b            : map($set,'gut','b'); 
+$gut              : map($set,'gut','d');
+
+
+// -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+
+$set-screen  : ();
+
+@each $key, $value in  map($set,'screen') {
+  $set-screen : map-merge($set-screen, (#{$key} : 'screen and (#{$set-screen-rule}-width: #{$value})'));
+}
+
+// -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+
+$set-col : '';
+
+@for $i from 0 to $set-column {
+   $i : $i+1;
+   
+   @if ($i!=1 and $i!=$set-column)  { $set-col : append($set-col,(nth($set-col,1)*$i)) }
+   @if ($i==$set-column)            { $set-col : append($set-col,(100%))   }
+   @if ($i==1)                      { $set-col : (100%/$set-column) }
+   
+}
+
+
+// -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+
+$set-row : '';
+
+@for $i from 0 to $set-column {
+   $i : $i+1;
+   @if ($i >1)            { $set-row  : append($set-row ,(100%/$i)) }
+   @if ($i==1)            { $set-row  : (100%/$i) }
+}

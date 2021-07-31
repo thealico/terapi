@@ -1,0 +1,99 @@
+.modal.f-nav,
+.modal.f-cek-banka 						{
+
+	.modal-head 						{ 
+		.a,.c 							{ height:100% ; > * { height:100% } }
+		.b 								{ font-weight: bold ; text-align: center }
+		a 								{ color: $color-1 }
+		button 							{ color: $color-1; font-size:13px; background:none; font-weight:400;
+			&.gray 						{ color:#888 }
+			&.orange 					{ color:$color-2;  } //#e35a2b
+			&.flue						{ color:#d28181;  } //#e35a2b
+		}
+		.buton  						{ color:$color-1; font: 700 15px "Source Sans Pro"; display: inline-flex; align-items:center; justify-content:center; padding:0 15px;
+			&.gray 						{ color:#888 }
+			&.orange 					{ color:#e35a2b }
+		}
+		.f-back,
+		.b-back 						{
+ 			i 							{ top:1px; font-size:15px; }
+		}
+	}
+
+	&.f-prev .a .modal-close,
+	&:not(.f-prev) .a .modal-prev 		{ display: none }
+	
+	&:not(.f-prev) .on-prev 			{ display: none }
+	&.f-prev .of-prev 					{ display: none }
+
+
+	nav.foto 							{ 
+
+		.b  							{ @include circle(90px); border:1px solid $color-1; @include flex_mc(); 
+			input 						{ width:100%; height:100%; opacity:0; position:absolute; z-index:1 }
+			i 							{ color:$color-1; font-size:28px; top:2px; left:-.5px }
+			span 						{ position: absolute; width:100%; pletter-spacing:.8px; font:300 11px 'Brandon'; text-align:center; bottom:14px; }
+		}
+
+		.n								{ display: block; height:22px;
+			> span 						{ left:16px; font:600 13px 'Source Sans Pro'; position:absolute;bottom: 0; visibility: hidden; opacity: 0; transition: .3s }
+		}
+
+		.e-remove 						{ 
+			i 							{ color:#b2b2b2; margin-right:5px; font-size:10px }
+			span 						{ color:#f26b6b }
+		}
+
+		.one 							{ color:#888 ; i { color: #222; font-size: 15px; top: 3px; margin-right: 4px }}
+
+		&.on .n .two					{ left:0; opacity:1;  visibility:visible }
+		&:not(.on) .n .one				{ left:0; opacity:1;  visibility:visible }
+	}
+}
+
+
+.modal.f-nav 							{ 
+	
+	/*  top: var(--app-head);  height: calc( 100% - calc(var(--app-menu) + var(--app-head ) );  */
+	
+	
+	&[rel='buy'] .rel:not(.rel-buy)		{ display: none }
+	&[rel='cek'] .rel:not(.rel-cek)		{ display: none }
+		
+
+	.modal-content 						{ background:white; max-width:430px; height:90%; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,.05); }
+
+
+	.modal-body							{ height: calc(100% - 49px) } 
+	.modal-head 						{ background:#f5f5f5; height:49px; border-bottom: 1px solid #efefef }
+
+	.list-1 							{ 
+		
+		li 								{  
+			> a 						{ border-bottom: 1px solid #efefef; padding:6px 12px; font-size:13px; font-weight:400; height: 50px; display: flex; align-items: center }
+			&:last-child a 				{ border-bottom: 0 }
+		}
+
+		&.xl li > a						{ height:68px; font-size:16px; font-weight:300; padding:8px 14px;
+
+		}
+	}
+
+	.field-find 						{ border-bottom: 1px solid #efefef;  background:#fdfdfd; height:50px;
+		input 							{ height:100%; width:100%; padding: 0 10px; z-index:0}
+		input 							{ z-index:0; background:none; font:400 13px 'Ubuntu'; letter-spacing:.3px; padding:1px 0 0 37px; height:100%; width:calc(100% - 45px) ; }
+		input 							{ @include placeholder(#999,1, 300 14px 'Ubuntu'); }
+		
+		.z-name 						{ right: 12px; font: 400 10px Ubuntu;top: 19px;color: #b9b8b8;letter-spacing: 1px;}
+
+		.plt 							{ z-index:2; color:#e8bc13; width:40px; height:100%; @include flex_mc();
+			i 							{ top: 3px; font-size:12px }
+		}
+		//.prt 							{ width: 40px ; z-index: 2; }
+
+	}
+
+	// &.on 								{ background: rgba(0,0,0,.15);
+	// 	.modal-content					{ transform: translate(0,0) }
+	// }
+}

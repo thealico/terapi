@@ -1,0 +1,5 @@
+.ptr--ptr 							{ background:#555;z-index: 10;overflow:unset!important;}
+.ptr--box 							{ background:#555; position:fixed;   display: flex; align-items: center;justify-content: center;width:100%; left:0;height:80px;}
+.ptr--icon 							{ color:rgba(255, 255, 255, 0.7)!important }
+.ptr--text 							{ color:rgba(255, 255, 255, 0.8)!important; font-size:18px; font-family:gotham!important; font-weight:300!important }
+#code-builds #reload 				{ position: fixed; top:0; left:30%; width:40%; z-index:5; height: var(--app-head )  }

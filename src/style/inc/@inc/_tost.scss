@@ -1,0 +1,237 @@
+@mixin tost($set)       {
+
+   
+   $type       : map-get($set,type);
+   $tost_w     : map-get($set,tost_w);
+   $tost_h     : map-get($set,tost_h);
+   $tost_b     : map-get($set,tost_b);
+   $tost_c     : (($tost_h - ($tost_b*3))/2)+$tost_b ;
+   
+   $tost_t     : map-get($set,tost_t);
+   $tost_r     : map-get($set,tost_r);
+
+   
+   $tost_b_inset        : map-get($set,tost_b_inset);
+
+   $tost_b_color        : map-get($set,tost_b_color);
+
+   
+
+   .tost.#{$type}       { width:$tost_w;  height:$tost_h;  
+
+    
+      span,
+      span:before,
+      span:after     { height:$tost_b; border-radius:$tost_r;  background:$tost_b_color }
+
+      span           { top:($tost_h/2) - ($tost_b/2) }
+
+      span:before    { top:-$tost_c  }
+      span:after     { bottom:-$tost_c}
+      
+      @if ( $tost_b_inset ){
+
+         @if ( find_map($tost_b_inset,'middle') ) { span             { width:($tost_w - find_map($tost_b_inset,'middle')) } }
+         @if ( find_map($tost_b_inset,'top') )    { span:before      { width:($tost_w - find_map($tost_b_inset,'top'))    } }
+         @if ( find_map($tost_b_inset,'bottom') ) { span:after       { width:($tost_w - find_map($tost_b_inset,'bottom')) } }
+      }      
+ 
+
+      @if ( $tost_t != 0 ){
+         
+         span:after     {  transition-property: bottom, transform  }
+         span:before    {  transition-property: top, transform  }
+
+         span           {  transition: background 0s $tost_t }
+
+         span:before,
+         span:after     { transition-duration:$tost_t, $tost_t; transition-delay:$tost_t,0s } 
+
+         
+      }
+      
+
+
+      &.on              {
+         
+         span,          
+         span:after     { width:$tost_w }
+         
+         @if ( $tost_t != 0 ){
+            
+            span:before,
+            span:after     { transition-delay: 0s, $tost_t }   
+         }
+
+      }
+   }
+
+}
+
+
+
+@include tost((
+   type            : 't-1',
+   tost_w          : 14px,        // genisilik
+   tost_h          : 13px,        // yükseklik
+   tost_b          : 1px,         //  cizgi yukseklik
+   tost_t          : 0,           //  transition time
+   tost_r          : 0,           // radius
+   tost_b_inset    : false,        // cizgi girintili model 
+   tost_b_color    : white        // cizgi renk
+));
+
+
+@include tost((
+   type            : 't-3',
+   tost_w          : 14px,        // genisilik
+   tost_h          : 12px,        // yükseklik
+   tost_b          : 2px,         //  cizgi yukseklik
+   tost_t          : 0,           //  transition time
+   tost_r          : 3px,          // radius
+   tost_b_inset    : ( top :0, middle: 6, bottom: 3),        // cizgi girintili model 
+   tost_b_color    : white        // cizgi renk
+));
+
+
+
+@include tost((
+   type            : 't-2',
+   tost_w          : 22px,        // genisilik
+   tost_h          : 19px,        // yükseklik
+   tost_b          : 3px,         //  cizgi yukseklik
+   tost_t          : .2s,         //  transition time
+   tost_r          : 4px,         // radius
+   tost_b_inset    :  ( top :0, middle: 9, bottom: 4),        // cizgi girintili model 
+   tost_b_color    : white        // cizgi renk
+));
+
+
+
+.tost           { display:block; position: relative;
+
+   span,
+   span:before,
+   span:after     { position:absolute; display:block;  left:0;  width:100%; background:white }
+
+   span:before,
+   span:after     { content:"" } 
+      
+   &.on           {
+      
+      span           { background:none }
+      span:before    { top: 0; transform: rotate(45deg) }
+      span:after     { bottom: 0; transform: rotate(-45deg) }
+   }
+}
+
+
+
+
+
+
+
+
+
+// $default : (
+
+//    tost_w          : 22px,        // genisilik
+//    tost_h          : 19px,        // yükseklik
+//    tost_b          : 3px,         //  cizgi yukseklik
+//    tost_t          : 0,           //  transition time
+//    tost_r          : 4px,         // radius
+//    tost_b_inset    : true,       // cizgi girintili model 
+//    tost_b_color    : white        // cizgi renk
+
+// );
+
+
+
+
+
+
+
+
+
+
+
+   // &:not(.on):hover a {
+      //    span,          
+      //    span:after     { width:$tost_w }
+      // }
+
+
+
+
+/*
+
+
+$button-width     : 14px;                   // The width of the button area
+$button-height    : 18px;                   // The height of the button area
+$bar-thickness    : 2px;                    // The thickness of the button bars
+$bar-radius       : 0;                      // The thickness of the button bars
+$bar-color        : white;
+
+$button-pad       : 0px;                    // The left/right padding between button area and bars.
+$button-bar-space : 5px;                    // The spacing between button bars
+$button-transistion-duration: 0s;           // The transition duration
+
+
+.tost                                    { display:block; position: relative; overflow: hidden; cursor: pointer; background:none; 
+
+span                                  { display:block; position: absolute;
+   
+   &:before,&:after                   { 
+      
+      position: absolute;
+      display: block;
+      content: "";
+      width: 100%;
+      left: 0;
+
+   }
+
+}
+}
+
+
+
+.tost                { height: $button-height; width: $button-width; transition: background $button-transistion-duration;
+
+span              {
+
+   top: ($button-height / 2) - ($bar-thickness / 2);
+   border-radius: $bar-radius;
+   height: $bar-thickness;
+   background: $bar-color;
+   right: $button-pad;
+   left: $button-pad;
+
+   &:before,&:after                       { 
+      height: $bar-thickness;
+      background-color:$bar-color;
+      border-radius: $bar-radius;
+   }
+   
+   &:before                               { top: -$bar-thickness - $button-bar-space; transition-property: top, transform  }
+   &:after                                { bottom: -$bar-thickness - $button-bar-space;transition-property: bottom, transform  }
+}
+
+}
+
+.tost.f-1 span      { transition: background 0s $button-transistion-duration;
+
+&:before,&:after  { transition-delay: $button-transistion-duration, 0s;  transition-duration: $button-transistion-duration, $button-transistion-duration }
+}
+
+.tost.f-1.on                             {
+
+span                                   { background: none;
+   &:before,&:after                    { transition-delay: 0s, $button-transistion-duration }
+   &:before                            { top: 0; transform: rotate(45deg) }
+   &:after                             { bottom: 0;  transform: rotate(-45deg) }
+}
+
+}
+*/
+

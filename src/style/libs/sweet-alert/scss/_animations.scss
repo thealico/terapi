@@ -1,0 +1,145 @@
+@import 'toasts-animations';
+
+// Appearance animation
+@keyframes swal2-show {
+  0% {
+    opacity: 0;
+    //transform: scale(.7);
+  }
+
+  // 45% {
+  //   transform: scale(1.05);
+  // }
+
+  // 80% {
+  //   transform: scale(.95);
+  // }
+
+  100% {
+    opactiy: 1;
+    transform: scale(1);
+  }
+}
+
+// Disppearance animation
+@keyframes swal2-hide {
+  0% {
+    //transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    //transform: scale(.5);
+    opacity: 0;
+  }
+}
+
+// Success icon animations
+@keyframes swal2-animate-success-line-tip {
+  
+  0%{
+    top: 10px;
+    left: 4px;
+    width: 5px;
+    visibility: hidden;
+  }
+
+  38% {
+    visibility:visible;
+    top: 16px;
+    left: 2px;
+    width: 21px;
+  }
+
+  100% {
+    visibility:visible;
+    top: 32px;
+    left: 18px;
+    width:13px;
+  }
+
+}
+
+@keyframes swal2-animate-success-line-long {
+  0% {
+    visibility:hidden;
+    top: 36px;
+    right: 31px;
+    width: 2px;
+  }
+
+
+
+  100% {
+    visibility:visible;
+    top: 28px;
+    right: 11px;
+    width: 26px;
+  }
+}
+
+@keyframes swal2-rotate-success-circular-line {
+  0% {
+    transform: rotate(-45deg);
+  }
+
+  /*5% {
+    transform: rotate(-45deg);
+  }
+
+  12% {
+    transform: rotate(-405deg);
+  }*/
+
+  100% {
+    transform: rotate(-405deg);
+  }
+}
+
+// Error icon animations
+@keyframes swal2-animate-error-x-mark {
+  0% {
+    margin-top: 1.625em;
+    transform: scale(.4);
+    opacity: 0;
+  }
+
+  50% {
+    margin-top: 1.625em;
+    transform: scale(.4);
+    opacity: 0;
+  }
+
+  80% {
+    margin-top: -.375em;
+    transform: scale(1.15);
+  }
+
+  100% {
+    margin-top: 0;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes swal2-animate-error-icon {
+  0% {
+    transform: rotateX(100deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes swal2-rotate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

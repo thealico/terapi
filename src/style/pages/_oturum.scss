@@ -1,0 +1,143 @@
+.oturum 				{ background: black; transition: background .5s;
+	&.swal2-height-auto { height: 100%!important  }
+	main 				{ background:black url('img/login.min.jpg') no-repeat 0 0 fixed; background-size:cover; color:white; opacity:1; transition:.5s }	
+	a 					{ color: white }
+
+	.app-menu 			{ bottom:-70px }
+
+	
+	.con form 			{
+
+		input.r  		{ background: rgba(255,255,255,.3) }
+		
+		.f-user 		{ margin-bottom:1px }
+
+		.fe .r 			{ height:75px; color:white; font:normal 17px 'Gotham Rounded'; text-indent:16px; @include placeholder(#fff,.9); 
+			&.user  	{ border-radius:12px 12px 0 0  }
+			&.pass  	{ border-radius:0 0 12px 12px  }
+
+			
+			&:-webkit-autofill,
+			&:-webkit-autofill:hover, 
+			&:-webkit-autofill:focus, 
+			&:-webkit-autofill:active  {
+				
+				font: normal 17px 'Gotham Rounded';
+				-webkit-box-shadow: 0 0 0 60px #898d92 inset !important;
+				-webkit-text-fill-color: #fff !important;
+				opacity: .8;
+    			
+				// -webkit-animation-name: autofill!important;
+    			// 		-webkit-animation-fill-mode: both!important;
+			    
+			    /* -webkit-box-shadow: 0 0 0 30px white inset !important; */
+			    /* -webkit-box-shadow: 0 0 0px 80px rgba(255,255,255,.5) inset!important;
+			    -webkit-text-color: white !important; */
+			    /* background-color : rgba(255, 255, 255, 1)!important;*/
+			   // background-color : red!important;
+			}
+
+			
+			
+			/*
+			&:-webkit-autofill {
+    			-webkit-box-fill-color: red !important;
+    			-webkit-box-color: red !important;
+			}
+			*/
+		}
+
+		/*
+		#f-user:-webkit-autofill {
+    		background-color: green !important;
+    	}*/
+
+		.fe  			{ 
+			.fi   		{ color: white; &.end { right: 14px } 
+				i 		{ opacity:.9}
+			}
+		}
+
+		.f-user 		{ .fi i { font-size: 18px; top:2px }  }
+		.f-pass 		{ .fi i { font-size: 20px; left:1px } }
+
+		.f-submit .btn 	{ width:100%; border-radius:9px; font:300 18px 'Gotham Rounded';  background:#eb1e37; height:68px; padding:10px; color:white }
+
+		.e-help 		{ display: block; font-size:12px;
+			i 			{ top:1px; font-size:11px }
+		}
+	}
+
+
+
+	.con-us 			{ width:420px; font-family:'Gotham'; font-weight:300; color:#e9e9e9; z-index:5;
+		&.left  		{ position:absolute; left:50px; bottom:15%; }
+
+		img 			{ width:110px; filter:grayscale(100%); opacity: .7 }
+		h1 				{ font-size: 40px; font-weight:300; }
+		p 				{ font-size: 18px; line-height:23px; text-align:justify }
+	}
+
+	.con-as 			{ width: 100%; text-align: right; letter-spacing:1.4px; bottom:10px; font:normal 10px 'Brandon';
+		em 				{ padding: 0 6px; top:-1px }
+
+	}
+	
+}
+
+
+html[mod='4'] 				{
+	.oturum main 			{ background-image:url('img/login/10.jpg'); animation: slide 10s infinite }
+
+}
+
+/*
+@keyframes slide  			{
+	30% 					{  background-image:url('img/login/10.jpg');}
+	90% 					{  background-image:url('img/login/18.jpg');}
+}
+*/
+
+html.start body.oturum main     { opacity : 0 }
+html.start body.oturum  		{ background : none }
+html.start   					{ background : white url('img/load/spin-basic.svg') no-repeat center center; }
+
+
+@media #{$gl-sm} 				{
+	.oturum 					{ background: black url('img/login.min.jpg') no-repeat 0 0 fixed; background-size: auto 110%; background-position: 64% 83%;}
+	.oturum  main 				{ background: rgba(0,0,0,.2); height:100% }
+}
+
+@media #{$gl-xs} 				{
+	
+	.oturum 					{ 
+		
+		.con form 				{ bottom:12%;
+			
+			.fe .r  			{ font-size: 16px }	
+			.f-submit .btn 		{ height: 60px}
+		}
+		
+		//main 					{ background: rgba(0,0,0,.2); height:100% }
+
+		.con-us 				{ width:100%; 
+			img 				{ width:100px; position: absolute; right:8%; top:6%; opacity:.9}
+			.txt 				{ padding:0 3px }
+			p 					{ font-size:13px; line-height:20px; }
+			h1 					{ font-size:26px }
+		}
+		.con-us.left			{ position: relative; height:100%; left:0 ; bottom:0; padding-left:4px; padding-right:4px; display: flex;  align-items:flex-end;  justify-content:center; }
+		.con-as 				{ text-align:center; font-size:7px;
+			em 					{ padding: 0 2px }
+			// .a 				{ width:100%; margin-bottom:5px }
+		}
+		
+	}
+
+}
+
+
+/* .sw-toast.t-3 				{ transition: opacity .2s; opacity:1 }
+ html.start .sw-toast.t-3 	{ opacity:0 } */
+
+ 

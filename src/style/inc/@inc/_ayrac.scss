@@ -1,0 +1,9 @@
+// Ilk Gelistirme Ortamı  : Arabam Sekil
+// Yer : baslik  sag ve soldan kesik cizgi ayracları verir
+
+
+.ayrac 						{
+	.sol,.sag 				{ position:absolute; height:1px; width:30px; background:#d1d0d0 }
+	.sol 					{ left:-30px }
+	.sag 					{ right:-30px }
+}

@@ -1,0 +1,21 @@
+.form								{
+	
+	.recaptcha 						{ 
+	 	
+	 	.in.sag 					{ padding-right:0 }
+	 	.in.sol 					{  padding-left:0 }
+	 	
+	 	.in 						{ min-height:76px; margin-right:-1px; position:static; top:0 ; visibility:visible; width:100%; }
+	}
+	
+	&.load  						{ 
+		.recaptcha .in 				{ display:block }
+	}
+
+
+
+	&.send-on,&.load 				{ 
+		.form-result 				{ display:block }
+	}
+
+}

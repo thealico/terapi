@@ -1,0 +1,501 @@
+@mixin makeHtmlKits($mod:false){
+  	
+	.hidden#{$mod} 				{ display:none;  &.import { display:none!important 		}}
+	.hide#{$mod} 				{ display:none;  &.import { display:none!important 		}}
+	.show#{$mod} 				{ display: block;
+		&.inline 				{ display: inline }
+		&.row,&.flex 			{ display: flex }
+	}
+	
+	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+	@ visible mods */ 
+
+	
+	// .visble-inline#{$mod} 		{ display:inline; &.import { display:inline!important 	}}
+	// .visble-flex#{$mod} 		{ display:flex;   &.import { display:flex!important   	}}
+	
+	.visble#{$mod} 				 { display:block;  &.import { display:block!important 	}}
+
+	
+	// /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+	// @ display mods */ 
+	
+	// .none#{$mod}				{ display:none; 	&.import { display:none!important 	}}
+	// .block#{$mod}			{ display:block; 	&.import { display:block!important 	}}
+	// .inline#{$mod}			{ display:inline; 	&.import { display:inline!important }}
+	// .flex#{$mod} 			{ display:flex; 	&.import { display:flex!important 	}}
+
+
+
+	// /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+	// @ float mods */ 
+	
+	// .float-left#{$mod} 				{ float:left }	
+	// .float-none#{$mod} 				{ float:none }	
+
+	// .unfloat3#{$mod} >  * > * > *,
+	// .unfloat2#{$mod} >  * > *, 	
+	// .unfloat#{$mod} > * 			{ float: none }
+
+	
+	// /* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+ 	// @ positions */
+
+	// .relative#{$mod} 			{ position:relative }
+	// .absolute#{$mod} 			{ position:absolute }
+	// .static#{$mod} 				{ position:static 	}
+	// .fixed#{$mod} 				{ position:fixed 	}
+
+
+	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+	@ text align mods */
+
+	@if ( $mod == null ) 		{
+
+		.txt#{$mod}-j 			{ text-align:justify }
+		.txt#{$mod}-c 			{ text-align:center  }
+		.txt#{$mod}-r			{ text-align:right 	 }
+		.txt#{$mod}-l 			{ text-align:left 	 }
+	}
+
+
+
+	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+	@ gc : grid col unset width size */
+
+	//.gc-un-size#{$mod}			{ @include colsize(false,true) }
+	
+	
+	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+	@ str cut */
+
+	@if ( $mod == null ) 			{
+
+		.cut#{$mod} 				{ @include strcut(null) 	}
+		@for $i from 1 to 4  		{ 
+			.cut-#{$i}#{$mod} 		{ @include strcut-line($i) 	}
+		}
+	}
+
+
+	// /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+	// @ table block converts */ 
+
+	// @if ( $mod == '-xs') or ( $mod == '-ms') {
+	
+	// 	.t-block#{$mod} 			{ display:block;
+	// 		tbody,tfoot,thead,
+	// 		tr,td,th  				{ display:block }
+	// 	}
+
+	// 	.t-block#{$mod} table 		{ display:block;
+	// 		tbody,tfoot,thead,
+	// 		tr,td,th  				{ display:block }
+	// 	}
+
+	// }
+	
+	
+	// @if ( $mod == null ) or  ( $mod == '-md') or  ( $mod == '-sm') or  ( $mod == '-sm') {
+	// }
+
+	[style*="--py#{$mod}"] 	{ padding-top: 	var(--py#{$mod}); padding-bottom: var(--py#{$mod}) }	
+	[style*="--px#{$mod}"] 	{ padding-left:   var(--px#{$mod}); padding-right:  var(--px#{$mod}) }
+	[style*="--pr#{$mod}"]	{ padding-right:  var(--pr#{$mod}) }
+	[style*="--pl#{$mod}"]	{ padding-left:   var(--pl#{$mod}) }
+	[style*="--pb#{$mod}"] 	{ padding-bottom: var(--pb#{$mod}) }
+	[style*="--pt#{$mod}"]  { padding-top: 	var(--pt#{$mod}) }
+	[style*="--mx#{$mod}"] 	{ margin-left:    var(--mx#{$mod}); margin-right: var(--mx#{$mod}) }
+	[style*="--my#{$mod}"] 	{ margin-top:     var(--my#{$mod}); margin-bottom:var(--my#{$mod}) }
+	[style*="--ml#{$mod}"] 	{ margin-left:    var(--ml#{$mod}) }
+	[style*="--mr#{$mod}"] 	{ margin-right:   var(--mr#{$mod}) }
+	[style*="--mt#{$mod}"] 	{ margin-top:     var(--mt#{$mod}) }
+	[style*="--mb#{$mod}"]  { margin-bottom:  var(--mb#{$mod}) }
+
+
+	[style*="--fs#{$mod}:"]   { font-size: var(--fs#{$mod})!important }
+
+
+
+	.scr-x#{$mod} 			{ overflow-x: scroll ; @include touchscroll();}
+
+
+	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+	@ widths */
+	// @if ( $mod == null ) or  ( $mod == '-md') {
+			
+	// 		.var.w { width:var(--w#{$mod}) }
+	// }
+
+	.var.w[style*="-w#{$mod}"] { width:var(--w#{$mod}) }
+	
+	[style*="-w#{$mod}"] { width:var(--w#{$mod}) }
+	
+
+	// @if ( $mod == null )  {  } }
+	// @if ( $mod == '-lg' ) { .var.w { width:var(--w-lg) } }
+	// @if ( $mod == '-md' ) { .var.w { width:var(--w-md) } }
+	// @if ( $mod == '-xs' ) { .var.w { width:var(--w-md) } }
+	// @if ( $mod == '-ms' ) { .var.w { width:var(--w-md) } }
+
+
+	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+	@ class birim zero */ 
+
+
+	// .wauto#{$mod} 				{ width:auto }
+	// .hauto#{$mod} 				{ height:auto }
+	// .pl-0#{$mod} 				{ padding-left:0 }
+	// .pr-0#{$mod} 				{ padding-right:0 }
+	.pt-0#{$mod} 					{ padding-top:0 }
+	// .pb-0#{$mod} 				{ padding-bottom:0 }
+	.mt-0#{$mod} 					{ margin-top:0 }
+	.mb-0#{$mod} 					{ margin-bottom:0 }
+	// .mr-0#{$mod} 				{ margin-right:0 }
+	// .ml-0#{$mod} 				{ margin-left:0 }
+
+
+	@if ( $mod != null )  {  
+		.mt#{$mod} 					{ margin-top: unset }
+		.mb#{$mod} 					{ margin-bottom: unset }
+		.pt#{$mod} 					{ padding-top: unset }
+		.pb#{$mod} 					{ padding-bottom: unset }
+		.mr#{$mod} 					{ margin-right: unset }
+		.ml#{$mod} 					{ margin-left: unset }
+		.pr#{$mod} 					{ padding-right: unset }
+		.pl#{$mod} 					{ padding-left: unset }
+		
+	}
+	
+
+	
+	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+	@ class birim */
+
+	// @if ( $mod == null )  {  
+	// }
+ 	
+ 	$say:5;
+
+	@for $i from 1 through 100 {
+		@if $say == $i{
+			
+			@if ( $mod == null ) or  ( $mod == '-md')  or  ( $mod == '-xs') {
+			
+				.w-#{$i}#{$mod} 	 { width:#{$i}#{'%'} }
+				.mt-#{$i}#{$mod} 	 { margin-top:#{$i}#{'px'} }
+				.mb-#{$i}#{$mod} 	 { margin-bottom:#{$i}#{'px'} }
+				.ml-#{$i}#{$mod} 	 { margin-left:#{$i}#{'px'} }
+				.pt-#{$i}#{$mod}   { padding-top:#{$i}#{'px'} }
+				.pb-#{$i}#{$mod}   { padding-bottom:#{$i}#{'px'} }
+				.py-#{$i}#{$mod}   { padding-top:#{$i}#{'px'}; padding-bottom:#{$i}#{'px'} }
+				
+			}
+
+		
+			// .h#{$mod}-#{$i} 	  { height:#{$i}#{'%'} }
+			// .pl-#{$i}#{$mod}   { padding-left:#{$i}#{'px'} }
+			// .pr-#{$i}#{$mod}   { padding-right:#{$i}#{'px'} }
+			// .mr-#{$i}#{$mod}   { margin-right:#{$i}#{'px'} }
+			// .mx#{$i}#{$mod} 	  { margin-bottom:#{$i}#{'px'}; margin-bottom:#{$i}#{'px'} }
+			 
+			 .px-#{$i}#{$mod} 	    {  padding-left:#{$i}#{'px'}; padding-right:#{$i}#{'px'}  } 
+			 .my-#{$i}#{$mod} 	    {  margin-top:#{$i}#{'px'}; margin-bottom:#{$i}#{'px'}  } 
+			
+			$say : $say+5;
+		}
+	}
+
+	
+
+
+}
+
+
+
+
+@mixin text_fit($size,$us:false,$as:false) 			{ 
+	
+	font-size:$size;
+
+	@if ($us == false and $as == false) { 
+		
+		line-height:($size - 8); height:($size - 10 );
+
+	}@else{
+		
+		@if ($us and $as) { line-height:($size + 7); height:($size + 5 ) }@else{
+			
+			@if ($us) { line-height:($size + 7 ); height:($size - 3 ) };
+			@if ($as) { line-height:($size - 8); height:($size + 2 ) };
+		}
+	}
+	
+}
+
+@mixin toll_no_tab_color()  					{ -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
+
+@mixin toll_ripple($normal,$active,$sub:false) 	{ @include toll_no_tab_color();
+
+	
+	@if $sub 									{ 
+		> * 									{ background: $normal radial-gradient(circle, transparent 1%, $normal 1%) center/15000%; background-position: center; transition: background 0.6s; }
+		&.active > * ,
+		&:active > *  							{ background-color: $active; background-size: 100%; transition: background 0s }
+	}
+	@else 										{ background: $normal radial-gradient(circle, transparent 1%, $normal 1%) center/15000%; background-position: center; transition: background 0.6s;
+		
+		&.active,
+		&:active  								{ background-color: $active; background-size: 100%; transition: background 0s }
+	}
+}
+
+
+
+@mixin flex_mc()  								{ display: flex; align-items:center; justify-content:center }
+@mixin flex_bw()  								{ display: flex; justify-content:space-between }
+@mixin flex_bwyc()  							{ display: flex; justify-content:space-between;  align-items:center;  }
+@mixin flex_xc()  								{ display: flex; justify-content:center }
+@mixin flex_yc()  								{ display: flex ; align-items:center  }
+@mixin flex_yce()  								{ display: flex ; align-items:center;justify-content:flex-end  }
+
+@mixin fh($index:1) 							{ height:100% }
+@mixin fw($index:1) 							{ width:100%  }
+
+@mixin line-height($heightValue: 12 ) 			{ line-height:(0.100 * $heightValue) + rem }
+   
+
+@mixin menu_drop($j) 							{ .menu-drop{  width:unquote('#{$j}"px"'); margin-left:unquote('#{-($j / 2)}"px"') } }
+
+@mixin circle($size)  							{ font-size:$size; border-radius:1em; width:1em; height:1em; }
+@mixin underline()  							{ &:hover{text-decoration:underline} }
+
+@mixin gradient()  			 					{  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.01) 1%,rgba(0,0,0,1) 100%); }
+
+
+@mixin animated($duration:false, $infinite:false) { 
+		animation-fill-mode: both; 
+		@if $duration {  animation-duration: $duration;  } @lese { animation-duration: 1s;} 
+		@if $infinite  	  { animation-iteration-count: infinite; } 
+}
+
+
+
+@mixin kapla($index:1) 							{ position: absolute; left:0; top:0;  width: 100%; height: 100%; z-index: $index }
+
+
+@mixin touchscroll() 							{ -webkit-overflow-scrolling: touch; overflow-scrolling: touch; -os-overflow-scrolling: touch }
+
+@mixin colsize($size:false,$z:false) 			{ 
+	
+	@if not $size {
+		
+		@if not $z {
+
+			width:auto; max-width:none; min-width:initial;
+
+		}@else{
+
+			width:auto!important; max-width:none!important; min-width:initial!important;
+		}
+
+	}@else{
+		
+		width:$size; max-width:$size; min-width:$size;
+	}
+}
+
+
+@mixin placeholder($color:false,$opacity:false,$font:false,$padding:false,$size:false,$weight:false) { 
+	&::placeholder 		{ 
+		@if $color 		{  color: $color }
+		@if $opacity	{  opacity:$opacity}
+		@if $font 		{  font:$font }
+		@if $size 		{  font-size:$size }
+		@if $weight 	{  font-weight:$weight }
+		@if $padding 	{  padding:$padding }
+	} 
+}
+
+
+$browser-context:14;
+ 
+@function em($pixels, $context: $browser-context) {
+	
+	@return #{$pixels/$context}em;
+}
+
+
+@function str-replace($string, $search, $replace: "") {
+   
+   $index: str-index($string, $search);
+
+   @if $index {
+      @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+   }
+
+   @return $string;
+
+}
+
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  
+   $src: null;
+
+   $extmods: (
+      eot: "?",
+      svg: "#" + str-replace($name, " ", "_")
+   );
+
+   $formats: (
+      otf: "opentype",
+      ttf: "truetype"
+   );
+
+   @each $ext in $exts {
+      $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+      $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+      $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+   }
+
+   @font-face {
+      
+      font-family: quote($name);
+      font-style: $style;
+      font-weight: $weight;
+      src: $src;
+   	}
+}
+
+
+@mixin strcut ($width:null){
+	
+	@if $width 	{ 
+		
+		width: $width;
+	}
+
+	text-overflow: ellipsis ;
+	white-space: nowrap;
+	overflow: hidden ;
+}
+
+
+@mixin strcut-line ($line,$width:null){
+  	
+  	@if $width { 
+  		width: $width ;
+  	}
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	-webkit-box-orient: vertical; 
+  	-webkit-line-clamp: $line; 
+  	display: -webkit-box;
+}
+
+
+
+@function find_map($map, $keys...) {
+
+	@each $key in $keys {
+
+		$test : map-get($map, $key);
+
+		@if $test == null {
+  			
+  			//@error "#{$map} bu degisken yok";
+  			@return 'hata';
+  		}
+
+		$map: map-get($map, $key);
+	}
+	@return $map;
+}
+
+
+
+@function map-deep-get($map, $keys...) {
+ 
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+
+@mixin icon_fit($size,$set:'gizmo',$line:false,$height:false)  			{ 
+	
+	
+	@if $set == 'social'{
+		line-height:($size + 6); font-size:$size;  height:($size + 1); 
+	}
+
+	@if $set == 'gizmo'{
+		line-height:($size + 1); font-size:$size;  height:($size - 4); 
+		//line-height:($size + 4); font-size:$size;  height:($size + 1); 
+	}
+	@if $set == 'standard'{
+		line-height:($size + 5); font-size:$size;  height:$size; 
+	}
+	@if $set == 'pika'{
+		line-height:($size + 5); font-size:$size;  height:($size + 1); 
+	}
+	@if $set == 'weather'{
+		line-height:($size + 13); font-size:$size;  height:($size + 7); 
+	}
+	@if $set == 'custom'{
+		line-height:$line; font-size:$size;  height:$height; 
+	}
+}
+
+
+@mixin triangle($g:'load', $w:1em,$c:orange,$d:'yt')  			{
+ 	
+ 	@if $g == 'load'{
+		
+		.trin s 							{ position: relative; display:block; background-color: $c; text-align: left; 
+			&[style*="w"] 	{}
+			&:before, &:after 			{ content: ''; position: absolute; background-color: inherit; }
+		}
+		
+		.trin s,.trin s:before,
+		.trin s:after   				{ border-top-right-radius: 30%; width: $w; height: $w;}
+
+		.trin[style*="--w"] s 			{ width: var(--w); height: var(--w);
+			&:before, &:after 			{ width: var(--w); height: var(--w); }
+		}
+		.trin[style*="--c"] s 			{ background-color: var(--c) }
+
+		.trin s 						{ transform: rotate(-60deg) skewX(-30deg) scale(1,.866); }
+		.trin s:before 					{ transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%); }
+		.trin s:after 					{ transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%); }
+		
+		.trin  							{ width: $w; height: $w; display:block; position:absolute;
+			&[style*="--w"]  			{ width: var(--w); height: var(--w) }
+			&.xl 						{ transform:rotate(-90deg)}
+			&.xr 						{ transform:rotate(90deg) }
+			&.yb 						{ transform:rotate(180deg) }
+		}
+		
+
+
+	}
+
+	@if $g == 'cust'					{ width: $w; height: $w;
+			s  							{ width: $w; height: $w; background-color: $c;
+				&:before, &:after 		{ width:$w; height:$w; }
+			}
+	}
+
+}
+
+
+@mixin icofix( $f: false, $h:false, $l: false,)  			{ 
+	
+	display : inline-block;
+	@if $f { font-size: #{$f}px; }
+	@if $l { line-height: #{$l}px; } @else { line-height:1; }
+	@if $h { height:  #{$h}px; }
+}

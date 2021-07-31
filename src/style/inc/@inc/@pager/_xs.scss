@@ -1,0 +1,12 @@
+.pager 					{
+
+	a 					{ height:50px; width:56px; 
+		&:not(.m) 		{ display:none }
+		&.prev 			{ margin-right:12px }
+		&.next 			{ margin-left:0}
+	}
+		
+	.form 				{
+
+	}
+}

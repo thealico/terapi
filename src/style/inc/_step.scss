@@ -1,0 +1,92 @@
+body 									{
+	
+	&:not(.on-step) .on-step 			{ display: none!important }	
+	&.on-step .of-step 					{ display: none!important }
+	&.load-step.next .step.sw 			{ transform: translateX(-100%) }
+	&.load-step.prev .step.sw 			{ transform: translateX(100%)  }
+
+	&:not([step='1']) .onsb-1,
+	&:not([step='2']) .onsb-2,
+	&:not([step='3']) .onsb-3,
+	&:not([step='4']) .onsb-4,
+	&:not([step='5']) .onsb-5 		{ display: none!important }
+}
+
+
+.steps .step:not(.on)	{ display: none }
+
+.step 					{ transition: transform .8s, opacity .3s; opacity:1;
+	
+	&.fade 				{ opacity:0 ; }
+
+	.us 				{ text-align:center;
+		h4 				{ font:400 13px 'Brandon'; padding-bottom:20px; letter-spacing:1px; text-transform: uppercase }
+		h3  			{ font:300 34px/40px 'Gotham';
+			sup 		{ position: absolute; right:-35px; top:-2px; width:28px;  font-size:16px }
+		}
+	}
+	
+	.list 				{ font:300 14px 'Open Sans';
+		li 				{ border-bottom:1px solid #e2e2e2;
+			h4 			{ font-weight:700; line-height:1; font-size:14px; color:#333;  }
+			p			{ color:#797777; font-size:12px; padding-top:4px }
+			&:last-child{ border-bottom:0 }
+			a 			{ display:flex; align-items:center;  height:56px; padding:18px 8px;  @include toll_ripple (#fff,#ececec,false)  }
+			s 			{ position:absolute; right:0; top:0; @include flex_mc(); width:20px; height:100%;
+				i 		{ color:#ee614e }
+			}
+		}
+
+		&.t-2 li 		{ 
+			h4  		{ font-size:15px }
+			a 			{ height:70px }
+		}
+
+		&[style] li a  	{ height: var(--h) }
+
+		ul 				{ transition: transform .8s, opacity .3s; opacity:1; background:white;}
+		//> .spin  		{ width:40px;  position: absolute; top: 0; left: 50%; transform: translate(-50%, 0); }
+
+		&.t-3 			{ font-size:14px; font-weight:400;
+			li a 		{ padding:15px 12px; height:52px}
+			li s 		{ right:10px }
+			h4 			{ font-weight:400; color:#222 }
+			span 		{ margin-right:12px; color:#999 }
+
+		}
+	}
+
+	&.load 				{ 
+		.list 			{ background:url('img/load/spin-basic.svg') no-repeat center top; }
+		.list ul 		{ opacity: 0 }
+		
+	}
+
+
+	.list .lorem		{ 
+		div 			{ width:100%; }
+		h4 				{ background:#f1f1f1; border-radius: 5px; width:65%;  margin-bottom:9px; height:10px; }
+		p 				{ background:#f1f1f1; border-radius: 5px; width:30%;  height:8px; }
+	}
+	
+
+}
+
+.steps  				{
+	
+	&[speed='5'] .step	{ transition: transform .5s, opacity .3s }
+	&[speed='3'] .step	{ transition: transform .3s, opacity .2s }
+	&[speed='2'] .step	{ transition: transform .2s, opacity .1s }
+}
+
+.modal.f-nav 			{ 
+
+	.step .us h3 		{ font-size:24px; line-height:34px; 
+		&.f-22 			{ font-size:22px; line-height:32px }
+		&.f-21 			{ font-size:21px; line-height:30px }
+		&.f-18 			{ font-size:18px; line-height:28px }
+	}
+
+	
+}
+

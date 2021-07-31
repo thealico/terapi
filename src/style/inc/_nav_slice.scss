@@ -1,0 +1,48 @@
+.tab > ol							{ border-radius:6px; height:40px; display:flex; justify-content:center;
+
+	&[style] > li 					{ min-width: var(--mw) }
+
+	> li 							{ z-index:1; height:100%; 
+
+		.t 							{ cursor:pointer; border-bottom:1px solid $color-1; border-left:1px solid $color-1; border-top:1px solid $color-1; display:flex; align-items:center; justify-content:center; height:100%; font-weight:400; padding:0 20px; border-left:1px solid $color-1; color:$color-1; background:white; }
+		
+		&:first-child .t 			{ border-radius: 6px 0 0 6px;  }
+		&:last-child .t  			{ border-radius: 0 6px 6px 0; border-right:1px solid $color-1 }
+		
+		&.op 						{ 
+			.t	  					{ background: #ebf6ff; }
+		}
+
+		&.on 						{ 
+			.t  					{ color:white;background: $color-1; }
+			&.op .t 				{ color:$color-1; background:#ebf6ff }
+		}
+
+		 
+		&.sub  						{
+			.t  i 					{ font-size:7px; top:2px; margin-left:5px  } 
+		}
+	}
+}
+
+
+.tab-con 							{
+	> div:not(.on) 					{ display: none }
+}
+
+
+.tab.t-hafta > ol					{
+	
+	> li:nth-child(6) .t,
+	> li:nth-child(7) .t  			{ background:#f2f9ff }
+	> li.on 						{ 
+		.t  						{ background: $color-1; }
+	}
+}
+
+
+
+@media #{$gl-xs} {
+	
+	.tab > ol > li .t 				{ font-size:13px }
+}

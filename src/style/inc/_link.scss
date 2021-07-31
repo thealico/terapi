@@ -1,0 +1,49 @@
+a 									{ text-decoration:none ; color:#222;
+	&:visited,&:active,&:focus 		{ text-decoration:none }
+	&:hover 						{ text-decoration:none; color:black } 
+	&.underline:hover 				{ text-decoration:underline}
+}
+
+.uf-1 a, a.uf-1 						{ color:$color-1  }
+
+
+
+
+.uf-2 a, a.uf-2 						{ color:$color-1; font-weight:400; font-size:15px; display:inline-flex; align-items:center;
+	
+	i 									{ color:#444 }
+	i:not(.r) 							{ margin-right:8px }
+}
+
+.uf-3 a, a.uf-3 						{ color:$color-1; font:600 14px 'Source Sans Pro'; display:inline-flex; align-items:center;
+	
+	i 									{ color:#444 }
+	i:not(.r) 							{ margin-right: 5px }
+	i.ss-trash							{ top: 2px }
+	i.ss-user							{ top: 1px; font-size: 13px }
+}
+
+
+.uf-4 a, a.uf-4 						{ color: white;
+	&:hover 							{ color: #fda83b }
+}
+
+.uf-5 a, a.uf-5 						{ color: #14729a;
+	&:hover 							{ color: #e48139 }
+}
+
+
+
+
+
+
+
+
+
+// .url-1 a, a.url-1 					{ color:white; &:hover { color:$color-3 } }
+// .url-2 a, a.url-2 					{ color:$color-2; &:hover { color:$color-1 } }
+// .url-3 a, a.url-3 					{ color:$color-2; &:hover { color:$color-6 } }
+// .url-5 a, a.url-5 					{ color:#178ddf; &:hover { text-decoration: underline };  }
+// .url-under a, a.url-under 			{ &:hover { text-decoration: underline };  }
+// .url-r-under a, a.url-r-under 		{ text-decoration: underline; &:hover { text-decoration: none };  }
+

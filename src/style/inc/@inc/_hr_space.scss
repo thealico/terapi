@@ -1,0 +1,8 @@
+// Gelistirme Ortamı  : Daktilo Medya
+// Yer : Ayrac aralik cizgileri
+
+hr.space 							{ background:none; width:100%;  height: 1px; border:0;
+	&.b1 							{ background:$renk-gray-5 }
+	&.b2 							{ background:$renk-gray-5; height:2px }
+	&.b3 							{ background:$renk-gray-5; height:3px }
+}

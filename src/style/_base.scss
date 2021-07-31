@@ -1,0 +1,222 @@
+// degisken
+@import "base/variables";
+
+// fonskiyon
+@import "base/mixins";
+
+// reset style  
+
+@import "base/reset";
+
+/*
+@ relative  */
+
+* 			               	 { position: relative }
+.static-on.this,  			 { position:static }
+.static-on  * 				 { position:static }
+.static-off.this,
+.static-off  * 				 { position:relative }
+
+/*
+@ clear */
+
+.c:after               		{ content:" "; clear: both; display:block  }
+
+.h 							{ height:100%; }
+
+
+
+#code-builds 				{ position: static;  font-family: inherit; font-size: inherit; font-weight: inherit }
+
+.load.f-body 				{ 
+		
+	span 					{ position: fixed; opacity:0; transition:.3s; z-index: 5;  left: 0; top: 50px; width: 100%; height: var(--app-body); overflow: hidden }
+	span 					{ display:flex; justify-content:center;  align-items: flex-end  }
+	img 					{ height: 85%;  bottom: -50%; max-width: 900px; width: auto; }
+	&:not(.on)				{ display:none; }
+	&.show span 			{ opacity: 1 }
+	//&.show img 				{ bottom: -50%; }
+	&.f-2 span				{ background:#fff }
+	&.f-3 span				{ background:#f7f7f7 }
+}
+
+.ob-fade  	 				{ transition: opacity .2s; opacity: 1 }
+
+.ob-load   					{
+	
+	//.load.f-body 			{ display: block }
+	.ob-fade 				{ opacity: 0 }
+}
+
+
+/*
+@ pointer locked */
+
+.of-point 					{ pointer-events: none;  opacity:.7 }
+
+
+/*
+@ perde*/
+
+
+.ovrly 						{ background: rgba(18,18,18,.8); left: 0; top:0; width:100%; height: 100%; position: fixed; z-index:7  }
+
+.ovrly.tre,
+.ovrly.two,
+.ovrly.one 					{ visibility: hidden; opacity: 0; transition: opacity .3s; z-index:7 }
+
+.ovrly.two 					{ background: rgba(0,0,0,.09); transition: opacity .2s; }
+ 		
+
+
+.f-bulur 					{ filter: blur(2px) }
+
+
+// .screen.for 						{ visibility: hidden; opacity: 0; transition:.3s; }
+// .screen.tre 						{ background:rgba(18,18,18,.3) }
+// .screen.two 						{ display:none}
+
+
+html.ovrly-one .ovrly.one 		{ visibility: visible; opacity:1 }
+html.ovrly-two .ovrly.two 		{ visibility: visible; opacity:1 }
+html.ovrly-tre .ovrly.tre 		{ visibility: visible; opacity:1 }
+
+// html.screen-for-on .screen.for 		{ visibility: visible; opacity:1 }
+// html.screen-tre-on .screen.tre 		{ visibility: visible; opacity:1 }
+// html.screen-two-on .screen.two 		{ display:block }
+
+html.no-scroll,
+html.no-scroll body 				{ height: 100%; width: 100%;  overflow: hidden }
+html.no-scroll body 				{ position: fixed }
+
+html.un-scr body 					{ height: auto!important; overflow: hidden; }
+
+
+
+.hide-scr::-webkit-scrollbar 		{ display: none}
+
+
+.scr-y 								{ height: 100%; overflow-y:scroll; overflow-x:hidden }
+
+.scr-touch 							{ @include touchscroll(); }
+
+.cc-click > * > *,
+.c-click > *,
+.click 								{ cursor: pointer }
+								
+
+
+/*
+@ find key  */
+
+.find-list.iskey >*:not(.onkey) 	{ display: none!important }
+
+
+/*
+@ positions  */
+
+.prt,.prb,.plt,
+.plb,.pcx,.pcy,.pcxy 		{ position: absolute;}
+
+.prt,.plt           		{ top:0 ;}
+.prb,.plb          			{ bottom:0 ;}
+.prt,.prb           		{ right:0 }
+.plt,.plb          			{ left:0 }
+.pcx,.pcxy          		{ left:50%; right:50% }
+.pcy,.pcxy          		{ top:50%; bottom:50% }
+
+.a-lb 						{ bottom:0 }
+.a-rt 						{ right:0 }
+.a-rb 						{ right:0; bottom:0 }
+
+
+.span-fix 					{ @include kapla() }
+
+/*
+ @ clear groups */ 
+
+// .c:after,
+// .c-left:after ,       
+// .c-left-2 > *:after,    
+// .c-left-3 > * > *:after   	 		{  content:" "; clear: both; display:block  }
+
+/*
+ @ child > left */ 
+
+// .c-left > * ,       
+// .c-left-2 > * > *,    
+// .c-left-3 > * > * > *   			 { float: left } 
+
+/*
+ @ child > left */
+
+.c-right  > *   			       	{ float: right }
+
+/*
+ @ margin  auto */
+
+.cm 								{ margin-left:auto; margin-right:auto }
+
+/*
+@ likit img  */
+
+img.iw, .iw img 					{ display:block; width:100% }
+
+
+/*
+@ grid test  */
+
+// .grid-test 							{ position:fixed; width:100%; display:block; height:100%; z-index:20; left:0; top:0;display:none;
+// 	&.on 							{ display:block}
+// 	span.con 						{ display:block; height:100% }
+// 	.row  							{ height:100% }
+// 	.row span 						{ height:100% }
+// 	.row s 							{ display:block; height:100%; background:rgba(227,60,60,.2) }
+// }
+
+/*
+@ grid's block tanimlari */
+
+
+[class*="visble"] 					{ display:none;  &.import { display:none!important }}
+
+
+
+.hidden-import 						{ display:none!important }
+.of-event 							{ pointer-events: none; }
+.on-event 							{ pointer-events: all; }
+
+
+.no-borderbox 					{ box-sizing:initial}
+
+/*
+@ top  */
+
+// @for $i from 1 to 15  	{ 
+// 	.top-#{$i} { top:#{$i}px ; &.import { top:#{$i}px !important } }; 
+// }
+
+// @for $i from 1 to 5  	{ 
+// 	.-top-#{$i} { top:-#{$i}px ; &.import { top:-#{$i}px !important } }; 
+// }
+
+
+/* @ flex */
+
+.flex 	  { display: flex }
+.flex.mc  { align-items:center; justify-content:center }
+.flex.yc  { align-items:center;  }
+.flex.bw  { justify-content: space-between  }
+.flex.end { justify-content: flex-end  }
+
+
+/*
+@ html swicth global */
+
+@include makeHtmlKits(null);
+
+@media #{$gl-lg} {  @include makeHtmlKits(-lg) }
+@media #{$gl-md} {  @include makeHtmlKits(-md) }
+@media #{$gl-sm} {  @include makeHtmlKits(-sm) }
+@media #{$gl-xs} {  @include makeHtmlKits(-xs) }
+//@media #{$gl-ms} {  @include makeHtmlKits(-ms) }

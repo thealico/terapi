@@ -1,0 +1,19 @@
+.block-load 				{
+
+	.bl-in 					{ transition: opacity .3s }
+}
+
+html.bl-on 					{
+	
+	.block-load.anime 		{
+		
+		.bl-spin 			{ background:url('img/load.gif') no-repeat center center; background-size:100% auto; }
+		.bl-spin 			{ position: absolute; font-size:30px; left:50%; width:1em; height:1em }
+		.bl-spin.yc 		{ transform: transalteY(50%); top:50%; }
+		.bl-spin.xc 		{ transform: transalteX(50%); left:50%; }
+		.bl-spin.mc 		{ transform: transalte(50% 50%);left:50%; top:50% }
+		.bl-in 				{ opacity:0 }	
+	}		
+}
+
+

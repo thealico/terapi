@@ -1,0 +1,47 @@
+ 
+header 						{ background:white; display:flex; transition:.3s; flex-direction:column; position:sticky; top:0; z-index:3; height:90px;
+
+	.logo 					{ 
+
+		img 				{ max-width: 224px }
+	}
+
+
+	.main ul 				{ 
+		> li   				{ 
+			a 				{ font-size:14px; font-weight:400;
+				&:hover 	{ color:#1e8a4b; }
+			}
+			i 				{ font-size:12px; margin-left:5px; top:0px }
+		}
+	}
+
+	.user 					{
+		a 					{ width:30px; height:30px; background:#f1f1f1; border-radius:30px; @include flex_mc();
+			&:hover			{ background:#1e8a4b; color:white;  }
+		}
+		a i 				{ font-size:16px; top:1px }
+	}
+	
+}
+
+
+@media #{$gl-md-min}  		{
+	
+	header 					{
+		.lan a i 			{ display: none }
+	}
+
+}
+
+
+.stick-150 header 			{ box-shadow: 0 0 14px rgba(148,148,148, .5 );  }
+
+// @media #{$gl-lg} { @import "@header/lg" }
+// @media #{$gl-md} { @import "@media/md"  } 
+// @media #{$gl-sm} { @import "@media/sm"  } 
+// @media #{$gl-xs} { @import "@media/xs"  }  
+// @media #{$gl-ms} { @import "@media/ms"  }    
+
+
+

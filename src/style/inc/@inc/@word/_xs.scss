@@ -1,0 +1,14 @@
+.word 										{ 
+	
+	&.em 									{ 	
+		p 									{ font-size:em(17) }
+	}
+	
+	&.tf14-xs p						 		{ font-size:14px; line-height: 20px }
+	&.tf16-xs p				 				{ font-size:16px; line-height: 27px }
+
+
+	// &.tf1631-xs p				 		{ font-size:16px; line-height: 31px }
+	// &.tf18-xs p						 	{ font-size:18px; line-height: 30px }
+	// &.tf21-xs p						 	{ font-size:21px; line-height: 32px }
+}

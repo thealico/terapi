@@ -1,0 +1,21 @@
+$iconImport : false;
+
+@if ($iconImport){ 
+
+	@if ($iconPath){ 
+		
+		$iconPath : $iconPath; 
+	}
+	@else { 
+
+		$iconPath : 'font/'; 
+	}    
+
+	@import url( '#{$iconPath}standard/ss-standard.css');
+	@import url( '#{$iconPath}social/ss-social.css');
+	@import url( '#{$iconPath}gizmo/ss-gizmo.css');
+	@import url( '#{$iconPath}pika/ss-pika.css');
+	// @import url( '#{$iconPath}weather/weather.min.css');
+	
+}
+

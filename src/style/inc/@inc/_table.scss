@@ -1,0 +1,144 @@
+// Ilk Gelistirme Ortamı  : Zero Buffer
+// Yer : basit tablo sıfırlama ve responsive destekleri
+
+.tablo, table 						{ border-spacing: 0; border-collapse: collapse;
+	thead.c 						{
+		th 							{ text-align:center}
+	}
+	tbody.c 						{
+		td 							{ text-align:center}
+	}
+	tbody,thead 					{
+		td,th 						{ text-align:left;
+			&.l 					{ text-align:left }
+			&.c 					{ text-align:center }
+			&.r 					{ text-align:right }
+			&.b 					{ font-weight:bold }
+		}
+	}
+}
+
+
+.tablo 								{ width:100%; font-family:$font-2;
+	tr 								{ border-bottom: 1px solid #e8e7e7; height:42px }
+	tbody tr:last-child 			{ border-bottom:0 }
+	
+	th,td 							{ border-left: 1px solid #e8e7e7; padding:0 10px }
+	tr > *:first-child 				{ border-left: 0  }
+ 	thead th 						{ font-weight: normal }
+ 	&.head-top thead th 			{ font-weight: bold; color:#22568c	 }
+	&.head-sid tr > *:first-child 	{ font-weight: bold; color:#22568c }
+
+	thead tr th						{ background: #f5f5f5  	}
+	thead tr th:first-child			{ border-radius: 6px 0 0 0 	}
+	thead tr th:last-child			{ border-radius: 0 6px 0 0 	}
+	tbody tr:nth-child(2n+0) td		{ background: #f7f7f7  	}
+	td i 							{ display: none }
+}
+
+.tablo-wrap 							{ border:1px solid #e8e7e7; border-radius: 6px; overflow-y: hidden; overflow-x: auto; @include touchscroll() }
+
+
+
+@media #{$gl-xs} 							{ 
+	
+	.tablo-mobil-xs 						{ overflow:hidden;
+		.tablo-in 							{ min-width: unset!important }
+	}
+	.tablo-mobil-xs table 	 			{ display:block; 
+
+		tbody,tfoot,thead,tr,td,th  	{ display:block }
+
+		thead                     		{ display:none }
+		tbody tr                  		{ height:auto; padding:0 0 4px 0;
+			td,
+			&:nth-child(2n+0) td 		{ background: none; border-left:0; }
+			&:nth-child(2n+0) 			{ background: #f7f7f7 }
+
+			td.head 							{ background: #f1f1f1;  border-bottom:1px solid #e8e7e7; margin-bottom: 4px; height: 38px; display: flex; align-items: center;
+				i 								{ display: none; }
+			}
+
+			td:not(.head)					{ padding-left:45%; border-bottom:1px solid #e8e7e7;	padding-top: 10px; padding-bottom: 10px;
+				&:last-child         		{ margin-bottom:0; border-bottom:0 }
+				&:before             		{ 
+					position:absolute;
+					font-weight:700;
+					width:40%;
+					left:10px;
+					top:0;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					content:attr(data-title);
+				}
+				i 								{ display: inline;  margin-right: 6px }
+			}        
+		}
+	}
+}
+
+@media #{$gl-ms} 							{ 
+	
+	.tablo-mobil-ms 						{overflow:hidden;
+		.tablo-in 							{ min-width: unset!important  }
+	}
+	.tablo-mobil-ms table 	 			{ display:block;
+		
+		tbody,tfoot,thead,tr,td,th  	{ display:block }
+
+		thead                     		{ display:none }
+		tbody tr                  		{ height:auto; padding:0 0 4px 0;
+			td,
+			&:nth-child(2n+0) td 		{ background: none; border-left:0; }
+			&:nth-child(2n+0) 			{ background: #f7f7f7 }
+
+			td.head 							{ background: #f1f1f1;  border-bottom:1px solid #e8e7e7; margin-bottom: 4px; height: 38px; display: flex; align-items: center;
+				i 								{ display: none; }
+			}
+
+			        
+		}
+		
+		&.head-sid.head-top  					{
+			tbody tr  								{ 
+				td:not(.head)						{ border-bottom:1px solid #e8e7e7;	padding-top: 7px; padding-bottom: 7px;
+					&:last-child         		{ border-bottom:0 }
+				}
+			}	
+		}
+
+		&.head-sid:not(.head-top)  			{
+			tbody tr  								{ 
+				td:not(.head)						{ padding-top: 7px; padding-bottom: 7px;
+				}
+			}	
+		}
+
+		&.head-top 									{
+			
+			tbody tr  								{
+				td:not(.head)						{ padding-left:45%; 	padding-top: 10px; padding-bottom: 10px;
+					&:last-child         		{ margin-bottom:0; }
+					&:before             		{ 
+						position:absolute;
+						font-weight:700;
+						width:40%;
+						left:10px;
+						top:0;
+						padding-top: 10px;
+						padding-bottom: 10px;
+						content:attr(data-title);
+					}
+					i 									{ display: inline; margin-right: 6px }
+				}
+			}
+		}
+
+
+		&:not(.head-sid) 							{
+			tbody tr  								{ padding:8px 0;
+				td:not(.head) 						{ padding-top: 6px; padding-bottom: 6px  }
+			}	
+		}
+	}
+}

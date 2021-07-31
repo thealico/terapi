@@ -1,0 +1,9 @@
+.c-mask-ratio,.mask-ratio 	{
+
+   .real                 	{ width:100%; object-fit:cover; height:100%; position:absolute; left:0; top:0}
+   .real.dk  			  	   { top:50%; left:50%; transform:translate(-50%,-50%); width:auto; height:100%  }
+   .mask                  	{ width:100%; display:block}
+}
+
+.c-mask-ratio.crop figure,
+.mask-ratio.crop 			{ overflow:hidden!important; display:block;}

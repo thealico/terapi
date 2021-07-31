@@ -1,0 +1,54 @@
+.modal.f-cari						{ 
+	
+	.modal-content 						{ height:420px }
+	//&.of .modal-content 				{ transition:.7s; transform: translate(0, 170% ) }
+	
+	.modal-content 						{ max-width: 480px }
+	.modal-head 						{ border-color:#e8e8e8;
+		button 							{ height:100%; padding:0 14px; font:700 14px 'Source Sans Pro' }
+		.f-hesap 						{
+			i 							{ color:#444 ; font-size:12px; top:1px; margin-right:6px; }
+		}
+
+		>.b 							{ transition:.5s; opacity:1 }
+	}
+	
+
+	.list-1 							{ 
+	
+		&.iskey li:not(.onkey) 			{ display: none }
+		a 								{ color:#555 }
+		a span							{ color:#333; margin-right:5px }
+		a i 							{ position: absolute; color:#1081eb; font-size:10px; right: 12px; top: 20px; visibility:hidden; animation-duration: .2s; }
+		li.on a 						{ font-weight:bold;
+			i  							{ animation-name: zoomIn;  visibility:visible; }
+		}
+
+		&.xl li 						{
+			&.on a						{ font-weight:400; color:#333; span { color:#111 } }
+			i 							{ font-size:14px; top:26px; right:16px }
+		}
+	}
+
+	&[mod='z'] .mod-c,
+	&[mod='c'] .mod-z 					{ display: none }
+	
+	&.mod-open .mod-of 					{ display: none }
+	
+	.mod-fade  							{ transition:.4s; opacity:1; }
+	&.mod-load .mod-fade  				{ opacity: 0 }
+
+	
+	.modal-body .mod 					{ transition:.6s; transform: translate(0,0) }
+	
+	&[mod='c'].mod-load .modal-body .mod-c { transform: translate( -100%,0) }
+	&[mod='z'].mod-load .modal-body .mod-z { transform: translate( 100%,0)  }
+
+	&.f-z .z-of, 
+	&:not(.f-z) .z-on 					{ display:none}
+	
+	&:not(.fc-tum) .list-tum,
+	&.fc-tum .list-tur 					{ display: none }
+	&.fc-tum .modal-head .of-cari 		{ display: none }
+	
+} 

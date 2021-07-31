@@ -1,0 +1,286 @@
+/*  alico 
+@ Front-end Developer & UI Designer by alico ( http://akman.me )  
+@ Files :  */
+	
+// @import "builds/grid/grid.scss";  
+ 
+// @import "base/variables"; 
+// @import "base/mixins";
+ 
+/*
+@  base */ 
+
+// @import url('base.min.css'); 	
+
+@import "base"; 	
+
+
+@import url('builds/grid/grid.min.css');
+
+/*
+@  font */ 
+
+
+@import url('font/font.min.css');
+@import url('icon/icon.min.css');
+
+// @import 'font/merge';
+// @import 'icon/merge';
+
+/*
+@  Libs  */
+
+// @import url('libs/tooltipster/dist/css/tooltipster.bundle.css');
+// @import url('libs/lbox/dist/css/lightgallery.min.css');
+// @import url('libs/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css');
+// @import url('libs/datepicker/merge/datepicker.min.css');
+// @import url('libs/photoswipe/merge/photoswipe.css');
+// @import url('libs/animate/animate-optimize.css');
+// @import url('libs/sweetalert/sweetalert.css');
+// @import "libs/optimize/merge";
+
+// @import url('libs/animate/animate.css');
+// @import url('libs/slick/slick.css'); 
+
+
+// @import 'libs/photoswipe/photoswipe';
+@import 'libs/sweet-alert/sweet-alert';
+@import 'libs/animate/animate';
+@import 'libs/slick/slick';
+
+
+/*
+@  Build */
+
+// @import url('builds/form/form.min.css'); 
+// @import url('builds/ets/ets.min.css'); 
+
+@import "builds/form/form";
+
+
+
+/*
+@ layout */
+
+
+@import "layout/layout";
+@import "layout/header";
+@import "layout/footer";
+
+
+/* 
+@ Include > Ayrik yapi olmayanlar */
+
+@import "inc/nav_slice"; 
+@import "inc/context"; 
+@import "inc/mask_ratio"; 
+@import "inc/link"; 
+@import "inc/toll"; 
+@import "inc/swal";
+@import "inc/refresh";
+@import "inc/block_load";
+@import "inc/note";
+@import "inc/triangle"; 
+@import "inc/tooltip"; 
+
+// @import "inc/menu-mobil";
+// @import "inc/more_bant"; 
+// @import "inc/buton_prev_next"; 
+///@import "inc/hr_space"; 
+// @import "inc/embed_case"; 
+// @import "inc/dot_post"; 
+// @import "inc/tab"; 
+// @import "inc/pager"; 
+// @import "inc/ayrac"; 
+
+
+@import "inc/ul_table"; 
+@import "inc/tr_table"; 
+@import "inc/slide"; 
+@import "inc/step"; 
+
+// @import "inc/word"; 
+// @import "inc/tost"; 
+
+
+// @import "inc/block/post";  
+
+
+/* 
+@ Include > Build's  */
+
+@import "inc/builds/modal/modal";
+
+// @import "inc/builds/slimscroll";
+// @import "inc/builds/icon";
+//@import "inc/builds/mask";
+@import "inc/builds/buton";
+
+ 
+
+
+
+.sub 							{
+	main 						{ background:#eff4f3 }
+}
+
+.capa 							{ position: absolute; left: 0; top:0 ; width: 1px; height: 1px; border:0 ; background: none }
+.under 							{ opacity:.5 }
+.under-text 					{ text-align:center;
+	i 							{ font-size:70px; color:#ff862d; display:block; margin-bottom:18px }
+	p 							{ font:300 20px 'Gotham'}
+}
+
+
+blockquote 						{
+	
+	&.t-1 						{ background:#aee8db; color:#2f4861; font-weight:600; line-height:1.6; font-size:14px; padding:22px 0 18px 0; border-radius:6px; text-align:center; }
+	&.t-2 						{ font: normal 24px/1.3 "Georgia"; color:#8e8d8f; text-align: center;
+		s 						{ position: absolute; font-size: 36px; color:$color-1; line-height: .9; display: block; height: 14px }
+		.a 						{ left:-25px; top:-15px }
+		.b 						{ right:-25px; bottom:-15px }
+	}
+}
+
+
+figure 							{
+
+	&.t-1 img 					{ border-radius:6px }
+}
+
+
+
+/*
+.breadcrumb  					{ font-size:12.5px; 
+
+	&:not(.t-1) 				{ position: absolute; left:0; width:100%; top:20px }
+	&.t-1 						{ padding:0; }
+
+	ol li 						{
+		&:not(:first-child):before { padding-right: .5rem; padding-left: .5rem; color: #888; font-size:11px; content: "/" }
+		a 						{ color:#adc4dd; &:hover{ color:#86aad0 }  }
+		&.on,&.on a 			{ color:#999 }
+		&:last-child 			{ color:#999;
+			a 					{ color:#999}
+		}
+	}
+	
+}
+*/
+
+
+
+blockquote.record 				{ display: flex;align-items: center;padding:20px 10px 20px 0 ;font-size: 19px;color: #909090;  font-weight: 300;
+	i 							{ color:orange; display: block;  font-size:30px; }
+}
+
+
+
+/*
+@ Unders, Gecici Kodlar
+@ Gelistirmesi deam eden sayfalar icin atlama ve ayar blockları */
+
+.unders				{
+
+	.tt 			{ padding:40px 0 0 20px; width:480px;  font:400 13px 'Ubuntu'; } 
+	.tt li 			{ display:block;}
+	.tt ul 			{ border:1px solid #ddd; border-radius: 12px; }
+	.tt ul li  		{ border-bottom:1px solid #ddd; }
+	.tt ul li  a 	{ font:500 14px 'Ubuntu'; color:#333; display:block; padding:16px 12px; 
+		
+		i.prt 	 	{ top:16px; right:12px; color:$color-1}	
+	}
+
+	.tt ul li:last-child { border-bottom:0 }
+	.tt h4 { color:red; margin-top:60px; margin-bottom:20px; }
+	.tt summary{ display: inline; padding-left: 10px;  font-size:12px; }
+
+
+	ul.set 				{	
+		li 				{ height:56px; @include flex_bw(); }
+		label 			{ @include flex_yc(); padding:0 10px }
+		li > div 		{ width:100px; }
+		select 			{ background: none  }
+
+	}
+
+	.frm .fi-down 		{ background:none ; width:30px }
+
+	.under-block 		{ bottom:17%; right:4%;  width:60%; max-width:510px;  
+		h4 				{ font:400 16px gotham}
+		p 				{ font-size:13px; line-height:24px; b{ font-weight:400}}
+		figure  		{ font-size: 120px;border-radius: 1em;width: 1em;height: 1em;background: #FCB82E;
+			i 			{ color:black; font-size:54px; }
+			s 			{ width: 0;height: 0;border-style: solid;border-width: 20px 15px 0;border-color: #FCB82E transparent transparent;position: absolute;right: 37px;bottom: -9px;transform: rotate(19deg);}
+		}
+	}
+}
+
+
+
+
+
+/*
+
+@media screen and (max-width: 1022px) and (orientation:landscape) {
+		
+	main  { display: none }
+	code  {
+
+		> *:not(.screen-lock)  		{ display: none  }
+		.screen-lock .f-phone  		{ display: flex  }
+		.screen-lock 				{ display: block }
+	} 
+}
+*/
+
+
+/*
+@ main > response */
+
+
+// @media #{$gl-lg} { @import "@main/lg" }  	//	1280
+// @media #{$gl-md} { @import "@main/md" }  	//	1024
+// @media #{$gl-sm} { @import "@main/sm" }  	//	0768
+// @media #{$gl-xs} { @import "@main/xs" }  	//	0568
+// @media #{$gl-ms} { @import "@main/ms" }  	//	0360
+
+
+
+/* 
+@ layout */
+
+// @import "layout/app-head";
+// @import "layout/app-menu";
+
+
+/*
+@ pages  */
+
+ @import "pages/home";
+
+// @import "pages/dashboard";
+// @import "pages/oturum";
+// @import "pages/market";
+// @import "pages/sepet";
+// @import "pages/cari";
+// @import "pages/kasa";
+// @import "pages/cek";
+// @import "pages/belge";
+// @import "pages/frame";
+
+
+//@import "pages/dashboard";
+// @import "pages/cari";
+// @import "pages/market";
+// @import "pages/sepet";
+// @import "pages/islem";
+
+
+// @import "pages/playlist"; 
+// @import "pages/group"; 
+// @import "pages/screen";
+// @import "pages/asset";
+// @import "pages/giris";
+
+//@import "pages/screen";

@@ -1,0 +1,105 @@
+// Content max and min size 
+
+$case-ext			: 1680px ;
+$case-max			: 1170px ;
+$case-min			: 360px  ; 
+
+// Fonts
+
+$iconPath  			: false;
+$fontPath  			: false;
+
+
+$font-size			: 14px;
+
+$font-0				: 'Gotham';
+$font-1  			: Brandon, Arial, sans-serif;
+$font-2  			: Arial, sans-serif;
+$font-3  			: Open Sans, Arial, sans-serif;
+$font-4  			: 'Gotham Narrow', Arial, sans-serif;
+
+
+
+// .font-arial 			{ font-family: $font-2  } 
+// .font-brandon		{ font-family: $font-1  } 
+// .font-opensans		{ font-family: $font-1  } 
+	
+// Colors
+
+$color-1	: #1081eb;	 	// 	blue    : default links
+$color-7	: #1c6dd1;	 	// 	blue    : links
+$color-2	: #f1371e;		//	orange 	: default active on class	
+$color-3	: #ddd;		//	orange 	: default active on class	
+
+$color-b	: #187b49;		
+$color-a	: #3f4863;	
+
+$color-9	: #FF8040;	
+
+
+
+
+// gray ton
+
+$gray-1		: #f7f7f7;	
+
+$gray-2		: #e5e5e5;	
+$gray-3		: #fcfcfc;	
+$gray-4		: #f2f2f2;
+
+
+$line-1 	: linear-gradient(90deg, #ffca68, #bf6527);
+
+
+// $gray-5		: #dedede;		
+// $gray-6		: #dddddd;		
+// $gray-7		: #d4d3d3;		
+// $gray-8		: #c5c5c5;		
+// $gray-9		: #6f6f6f;	
+
+
+// FlexBox-Grid Sets
+
+$gl-con       	 	: "screen and (max-width: #{$case-max+10} )";
+$gl-con-min    	 	: "screen and (min-width: #{$case-max+10} )";
+
+$gl-ms       	 	: "screen and (max-width: 26em)"; 		
+$gl-xs        		: "screen and (max-width: 35.5em)"; 
+$gl-sm        		: "screen and (max-width: 54em)";  	
+$gl-md         		: "screen and (max-width: 64em)";   
+$gl-lg         		: "screen and (max-width: 80em)";   	
+$gl-xl         		: "screen and (max-width: 87.5em)";   	
+$gl-xxl        		: "screen and (max-width: 100em)";   	
+
+$gl-ms-min       	: "screen and (min-width: 26em)"; 	
+$gl-xs-min        	: "screen and (min-width: 35.5em)"; 	
+$gl-sm-min        	: "screen and (min-width: 54em)";  	 	
+$gl-md-min         	: "screen and (min-width: 64em)";   	
+$gl-lg-min      	: "screen and (min-width: 80em)";   	
+$gl-xl-min      	: "screen and (min-width: 87.5em)";   	
+				
+
+$gl-gut				: 1rem; 
+$gut-sm				: 20px;
+$gut-xs				: 16px;
+$gut-ms				: 12px;
+
+
+
+
+
+
+
+// BootStrap's Grid's Sets
+
+// $gl-xl         : "(min-width: 1400px)";  
+// $gl-lg         : "(min-width: 1200px)";  
+// $gl-md         : "(max-width: 1199px)";   
+// $gl-sm         : "(max-width: 991px)";   						
+// $gl-xs         : "(max-width: 767px)"; 						
+// $gl-ms         : "(max-width: 420px)"; 		
+
+// $gl-lg         : "(min-width: 1200px)";  
+// $gl-md         : "(min-width: 992px) and (max-width: 1199px)";   
+// $gl-sm         : "(min-width: 768px) and (max-width: 991px)";   						
+// $gl-xs         : "(max-width: 767px)"; 		

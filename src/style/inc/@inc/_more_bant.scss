@@ -1,0 +1,15 @@
+// Ilk Gelistirme Ortamı  : Daktilo Medya
+// Yer : Devam butonu
+
+
+.more-bant 					{ font:700 16px $font-2; background:#282727; color:white; display: block; padding: 14px 0; text-align: center;
+	i 						{ position: absolute 	}
+	.ss-up,.sag 			{ right: 12px; top: 19px; font-size:12px }
+	.ss-index 				{  font-size:16px }
+	&:hover  				{ background-color:#111; color:#fff  }
+	
+	&.white 				{ background:none; border:1px solid #d6d3d3; font-weight:800; padding:12px 0; color:#3d3e3f;
+		&:hover 			{ background:none; color:#000; border-color:#555 }
+		.ss-up 				{ top: 17px;}
+	}
+}

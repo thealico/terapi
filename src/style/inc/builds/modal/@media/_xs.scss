@@ -1,0 +1,11 @@
+.modal.format-ilan						{ 
+	
+	.modal-inner 						{ padding:14px }
+	
+}
+
+.modal.format-mesaj 					{ padding:10px;
+	.modal-content 						{ max-width:none; max-height:none; height:100%; width:100%;  }
+	section 							{ padding:16px }
+	.modal-mesaj 						{ min-height:400px }
+}

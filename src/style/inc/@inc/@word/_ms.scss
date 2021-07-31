@@ -1,0 +1,30 @@
+.word 										{ 
+	
+	
+
+	&.tf14-ms p						 		{ font-size:14px; line-height: 22px }
+	&.tf16-ms p				 				{ font-size:16px; line-height: 27px }
+
+	// &.tf1631-ms p				 		{ font-size:16px; line-height: 31px }
+	// &.tf18-ms p							{ font-size:18px; line-height: 30px }
+	// &.tf21-ms p							{ font-size:21px; line-height: 32px }
+
+
+	&.f-2 									{
+		
+		p									{ font-size:15px; line-height:1.62; margin-bottom:13px }
+
+		img 								{  width:100%; }
+
+		img[class*="sol-"], 	
+		img[class*="sag-"] 					{ margin:0 ; float:none; width: 100% }
+		
+		
+
+
+		
+		
+	}
+	
+
+}

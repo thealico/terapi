@@ -1,0 +1,204 @@
+// @ Flexbox Grid Version 1.5.0  - https://github.com/thealico/flexboxgrid
+// @ Front-end Developer by Ali Akman (alico) 
+// @ http://akman.me  */
+
+@mixin make-row-number($n:false)          
+{
+   @for $i from 0 to $set-column                {
+      
+      .row#{$n}-#{$i+1} > #{$select-colone}     { flex-basis: calc( #{nth($set-row, $i+1)} - var(--cg) ); /* max-width: calc( #{nth($set-row, $i+1)} - var(--cg) ) */  } 
+   }
+}
+
+@mixin make-col-number($n:false)          
+{
+   @for $i from 0 to $set-column                {
+      #{$select-row } > .col#{$n}-#{$i+1}       { flex-basis: calc( #{nth($set-col, $i+1)} - var(--cg) ); /*max-width: calc( #{nth($set-col, $i+1)} - var(--cg) ) */ }
+   }
+}
+
+@mixin make-row-option($n:false)       
+{
+ 
+   #{$select-row}                      {
+
+      &.center#{$n}                    { justify-content: center}
+      &.end#{$n}                       { justify-content: flex-end }
+      &.start#{$n}                     { justify-content: flex-start }
+      &.between#{$n}                   { justify-content: space-between }
+      &.around#{$n}                    { justify-content: space-around }
+      &.top#{$n}                       { align-items: flex-start }
+      &.middle#{$n}                    { align-items: center }
+      &.bottom#{$n}                    { align-items: flex-end }
+      &.stretch#{$n}                   { align-items: stretch }
+      &.baseline#{$n}                  { align-items: baseline }
+      &.direct-x#{$n}                  { flex-direction: row  }
+      &.direct-xr#{$n}                 { flex-direction: row-reverse  }
+      &.direct-yr#{$n}                 { flex-direction: column-reverse }
+      &.direct-y#{$n}                  { flex-direction: column }
+      &.direct-yr#{$n},&.direct-y#{$n} { > #{$select-colone} { flex-basis: auto; width:100% } }
+      
+      //&.c-op#{$n} > *                  { padding-left:$gut/2; padding-right:$gut/2 }   // left, right gutter on
+      
+      &.c-op#{$n}                      { column-gap: var(--cg) }     // left, right gutter on
+      
+      
+
+      &.c-nb#{$n}                      { row-gap: 0 }                // bottom gutter on      
+      &.c-ob#{$n}                      { row-gap: var(--cg) }        // bottom gutter of      
+      
+      &.c-nf#{$n} > *                  { flex: none }                                   
+      
+      @if not $n                       { 
+
+         &.nsc                         { margin-left:auto; margin-right:auto }
+         &.ns,&.nsc                    { --rg:0; --cg:0 }
+         
+         &.c-eh > *                    {
+            > *                        { height: 100%;  width: 100%; display: block  }
+         }
+
+         &.c-eh-2 > *                   { display:flex;
+            > *                         { flex: 1 0 100% }
+         }
+      }
+   }
+}
+
+@mixin make-col-option($n:false)       
+{
+
+   #{$select-row}                      {
+      
+      .tc#{$n}-top                     { align-self: flex-start }
+      .tc#{$n}-middle                  { align-self: center }
+      .tc#{$n}-bottom                  { align-self: flex-end }
+      .tc#{$n}-first                   { order: -1 }
+      .tc#{$n}-last                    { order: 1 }
+      .tc#{$n}-ns                      { padding-left:0; padding-right: 0; padding-bottom: 0 }
+      .tc#{$n}-ob                      { padding-bottom:$gut }
+      .tc#{$n}-nb                      { padding-bottom:0!important }
+   }
+}
+
+
+@mixin make-offset($n:false)
+{
+   
+   @if (map($set,'options','offset')){  
+       
+      #{$select-row} {
+
+         > *.left#{$n}-0   { margin-left:0  }
+         > *.right#{$n}-0  { margin-right:0 }
+
+         @for $i from 0 to ($set-column - 1) {
+
+            > *.left#{$n}-#{$i+1}  { margin-left:nth($set-col, $i+1)  }
+         }
+
+         @for $i from 0 to ($set-column - 1) {
+
+            > *.right#{$n}-#{$i+1}  { margin-right:nth($set-col, $i+1) }
+         }
+      }
+   }
+}
+
+@mixin make-order( $n:false )
+{
+   @if (map($set,'options','order')){  
+      @for $i from 1 through 20 {
+         #{$select-row} > .order#{$n}-#{$i} { order:#{$i} }
+      }
+   }
+}
+
+@mixin make-space($n:false)
+{
+   @if (map($set,'options','space')) {  
+      
+      @for $i from 0 to length($gut-b ) {
+         
+         $v :nth($gut-b , $i+1);
+
+         #{$select-row}                         {
+            
+            &.gut-#{$i+1}#{$n}                 { 
+               
+               --cg:#{$v};
+               --rg:#{$v};
+
+               &.c-op                          { --cg:#{$v};}
+               
+               @if $n {
+                  
+                  &.c-ob                        { --rg:#{$v} }   
+                  
+                  @each $key, $value in $set-screen{
+                     
+                     &.c-ob-#{$key}             { --rg:#{$v}  }   
+                  }   
+               }
+
+               .tc#{$n}-ob                     { padding-bottom:#{$v} }
+               
+            }
+           
+         }
+      }
+      
+      @for $i from 0 to length($gut-s ) {
+         
+         $v :nth($gut-s , $i+1);
+
+         #{$select-row}                         {
+
+            &.-gut-#{$i+1}#{$n}                 { 
+
+               --cg:#{$v};
+               --rg:#{$v};
+
+               &.c-op                           { --cg:#{$v}; }
+               
+               @if $n {
+                  
+                  &.c-ob                        { --rg:#{$v} }   
+                 
+                  @each $key, $value in $set-screen{
+                     
+                     &.c-ob-#{$key}             { --rg:#{$v} }   
+                  }   
+               }
+
+               .tc#{$n}-ob                      { padding-bottom:#{$v} }
+            } 
+         }
+      }
+      
+      $v : $gut;
+
+      #{$select-row}                            {
+
+         &.gut-0#{$n}                           { 
+           
+            --cg:#{$v};
+            --rg:#{$v};
+
+           &.c-op                               { --cg:#{$v}; }
+            
+             @if $n {
+                  
+                  &.c-ob                        { --rg:#{$v} }  
+                  
+                  @each $key, $value in $set-screen{
+                     &.c-ob-#{$key}             { --rg:#{$v} }   
+                  }   
+               }
+
+            .tc#{$n}-ob                          { padding-bottom:#{$v} }
+
+         }
+      }
+   }
+}

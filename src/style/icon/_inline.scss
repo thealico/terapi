@@ -1,0 +1,29 @@
+$iconInline : true;
+
+@if ($iconInline){ 
+	
+	@if ($iconPath){ 
+		
+		$iconPath : $iconPath; 
+	}
+	@else { 
+
+		$iconPath : ''; 
+	}    
+ 
+	@include font-face('SSSocial',	'#{$iconPath}social/ss-social-regular',normal,normal,woff2);
+	@include font-face('SSSocial',	'#{$iconPath}social/ss-social-circle',bold,normal,woff2);
+	@include font-face('SSStandard','#{$iconPath}standard/ss-standard',normal,normal,woff2);
+	@include font-face('SSGizmo',	'#{$iconPath}gizmo/ss-gizmo',normal,normal,woff2);
+	@include font-face('SSPika',	'#{$iconPath}pika/ss-pika',normal,normal,woff2);
+	@include font-face('icomoon',	'#{$iconPath}icomoon/fonts/icomoon',normal,normal,woff);
+
+}
+
+// @include font-face('icomoon',	'#{$iconPath}icomoon/fonts/icomoon',normal,normal,eot woff ttf svg);
+// @include font-face('weathericons','#{$iconPath}weather/weather',normal,normal,eot woff2 woff ttf svg);
+// @include font-face('SSSocial','#{$iconPath}social/ss-social-regular',normal,normal,eot woff2 woff ttf svg);
+// @include font-face('SSSocial','#{$iconPath}social/ss-social-circle',bold,normal,eot woff2 woff ttf svg);
+// @include font-face('SSStandard','#{$iconPath}standard/ss-standard',normal,normal,eot woff2 woff ttf svg);
+// @include font-face('SSGizmo','#{$iconPath}gizmo/ss-gizmo',normal,normal,eot woff2 woff ttf svg);
+// @include font-face('SSPika','#{$iconPath}pika/ss-pika',normal,normal,eot woff2 woff ttf svg); 
