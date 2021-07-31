@@ -76,7 +76,7 @@
 		<?php endforeach; endif ?>
 
 		
-		<script src="<?php path('app.js?v='.time()) ?>"></script>
+		<script src="<?php path('app.min.js?v='.time()) ?>"></script>
 		
 	</code>
 

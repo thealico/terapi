@@ -1,105 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-@font-face {
-  font-family: "Open Sans";
-  font-weight: 300;
-  src: url("open-sans/OS300.woff2") format("woff2"); }
-@font-face {
-  font-family: "Open Sans";
-  font-weight: 400;
-  src: url("open-sans/OS400.woff2") format("woff2"); }
-@font-face {
-  font-family: "Open Sans";
-  font-weight: 600;
-  src: url("open-sans/OS600.woff2") format("woff2"); }
-@font-face {
-  font-family: "Open Sans";
-  font-weight: 700;
-  src: url("open-sans/OS700.woff2") format("woff2"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 300;
-  src: url("source-sans/SS300.woff2") format("woff2"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 400;
-  src: url("source-sans/SS400.woff2") format("woff2"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 600;
-  src: url("source-sans/SS600.woff2") format("woff2"); }
-@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 700;
-  src: url("source-sans/SS700.woff2") format("woff2"); }
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: 300;
-  src: url("ubuntu/U300.woff2") format("woff2"); }
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: 400;
-  src: url("ubuntu/U400.woff2") format("woff2"); }
-@font-face {
-  font-family: "Ubuntu";
-  font-weight: 500;
-  src: url("ubuntu/U500.woff2") format("woff2"); }
-@font-face {
-  font-family: "Gotham Narrow";
-  font-weight: 300;
-  src: url("gotham-narrow/GN300.woff2") format("woff2"); }
-@font-face {
-  font-family: "Gotham Narrow";
-  font-weight: 400;
-  src: url("gotham-narrow/GN400.woff2") format("woff2"); }
-@font-face {
-  font-family: "Gotham Narrow";
-  font-weight: 500;
-  src: url("gotham-narrow/GN500.woff2") format("woff2"); }
-@font-face {
-  font-family: "Gotham Rounded";
-  font-weight: 300;
-  src: url("gotham-round/GR300.woff2") format("woff2"); }
-@font-face {
-  font-family: "Gotham Rounded";
-  font-weight: 400;
-  src: url("gotham-round/GR400.woff2") format("woff2"); }
-@font-face {
-  font-family: "Gotham Rounded";
-  font-weight: 500;
-  src: url("gotham-round/GR500.woff2") format("woff2"); }
-@font-face {
-  font-family: "Gotham";
-  font-weight: 100;
-  src: url("gotham/G100.woff2") format("woff2"); }
-@font-face {
-  font-family: "Gotham";
-  font-weight: 300;
-  src: url("gotham/G300.woff2") format("woff2"); }
-@font-face {
-  font-family: "Gotham";
-  font-weight: 400;
-  src: url("gotham/G400.woff2") format("woff2"); }
-@font-face {
-  font-family: "Gotham";
-  font-weight: 500;
-  src: url("gotham/G500.woff2") format("woff2"); }
-@font-face {
-  font-family: "Brandon";
-  font-weight: 300;
-  src: url("brandon/B300.woff") format("woff"); }
-@font-face {
-  font-family: "Brandon";
-  font-weight: 400;
-  src: url("brandon/B400.woff2") format("woff2"); }
-@font-face {
-  font-family: "Brandon";
-  font-weight: 600;
-  src: url("brandon/B600.woff2") format("woff2"); }
-@font-face {
-  font-family: "Brandon";
-  font-weight: 700;
-  src: url("brandon/B700.woff2") format("woff2"); }
-@font-face {
-  font-family: "Brandon";
-  font-weight: 800;
-  src: url("brandon/B800.woff2") format("woff2"); }
+/*
+@include font-face('Open Sans', open-sans/OS300,300,null,woff2);
+@include font-face('Open Sans', open-sans/OS400,400,null,woff2);
+@include font-face('Open Sans', open-sans/OS600,600,null,woff2);
+@include font-face('Open Sans', open-sans/OS700,700,null,woff2);
+
+@include font-face('Source Sans Pro', source-sans/SS300,300,null,woff2);
+@include font-face('Source Sans Pro', source-sans/SS400,400,null,woff2);
+@include font-face('Source Sans Pro', source-sans/SS600,600,null,woff2);
+@include font-face('Source Sans Pro', source-sans/SS700,700,null,woff2);
+
+@include font-face('Ubuntu', ubuntu/U300,300,null,woff2);
+@include font-face('Ubuntu', ubuntu/U400,400,null,woff2);
+@include font-face('Ubuntu', ubuntu/U500,500,null,woff2);
+
+@include font-face('Gotham Narrow', gotham-narrow/GN300,300,null,woff2);
+@include font-face('Gotham Narrow', gotham-narrow/GN400,400,null,woff2);
+@include font-face('Gotham Narrow', gotham-narrow/GN500,500,null,woff2);
+
+@include font-face('Gotham Rounded', gotham-round/GR300,300,null,woff2);
+@include font-face('Gotham Rounded', gotham-round/GR400,400,null,woff2);
+@include font-face('Gotham Rounded', gotham-round/GR500,500,null,woff2);
+
+@include font-face('Gotham', gotham/G100,100,null,woff2);
+@include font-face('Gotham', gotham/G300,300,null,woff2);
+@include font-face('Gotham', gotham/G400,400,null,woff2);
+@include font-face('Gotham', gotham/G500,500,null,woff2);
+
+@include font-face('Brandon', brandon/B300,300,null,woff);
+@include font-face('Brandon', brandon/B400,400,null,woff2);
+@include font-face('Brandon', brandon/B600,600,null,woff2);
+@include font-face('Brandon', brandon/B700,700,null,woff2);
+@include font-face('Brandon', brandon/B800,800,null,woff2);
+
+*/
