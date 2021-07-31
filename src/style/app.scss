@@ -55,8 +55,7 @@
 // @import url('builds/form/form.min.css'); 
 // @import url('builds/ets/ets.min.css'); 
 
-@import "builds/form/form";
-
+// @import "builds/form/form";
 
 
 /*
@@ -71,17 +70,18 @@
 /* 
 @ Include > Ayrik yapi olmayanlar */
 
-@import "inc/nav_slice"; 
 @import "inc/context"; 
 @import "inc/mask_ratio"; 
 @import "inc/link"; 
 @import "inc/toll"; 
 @import "inc/swal";
-@import "inc/refresh";
-@import "inc/block_load";
-@import "inc/note";
-@import "inc/triangle"; 
 @import "inc/tooltip"; 
+
+//@import "inc/refresh";
+//@import "inc/nav_slice"; 
+//@import "inc/block_load";
+//@import "inc/note";
+//@import "inc/triangle"; 
 
 // @import "inc/menu-mobil";
 // @import "inc/more_bant"; 
@@ -94,14 +94,13 @@
 // @import "inc/ayrac"; 
 
 
-@import "inc/ul_table"; 
-@import "inc/tr_table"; 
-@import "inc/slide"; 
-@import "inc/step"; 
+// @import "inc/ul_table"; 
+// @import "inc/tr_table"; 
+// @import "inc/slide"; 
+// @import "inc/step"; 
 
 // @import "inc/word"; 
 // @import "inc/tost"; 
-
 
 // @import "inc/block/post";  
 
@@ -110,15 +109,14 @@
 @ Include > Build's  */
 
 @import "inc/builds/modal/modal";
+@import "inc/builds/buton";
 
 // @import "inc/builds/slimscroll";
 // @import "inc/builds/icon";
-//@import "inc/builds/mask";
-@import "inc/builds/buton";
+// @import "inc/builds/mask";
+
 
  
-
-
 
 .sub 							{
 	main 						{ background:#eff4f3 }
@@ -247,6 +245,7 @@ blockquote.record 				{ display: flex;align-items: center;padding:20px 10px 20px
 
 
 
+
 /* 
 @ layout */
 
@@ -270,7 +269,7 @@ blockquote.record 				{ display: flex;align-items: center;padding:20px 10px 20px
 // @import "pages/frame";
 
 
-//@import "pages/dashboard";
+// @import "pages/dashboard";
 // @import "pages/cari";
 // @import "pages/market";
 // @import "pages/sepet";
