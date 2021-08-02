@@ -1,5 +1,4 @@
- 
-header 						{ background:white; display:flex; transition:.3s; flex-direction:column; position:sticky; top:0; z-index:3; height:90px;
+header 						{ background:white; display:flex; transition:.3s; flex-direction:column; position:sticky; top:0; z-index:3;height:90px; min-height:90px;
 
 	.logo 					{ 
 
@@ -34,8 +33,7 @@ header 						{ background:white; display:flex; transition:.3s; flex-direction:co
 
 }
 
-
-.stick-150 header 			{ box-shadow: 0 0 14px rgba(148,148,148, .5 );  }
+.stick-100 header 			{ box-shadow: 0 0 14px rgba(148,148,148, .5 );  }
 
 // @media #{$gl-lg} { @import "@header/lg" }
 // @media #{$gl-md} { @import "@media/md"  } 

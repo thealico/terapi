@@ -11,8 +11,8 @@
 html 								{ font: 300 14px 'Poppins'; -webkit-text-size-adjust: 100%;  text-size-adjust: 100% }
 html,body 							{ min-height:100%; width:100% }
 body::-webkit-scrollbar 			{ display: none}
-body 								{ overflow-x: hidden ; transition: opacity .3s; opacity: 1 ; /*min-width:1024px; min-height:768px*/ }
-
+body 								{ overflow-x: hidden ; display:flex; flex-direction:column;min-height:100vh; transition: opacity .3s; opacity: 1 ; /*min-width:1024px; min-height:768px*/ }
+body > main 						{ flex:1 }
 html.query 							{ pointer-events: none; background:url('img/load/spin.gif') no-repeat center center;
 	body							{ opacity: 0 }
 }

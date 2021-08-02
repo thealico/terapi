@@ -496,6 +496,12 @@ img.iw, .iw img {
   padding-top: 5px;
   padding-bottom: 5px; }
 
+.pl-5 {
+  padding-left: 5px; }
+
+.pr-5 {
+  padding-right: 5px; }
+
 .px-5 {
   padding-left: 5px;
   padding-right: 5px; }
@@ -525,6 +531,12 @@ img.iw, .iw img {
 .py-10 {
   padding-top: 10px;
   padding-bottom: 10px; }
+
+.pl-10 {
+  padding-left: 10px; }
+
+.pr-10 {
+  padding-right: 10px; }
 
 .px-10 {
   padding-left: 10px;
@@ -556,6 +568,12 @@ img.iw, .iw img {
   padding-top: 15px;
   padding-bottom: 15px; }
 
+.pl-15 {
+  padding-left: 15px; }
+
+.pr-15 {
+  padding-right: 15px; }
+
 .px-15 {
   padding-left: 15px;
   padding-right: 15px; }
@@ -585,6 +603,12 @@ img.iw, .iw img {
 .py-20 {
   padding-top: 20px;
   padding-bottom: 20px; }
+
+.pl-20 {
+  padding-left: 20px; }
+
+.pr-20 {
+  padding-right: 20px; }
 
 .px-20 {
   padding-left: 20px;
@@ -616,6 +640,12 @@ img.iw, .iw img {
   padding-top: 25px;
   padding-bottom: 25px; }
 
+.pl-25 {
+  padding-left: 25px; }
+
+.pr-25 {
+  padding-right: 25px; }
+
 .px-25 {
   padding-left: 25px;
   padding-right: 25px; }
@@ -645,6 +675,12 @@ img.iw, .iw img {
 .py-30 {
   padding-top: 30px;
   padding-bottom: 30px; }
+
+.pl-30 {
+  padding-left: 30px; }
+
+.pr-30 {
+  padding-right: 30px; }
 
 .px-30 {
   padding-left: 30px;
@@ -676,6 +712,12 @@ img.iw, .iw img {
   padding-top: 35px;
   padding-bottom: 35px; }
 
+.pl-35 {
+  padding-left: 35px; }
+
+.pr-35 {
+  padding-right: 35px; }
+
 .px-35 {
   padding-left: 35px;
   padding-right: 35px; }
@@ -705,6 +747,12 @@ img.iw, .iw img {
 .py-40 {
   padding-top: 40px;
   padding-bottom: 40px; }
+
+.pl-40 {
+  padding-left: 40px; }
+
+.pr-40 {
+  padding-right: 40px; }
 
 .px-40 {
   padding-left: 40px;
@@ -736,6 +784,12 @@ img.iw, .iw img {
   padding-top: 45px;
   padding-bottom: 45px; }
 
+.pl-45 {
+  padding-left: 45px; }
+
+.pr-45 {
+  padding-right: 45px; }
+
 .px-45 {
   padding-left: 45px;
   padding-right: 45px; }
@@ -765,6 +819,12 @@ img.iw, .iw img {
 .py-50 {
   padding-top: 50px;
   padding-bottom: 50px; }
+
+.pl-50 {
+  padding-left: 50px; }
+
+.pr-50 {
+  padding-right: 50px; }
 
 .px-50 {
   padding-left: 50px;
@@ -796,6 +856,12 @@ img.iw, .iw img {
   padding-top: 55px;
   padding-bottom: 55px; }
 
+.pl-55 {
+  padding-left: 55px; }
+
+.pr-55 {
+  padding-right: 55px; }
+
 .px-55 {
   padding-left: 55px;
   padding-right: 55px; }
@@ -825,6 +891,12 @@ img.iw, .iw img {
 .py-60 {
   padding-top: 60px;
   padding-bottom: 60px; }
+
+.pl-60 {
+  padding-left: 60px; }
+
+.pr-60 {
+  padding-right: 60px; }
 
 .px-60 {
   padding-left: 60px;
@@ -856,6 +928,12 @@ img.iw, .iw img {
   padding-top: 65px;
   padding-bottom: 65px; }
 
+.pl-65 {
+  padding-left: 65px; }
+
+.pr-65 {
+  padding-right: 65px; }
+
 .px-65 {
   padding-left: 65px;
   padding-right: 65px; }
@@ -885,6 +963,12 @@ img.iw, .iw img {
 .py-70 {
   padding-top: 70px;
   padding-bottom: 70px; }
+
+.pl-70 {
+  padding-left: 70px; }
+
+.pr-70 {
+  padding-right: 70px; }
 
 .px-70 {
   padding-left: 70px;
@@ -916,6 +1000,12 @@ img.iw, .iw img {
   padding-top: 75px;
   padding-bottom: 75px; }
 
+.pl-75 {
+  padding-left: 75px; }
+
+.pr-75 {
+  padding-right: 75px; }
+
 .px-75 {
   padding-left: 75px;
   padding-right: 75px; }
@@ -945,6 +1035,12 @@ img.iw, .iw img {
 .py-80 {
   padding-top: 80px;
   padding-bottom: 80px; }
+
+.pl-80 {
+  padding-left: 80px; }
+
+.pr-80 {
+  padding-right: 80px; }
 
 .px-80 {
   padding-left: 80px;
@@ -976,6 +1072,12 @@ img.iw, .iw img {
   padding-top: 85px;
   padding-bottom: 85px; }
 
+.pl-85 {
+  padding-left: 85px; }
+
+.pr-85 {
+  padding-right: 85px; }
+
 .px-85 {
   padding-left: 85px;
   padding-right: 85px; }
@@ -1005,6 +1107,12 @@ img.iw, .iw img {
 .py-90 {
   padding-top: 90px;
   padding-bottom: 90px; }
+
+.pl-90 {
+  padding-left: 90px; }
+
+.pr-90 {
+  padding-right: 90px; }
 
 .px-90 {
   padding-left: 90px;
@@ -1036,6 +1144,12 @@ img.iw, .iw img {
   padding-top: 95px;
   padding-bottom: 95px; }
 
+.pl-95 {
+  padding-left: 95px; }
+
+.pr-95 {
+  padding-right: 95px; }
+
 .px-95 {
   padding-left: 95px;
   padding-right: 95px; }
@@ -1065,6 +1179,12 @@ img.iw, .iw img {
 .py-100 {
   padding-top: 100px;
   padding-bottom: 100px; }
+
+.pl-100 {
+  padding-left: 100px; }
+
+.pr-100 {
+  padding-right: 100px; }
 
 .px-100 {
   padding-left: 100px;
@@ -1505,6 +1625,12 @@ img.iw, .iw img {
     padding-top: 5px;
     padding-bottom: 5px; }
 
+  .pl-5-md {
+    padding-left: 5px; }
+
+  .pr-5-md {
+    padding-right: 5px; }
+
   .px-5-md {
     padding-left: 5px;
     padding-right: 5px; }
@@ -1534,6 +1660,12 @@ img.iw, .iw img {
   .py-10-md {
     padding-top: 10px;
     padding-bottom: 10px; }
+
+  .pl-10-md {
+    padding-left: 10px; }
+
+  .pr-10-md {
+    padding-right: 10px; }
 
   .px-10-md {
     padding-left: 10px;
@@ -1565,6 +1697,12 @@ img.iw, .iw img {
     padding-top: 15px;
     padding-bottom: 15px; }
 
+  .pl-15-md {
+    padding-left: 15px; }
+
+  .pr-15-md {
+    padding-right: 15px; }
+
   .px-15-md {
     padding-left: 15px;
     padding-right: 15px; }
@@ -1594,6 +1732,12 @@ img.iw, .iw img {
   .py-20-md {
     padding-top: 20px;
     padding-bottom: 20px; }
+
+  .pl-20-md {
+    padding-left: 20px; }
+
+  .pr-20-md {
+    padding-right: 20px; }
 
   .px-20-md {
     padding-left: 20px;
@@ -1625,6 +1769,12 @@ img.iw, .iw img {
     padding-top: 25px;
     padding-bottom: 25px; }
 
+  .pl-25-md {
+    padding-left: 25px; }
+
+  .pr-25-md {
+    padding-right: 25px; }
+
   .px-25-md {
     padding-left: 25px;
     padding-right: 25px; }
@@ -1654,6 +1804,12 @@ img.iw, .iw img {
   .py-30-md {
     padding-top: 30px;
     padding-bottom: 30px; }
+
+  .pl-30-md {
+    padding-left: 30px; }
+
+  .pr-30-md {
+    padding-right: 30px; }
 
   .px-30-md {
     padding-left: 30px;
@@ -1685,6 +1841,12 @@ img.iw, .iw img {
     padding-top: 35px;
     padding-bottom: 35px; }
 
+  .pl-35-md {
+    padding-left: 35px; }
+
+  .pr-35-md {
+    padding-right: 35px; }
+
   .px-35-md {
     padding-left: 35px;
     padding-right: 35px; }
@@ -1714,6 +1876,12 @@ img.iw, .iw img {
   .py-40-md {
     padding-top: 40px;
     padding-bottom: 40px; }
+
+  .pl-40-md {
+    padding-left: 40px; }
+
+  .pr-40-md {
+    padding-right: 40px; }
 
   .px-40-md {
     padding-left: 40px;
@@ -1745,6 +1913,12 @@ img.iw, .iw img {
     padding-top: 45px;
     padding-bottom: 45px; }
 
+  .pl-45-md {
+    padding-left: 45px; }
+
+  .pr-45-md {
+    padding-right: 45px; }
+
   .px-45-md {
     padding-left: 45px;
     padding-right: 45px; }
@@ -1774,6 +1948,12 @@ img.iw, .iw img {
   .py-50-md {
     padding-top: 50px;
     padding-bottom: 50px; }
+
+  .pl-50-md {
+    padding-left: 50px; }
+
+  .pr-50-md {
+    padding-right: 50px; }
 
   .px-50-md {
     padding-left: 50px;
@@ -1805,6 +1985,12 @@ img.iw, .iw img {
     padding-top: 55px;
     padding-bottom: 55px; }
 
+  .pl-55-md {
+    padding-left: 55px; }
+
+  .pr-55-md {
+    padding-right: 55px; }
+
   .px-55-md {
     padding-left: 55px;
     padding-right: 55px; }
@@ -1834,6 +2020,12 @@ img.iw, .iw img {
   .py-60-md {
     padding-top: 60px;
     padding-bottom: 60px; }
+
+  .pl-60-md {
+    padding-left: 60px; }
+
+  .pr-60-md {
+    padding-right: 60px; }
 
   .px-60-md {
     padding-left: 60px;
@@ -1865,6 +2057,12 @@ img.iw, .iw img {
     padding-top: 65px;
     padding-bottom: 65px; }
 
+  .pl-65-md {
+    padding-left: 65px; }
+
+  .pr-65-md {
+    padding-right: 65px; }
+
   .px-65-md {
     padding-left: 65px;
     padding-right: 65px; }
@@ -1894,6 +2092,12 @@ img.iw, .iw img {
   .py-70-md {
     padding-top: 70px;
     padding-bottom: 70px; }
+
+  .pl-70-md {
+    padding-left: 70px; }
+
+  .pr-70-md {
+    padding-right: 70px; }
 
   .px-70-md {
     padding-left: 70px;
@@ -1925,6 +2129,12 @@ img.iw, .iw img {
     padding-top: 75px;
     padding-bottom: 75px; }
 
+  .pl-75-md {
+    padding-left: 75px; }
+
+  .pr-75-md {
+    padding-right: 75px; }
+
   .px-75-md {
     padding-left: 75px;
     padding-right: 75px; }
@@ -1954,6 +2164,12 @@ img.iw, .iw img {
   .py-80-md {
     padding-top: 80px;
     padding-bottom: 80px; }
+
+  .pl-80-md {
+    padding-left: 80px; }
+
+  .pr-80-md {
+    padding-right: 80px; }
 
   .px-80-md {
     padding-left: 80px;
@@ -1985,6 +2201,12 @@ img.iw, .iw img {
     padding-top: 85px;
     padding-bottom: 85px; }
 
+  .pl-85-md {
+    padding-left: 85px; }
+
+  .pr-85-md {
+    padding-right: 85px; }
+
   .px-85-md {
     padding-left: 85px;
     padding-right: 85px; }
@@ -2014,6 +2236,12 @@ img.iw, .iw img {
   .py-90-md {
     padding-top: 90px;
     padding-bottom: 90px; }
+
+  .pl-90-md {
+    padding-left: 90px; }
+
+  .pr-90-md {
+    padding-right: 90px; }
 
   .px-90-md {
     padding-left: 90px;
@@ -2045,6 +2273,12 @@ img.iw, .iw img {
     padding-top: 95px;
     padding-bottom: 95px; }
 
+  .pl-95-md {
+    padding-left: 95px; }
+
+  .pr-95-md {
+    padding-right: 95px; }
+
   .px-95-md {
     padding-left: 95px;
     padding-right: 95px; }
@@ -2074,6 +2308,12 @@ img.iw, .iw img {
   .py-100-md {
     padding-top: 100px;
     padding-bottom: 100px; }
+
+  .pl-100-md {
+    padding-left: 100px; }
+
+  .pr-100-md {
+    padding-right: 100px; }
 
   .px-100-md {
     padding-left: 100px;
@@ -2513,6 +2753,12 @@ img.iw, .iw img {
     padding-top: 5px;
     padding-bottom: 5px; }
 
+  .pl-5-xs {
+    padding-left: 5px; }
+
+  .pr-5-xs {
+    padding-right: 5px; }
+
   .px-5-xs {
     padding-left: 5px;
     padding-right: 5px; }
@@ -2542,6 +2788,12 @@ img.iw, .iw img {
   .py-10-xs {
     padding-top: 10px;
     padding-bottom: 10px; }
+
+  .pl-10-xs {
+    padding-left: 10px; }
+
+  .pr-10-xs {
+    padding-right: 10px; }
 
   .px-10-xs {
     padding-left: 10px;
@@ -2573,6 +2825,12 @@ img.iw, .iw img {
     padding-top: 15px;
     padding-bottom: 15px; }
 
+  .pl-15-xs {
+    padding-left: 15px; }
+
+  .pr-15-xs {
+    padding-right: 15px; }
+
   .px-15-xs {
     padding-left: 15px;
     padding-right: 15px; }
@@ -2602,6 +2860,12 @@ img.iw, .iw img {
   .py-20-xs {
     padding-top: 20px;
     padding-bottom: 20px; }
+
+  .pl-20-xs {
+    padding-left: 20px; }
+
+  .pr-20-xs {
+    padding-right: 20px; }
 
   .px-20-xs {
     padding-left: 20px;
@@ -2633,6 +2897,12 @@ img.iw, .iw img {
     padding-top: 25px;
     padding-bottom: 25px; }
 
+  .pl-25-xs {
+    padding-left: 25px; }
+
+  .pr-25-xs {
+    padding-right: 25px; }
+
   .px-25-xs {
     padding-left: 25px;
     padding-right: 25px; }
@@ -2662,6 +2932,12 @@ img.iw, .iw img {
   .py-30-xs {
     padding-top: 30px;
     padding-bottom: 30px; }
+
+  .pl-30-xs {
+    padding-left: 30px; }
+
+  .pr-30-xs {
+    padding-right: 30px; }
 
   .px-30-xs {
     padding-left: 30px;
@@ -2693,6 +2969,12 @@ img.iw, .iw img {
     padding-top: 35px;
     padding-bottom: 35px; }
 
+  .pl-35-xs {
+    padding-left: 35px; }
+
+  .pr-35-xs {
+    padding-right: 35px; }
+
   .px-35-xs {
     padding-left: 35px;
     padding-right: 35px; }
@@ -2722,6 +3004,12 @@ img.iw, .iw img {
   .py-40-xs {
     padding-top: 40px;
     padding-bottom: 40px; }
+
+  .pl-40-xs {
+    padding-left: 40px; }
+
+  .pr-40-xs {
+    padding-right: 40px; }
 
   .px-40-xs {
     padding-left: 40px;
@@ -2753,6 +3041,12 @@ img.iw, .iw img {
     padding-top: 45px;
     padding-bottom: 45px; }
 
+  .pl-45-xs {
+    padding-left: 45px; }
+
+  .pr-45-xs {
+    padding-right: 45px; }
+
   .px-45-xs {
     padding-left: 45px;
     padding-right: 45px; }
@@ -2782,6 +3076,12 @@ img.iw, .iw img {
   .py-50-xs {
     padding-top: 50px;
     padding-bottom: 50px; }
+
+  .pl-50-xs {
+    padding-left: 50px; }
+
+  .pr-50-xs {
+    padding-right: 50px; }
 
   .px-50-xs {
     padding-left: 50px;
@@ -2813,6 +3113,12 @@ img.iw, .iw img {
     padding-top: 55px;
     padding-bottom: 55px; }
 
+  .pl-55-xs {
+    padding-left: 55px; }
+
+  .pr-55-xs {
+    padding-right: 55px; }
+
   .px-55-xs {
     padding-left: 55px;
     padding-right: 55px; }
@@ -2842,6 +3148,12 @@ img.iw, .iw img {
   .py-60-xs {
     padding-top: 60px;
     padding-bottom: 60px; }
+
+  .pl-60-xs {
+    padding-left: 60px; }
+
+  .pr-60-xs {
+    padding-right: 60px; }
 
   .px-60-xs {
     padding-left: 60px;
@@ -2873,6 +3185,12 @@ img.iw, .iw img {
     padding-top: 65px;
     padding-bottom: 65px; }
 
+  .pl-65-xs {
+    padding-left: 65px; }
+
+  .pr-65-xs {
+    padding-right: 65px; }
+
   .px-65-xs {
     padding-left: 65px;
     padding-right: 65px; }
@@ -2902,6 +3220,12 @@ img.iw, .iw img {
   .py-70-xs {
     padding-top: 70px;
     padding-bottom: 70px; }
+
+  .pl-70-xs {
+    padding-left: 70px; }
+
+  .pr-70-xs {
+    padding-right: 70px; }
 
   .px-70-xs {
     padding-left: 70px;
@@ -2933,6 +3257,12 @@ img.iw, .iw img {
     padding-top: 75px;
     padding-bottom: 75px; }
 
+  .pl-75-xs {
+    padding-left: 75px; }
+
+  .pr-75-xs {
+    padding-right: 75px; }
+
   .px-75-xs {
     padding-left: 75px;
     padding-right: 75px; }
@@ -2962,6 +3292,12 @@ img.iw, .iw img {
   .py-80-xs {
     padding-top: 80px;
     padding-bottom: 80px; }
+
+  .pl-80-xs {
+    padding-left: 80px; }
+
+  .pr-80-xs {
+    padding-right: 80px; }
 
   .px-80-xs {
     padding-left: 80px;
@@ -2993,6 +3329,12 @@ img.iw, .iw img {
     padding-top: 85px;
     padding-bottom: 85px; }
 
+  .pl-85-xs {
+    padding-left: 85px; }
+
+  .pr-85-xs {
+    padding-right: 85px; }
+
   .px-85-xs {
     padding-left: 85px;
     padding-right: 85px; }
@@ -3022,6 +3364,12 @@ img.iw, .iw img {
   .py-90-xs {
     padding-top: 90px;
     padding-bottom: 90px; }
+
+  .pl-90-xs {
+    padding-left: 90px; }
+
+  .pr-90-xs {
+    padding-right: 90px; }
 
   .px-90-xs {
     padding-left: 90px;
@@ -3053,6 +3401,12 @@ img.iw, .iw img {
     padding-top: 95px;
     padding-bottom: 95px; }
 
+  .pl-95-xs {
+    padding-left: 95px; }
+
+  .pr-95-xs {
+    padding-right: 95px; }
+
   .px-95-xs {
     padding-left: 95px;
     padding-right: 95px; }
@@ -3082,6 +3436,12 @@ img.iw, .iw img {
   .py-100-xs {
     padding-top: 100px;
     padding-bottom: 100px; }
+
+  .pl-100-xs {
+    padding-left: 100px; }
+
+  .pr-100-xs {
+    padding-right: 100px; }
 
   .px-100-xs {
     padding-left: 100px;
@@ -4257,9 +4617,15 @@ body::-webkit-scrollbar {
 
 body {
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   transition: opacity .3s;
   opacity: 1;
   /*min-width:1024px; min-height:768px*/ }
+
+body > main {
+  flex: 1; }
 
 html.query {
   pointer-events: none;
@@ -4292,7 +4658,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 3;
-  height: 90px; }
+  height: 90px;
+  min-height: 90px; }
   header .logo img {
     max-width: 224px; }
   header .main ul > li a {
@@ -4322,7 +4689,7 @@ header {
 @media screen and (min-width: 64em) {
   header .lan a i {
     display: none; } }
-.stick-150 header {
+.stick-100 header {
   box-shadow: 0 0 14px rgba(148, 148, 148, 0.5); }
 
 footer {
@@ -6075,3 +6442,59 @@ blockquote.record {
     .home .sec-posts.f-3 ul > li li span {
       font-size: 12px;
       color: #222; }
+
+.nasil .sec-text h1 {
+  text-align: center;
+  color: #3f4863;
+  font-size: 32px; }
+.nasil .sec-text ul li {
+  display: flex;
+  margin-bottom: 50px; }
+  .nasil .sec-text ul li:last-child {
+    margin-bottom: 0; }
+  .nasil .sec-text ul li div {
+    flex: 1;
+    padding-left: 1.5rem; }
+  .nasil .sec-text ul li p {
+    font-size: 18px;
+    text-align: justify; }
+  .nasil .sec-text ul li h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #3f4863; }
+  .nasil .sec-text ul li i {
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+    font-weight: 700;
+    font-size: 26px;
+    color: #3f4863;
+    border: 2px solid #3f4863;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+.nasil .sec-navs {
+  height: 500px;
+  background: url("img/cover-nasil.jpg") no-repeat center 35%;
+  background-size: cover; }
+  .nasil .sec-navs > div {
+    background: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0; }
+  .nasil .sec-navs .con {
+    z-index: 1; }
+  .nasil .sec-navs ul li {
+    margin-bottom: 70px; }
+    .nasil .sec-navs ul li h3 {
+      font-size: 28px;
+      color: #3f4863;
+      margin-bottom: 10px; }
+    .nasil .sec-navs ul li:last-child {
+      margim-bottom: 0; }
+    .nasil .sec-navs ul li p {
+      font-size: 17px;
+      text-align: justify; }

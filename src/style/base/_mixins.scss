@@ -189,6 +189,8 @@
 				.pt-#{$i}#{$mod}   { padding-top:#{$i}#{'px'} }
 				.pb-#{$i}#{$mod}   { padding-bottom:#{$i}#{'px'} }
 				.py-#{$i}#{$mod}   { padding-top:#{$i}#{'px'}; padding-bottom:#{$i}#{'px'} }
+				.pl-#{$i}#{$mod}   { padding-left:#{$i}#{'px'} }
+				.pr-#{$i}#{$mod}   { padding-right:#{$i}#{'px'} }
 				
 			}
 

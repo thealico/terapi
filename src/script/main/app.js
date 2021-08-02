@@ -54,9 +54,8 @@ $(document).ready(function(){
 	@ Utility  */
 		
 	kit();
-
-
-	stick(150); 
+	
+	stick(100); 
 
 	/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
 	@ Build > table  */
