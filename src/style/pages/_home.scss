@@ -34,7 +34,7 @@
 	.sec-post.f-1  							{ background:#f4f4f4;
 		.con > h3 							{ font-size:30px; font-weight:600 }
 		article a 							{ background:white; border-radius:10px; padding:20px ; display:block; }
-		figure 								{ border-radius:6px; margin-bottom:35px;  background:#efeff1  }
+		figure 								{ border-radius:6px; background:#efeff1  }
 		h4 									{ color:#333; font-size:26px; font-weight:400; }
 	}
 
@@ -118,8 +118,41 @@
 		}
 	}
 
+}
 
+
+@media #{$gl-md} {
 	
+	.home .sec-team.f-2 .col div .btn{ min-width:85% }
+
+} 
 
 
+@media #{$gl-sm} {
+	
+	.home 										{
+		
+		.sec-cover								{  background:#c2c8d8 url(img/cover-bg-dik.jpg) no-repeat center center; background-size:cover; height:60vh;
+			.btn 								{ min-width:158px}
+			.txt 								{ width:380px }
+			h2 									{ font-size:36px; }
+			h3 									{ width:78%; font-size:23px;}
+			p 									{ font-size:18px}
+		}
+	}
+}
+
+
+@media #{$gl-xs} {
+	
+	.home 										{
+		
+		.sec-cover								{ height:52vh;
+			.btn 								{ min-width:158px}
+			.txt 								{ width:380px }
+			h2 									{ font-size:33px; }
+			h3 									{ width:74%; font-size:22px;}
+			p 									{ font-size:18px}
+		}
+	}
 }

@@ -77,6 +77,7 @@ $(document).ready(function(){
 	fs.context =  new Context();
 
 	_tema_slide();
+	_tema_tost();
 
 	//_tema_app_menu();
 	//_tema_nav_tab();

@@ -202,12 +202,12 @@
   row-gap: var(--cg); }
 [class*="row"].c-nf > * {
   flex: none; }
-[class*="row"].nsc {
-  margin-left: auto;
-  margin-right: auto; }
 [class*="row"].ns, [class*="row"].nsc {
   --rg:0;
   --cg:0 ; }
+[class*="row"].nsc {
+  margin-left: auto;
+  margin-right: auto; }
 [class*="row"].c-eh > * > * {
   height: 100%;
   width: 100%;
@@ -581,6 +581,9 @@
     row-gap: var(--cg); }
   [class*="row"].c-nf-lg > * {
     flex: none; }
+  [class*="row"].ns-lg, [class*="row"].nsc-lg {
+    --rg:0;
+    --cg:0 ; }
 
   [class*="row"] .tc-lg-top {
     align-self: flex-start; }
@@ -945,6 +948,9 @@
     row-gap: var(--cg); }
   [class*="row"].c-nf-md > * {
     flex: none; }
+  [class*="row"].ns-md, [class*="row"].nsc-md {
+    --rg:0;
+    --cg:0 ; }
 
   [class*="row"] .tc-md-top {
     align-self: flex-start; }
@@ -1073,7 +1079,7 @@
 
   [class*="row"] > .order-md-20 {
     order: 20; } }
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 54em) {
   .row-sm-1 > [class*="col"] {
     flex-basis: calc( 100% - ( var(--cg) * 0 / 1 ) );
     max-width: calc( 100% - ( var(--cg) * 0 / 1 ) ); }
@@ -1309,6 +1315,9 @@
     row-gap: var(--cg); }
   [class*="row"].c-nf-sm > * {
     flex: none; }
+  [class*="row"].ns-sm, [class*="row"].nsc-sm {
+    --rg:0;
+    --cg:0 ; }
 
   [class*="row"] .tc-sm-top {
     align-self: flex-start; }
@@ -1673,6 +1682,9 @@
     row-gap: var(--cg); }
   [class*="row"].c-nf-xs > * {
     flex: none; }
+  [class*="row"].ns-xs, [class*="row"].nsc-xs {
+    --rg:0;
+    --cg:0 ; }
 
   [class*="row"] .tc-xs-top {
     align-self: flex-start; }
@@ -1801,7 +1813,7 @@
 
   [class*="row"] > .order-xs-20 {
     order: 20; } }
-@media screen and (max-width: 23.5em) {
+@media screen and (max-width: 26em) {
   .row-ms-1 > [class*="col"] {
     flex-basis: calc( 100% - ( var(--cg) * 0 / 1 ) );
     max-width: calc( 100% - ( var(--cg) * 0 / 1 ) ); }
@@ -2037,6 +2049,9 @@
     row-gap: var(--cg); }
   [class*="row"].c-nf-ms > * {
     flex: none; }
+  [class*="row"].ns-ms, [class*="row"].nsc-ms {
+    --rg:0;
+    --cg:0 ; }
 
   [class*="row"] .tc-ms-top {
     align-self: flex-start; }

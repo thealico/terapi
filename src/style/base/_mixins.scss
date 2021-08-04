@@ -1,11 +1,21 @@
 @mixin makeHtmlKits($mod:false){
   	
-	.hidden#{$mod} 				{ display:none;  &.import { display:none!important 		}}
+	.hidden#{$mod} 			{ display:none;  &.import { display:none!important 		}}
 	.hide#{$mod} 				{ display:none;  &.import { display:none!important 		}}
-	.show#{$mod} 				{ display: block;
+	/*
+	.u-show#{$mod} 			{ display: block;
 		&.inline 				{ display: inline }
 		&.row,&.flex 			{ display: flex }
 	}
+	*/
+
+	.shov#{$mod} 			{ display: block;
+		&.import 				{ display: block!important }
+		&.inline 				{ display: inline }
+		&.inline.import 		{ display: inline!important }
+		&.row,&.flex 			{ display: flex!important }
+	}
+
 	
 	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
 	@ visible mods */ 
@@ -50,13 +60,13 @@
 	/*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
 	@ text align mods */
 
-	@if ( $mod == null ) 		{
+	
 
-		.txt#{$mod}-j 			{ text-align:justify }
-		.txt#{$mod}-c 			{ text-align:center  }
-		.txt#{$mod}-r			{ text-align:right 	 }
-		.txt#{$mod}-l 			{ text-align:left 	 }
-	}
+	.txt#{$mod}-j 			{ text-align:justify }
+	.txt#{$mod}-c 			{ text-align:center  }
+	.txt#{$mod}-r			{ text-align:right 	 }
+	.txt#{$mod}-l 			{ text-align:left 	 }
+	
 
 
 
@@ -114,6 +124,11 @@
 
 
 	[style*="--fs#{$mod}:"]   { font-size: var(--fs#{$mod})!important }
+	
+	.v-fs-1[style*="--fs-1#{$mod}:"] .fs-1 				  { font-size: var(--fs-1#{$mod})!important }
+	.v-fs-2[style*="--fs-2#{$mod}:"] .fs-2 				  { font-size: var(--fs-2#{$mod})!important }
+	.v-fs-3[style*="--fs-3#{$mod}:"] .fs-3 				  { font-size: var(--fs-3#{$mod})!important }
+	.v-fs-4[style*="--fs-4#{$mod}:"] .fs-4 				  { font-size: var(--fs-4#{$mod})!important }
 
 
 
@@ -180,7 +195,7 @@
 	@for $i from 1 through 100 {
 		@if $say == $i{
 			
-			@if ( $mod == null ) or  ( $mod == '-md')  or  ( $mod == '-xs') {
+			//@if ( $mod == null ) or  ( $mod == '-md')  or  ( $mod == '-xs') {
 			
 				.w-#{$i}#{$mod} 	 { width:#{$i}#{'%'} }
 				.mt-#{$i}#{$mod} 	 { margin-top:#{$i}#{'px'} }
@@ -192,7 +207,7 @@
 				.pl-#{$i}#{$mod}   { padding-left:#{$i}#{'px'} }
 				.pr-#{$i}#{$mod}   { padding-right:#{$i}#{'px'} }
 				
-			}
+			//}
 
 		
 			// .h#{$mod}-#{$i} 	  { height:#{$i}#{'%'} }

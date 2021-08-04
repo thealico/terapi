@@ -178,7 +178,8 @@ img.iw, .iw img 					{ display:block; width:100% }
 @ grid's block tanimlari */
 
 
-[class*="visble"] 					{ display:none;  &.import { display:none!important }}
+//[class*="visble"] 					{ display:none;  &.import { display:none!important }}
+[class*="shov"] 					{ display:none;  &.import { display:none!important } }
 
 
 

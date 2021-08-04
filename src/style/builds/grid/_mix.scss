@@ -54,10 +54,12 @@
       
       &.c-nf#{$n} > *                  { flex: none }                                   
       
+      &.ns#{$n},&.nsc#{$n}             { --rg:0; --cg:0 }
+
       @if not $n                       { 
 
          &.nsc                         { margin-left:auto; margin-right:auto }
-         &.ns,&.nsc                    { --rg:0; --cg:0 }
+         // &.ns,&.nsc                    { --rg:0; --cg:0 }
          
          &.c-eh > *                    {
             > *                        { height: 100%;  width: 100%; display: block  }
@@ -80,6 +82,7 @@
       .tc#{$n}-bottom                  { align-self: flex-end }
       .tc#{$n}-first                   { order: -1 }
       .tc#{$n}-last                    { order: 1 }
+      //.tc#{$n}-ns                    { padding-left:0; padding-right: 0; padding-bottom: 0 }
       .tc#{$n}-ns                      { padding-left:0; padding-right: 0; padding-bottom: 0 }
       .tc#{$n}-ob                      { padding-bottom:$gut }
       .tc#{$n}-nb                      { padding-bottom:0!important }

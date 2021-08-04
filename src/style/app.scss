@@ -100,7 +100,7 @@
 // @import "inc/step"; 
 
 // @import "inc/word"; 
-// @import "inc/tost"; 
+@import "inc/tost"; 
 
 // @import "inc/block/post";  
 
@@ -238,10 +238,10 @@ blockquote.record 				{ display: flex;align-items: center;padding:20px 10px 20px
 
 
 // @media #{$gl-lg} { @import "@main/lg" }  	//	1280
-// @media #{$gl-md} { @import "@main/md" }  	//	1024
-// @media #{$gl-sm} { @import "@main/sm" }  	//	0768
-// @media #{$gl-xs} { @import "@main/xs" }  	//	0568
-// @media #{$gl-ms} { @import "@main/ms" }  	//	0360
+@media #{$gl-md} { @import "@main/md" }  	//	1024
+@media #{$gl-sm} { @import "@main/sm" }  	//	0768
+@media #{$gl-xs} { @import "@main/xs" }  	//	0568
+@media #{$gl-ms} { @import "@main/ms" }  	//	0360
 
 
 

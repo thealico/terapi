@@ -8,6 +8,8 @@ var set    = {
 	'display' 	: true,
 	'media' 	: {
 		
+		'xxl'	: 1400,
+		'xl'	: 1200,
 		'lg'	: 1170,
 		'md'	: 1024,
 		'sm'	: 864,

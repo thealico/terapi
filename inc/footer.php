@@ -1,14 +1,14 @@
 </main>
 <footer>
-	<div class="con py-60">
+	<div class="con py-60 py-40-sm">
 		
-		<div class="row between">
+		<div class="row row-sm-1 gut-2-sm between txt-sm-c">
 			
 			<div class="one col-4">
 				<h5>online.<span>terapi</span></h5>
 			</div>
 
-			<div class="two col-8 row">
+			<div class="two col-8  row row-xs-1 gut-2-xs">
 
 				<div class="col f1">
 					<h5>Sayfalar</h5>
@@ -35,7 +35,7 @@
 					
 					<h5>Sosyal Medya</h5>
 
-					<ul class="row">
+					<ul class="row center-sm">
 						<li class="face"><a href="#"><i class="ss-social ss-facebook"></i></a></li>
 						<li class="inst"><a href="#"><i class="ss-social ss-instagram"></i></a></li>
 						<li class="yutb"><a href="#"><i class="ss-social ss-youtube"></i></a></li>
