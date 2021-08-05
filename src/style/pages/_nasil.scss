@@ -15,12 +15,42 @@
 	}
 
 	.sec-navs 					{ height:500px; background:url('img/cover-nasil.jpg') no-repeat center 35%; background-size:cover;
-		> div 					{ background:rgba(255,255,255,.75); width:100%; height:100%; position:absolute;  left:0 ; top:0 ; z-index:0 }
+		> div 					{ background:rgba(255,255,255,.75); width:100%; height:100%; z-index:0 }
 		.con 					{ z-index:1}
-		ul li 					{ margin-bottom:70px;
+		ul li 					{ 
 			h3 					{ font-size:28px; color:$color-a; margin-bottom:10px;}
 			&:last-child 		{ margim-bottom:0 }
 			p 					{ font-size:17px; text-align:justify }
+		}
+	}
+}
+
+
+
+@media #{$gl-sm} {
+	
+
+	.nasil 							{ 
+		
+		.sec-navs					{ height:auto; 
+			ul li p 				{ text-align: center }
+		}
+	}
+}
+
+@media #{$gl-xs} 				{
+	
+	.nasil 						{
+		.sec-text 				{
+			ul 					{
+				li 				{ flex-direction:column; align-items:center; justify-content:center;  }
+				li p 			{ text-align:center; padding-top:10px } 
+				li h3			{ padding-top:8px ; font-size:25px } 
+			}
+		}
+
+		.sec-navs				{ 
+			ul li h3 			{ font-size:24px}			
 		}
 	}
 }

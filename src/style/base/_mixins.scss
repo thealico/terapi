@@ -160,14 +160,14 @@
 
 	// .wauto#{$mod} 				{ width:auto }
 	// .hauto#{$mod} 				{ height:auto }
-	// .pl-0#{$mod} 				{ padding-left:0 }
-	// .pr-0#{$mod} 				{ padding-right:0 }
+	.pl-0#{$mod} 				{ padding-left:0 }
+	.pr-0#{$mod} 				{ padding-right:0 }
 	.pt-0#{$mod} 					{ padding-top:0 }
-	// .pb-0#{$mod} 				{ padding-bottom:0 }
+	.pb-0#{$mod} 				{ padding-bottom:0 }
 	.mt-0#{$mod} 					{ margin-top:0 }
 	.mb-0#{$mod} 					{ margin-bottom:0 }
-	// .mr-0#{$mod} 				{ margin-right:0 }
-	// .ml-0#{$mod} 				{ margin-left:0 }
+	.mr-0#{$mod} 				{ margin-right:0 }
+	.ml-0#{$mod} 				{ margin-left:0 }
 
 
 	@if ( $mod != null )  {  
