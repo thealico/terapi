@@ -220,4 +220,4 @@ img.iw, .iw img 					{ display:block; width:100% }
 @media #{$gl-md} {  @include makeHtmlKits(-md) }
 @media #{$gl-sm} {  @include makeHtmlKits(-sm) }
 @media #{$gl-xs} {  @include makeHtmlKits(-xs) }
-//@media #{$gl-ms} {  @include makeHtmlKits(-ms) }
+@media #{$gl-ms} {  @include makeHtmlKits(-ms) }

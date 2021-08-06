@@ -22,7 +22,7 @@
 					<h3>Terapistini seç, dilediğin zaman gorüşmeye başla.</h3>
 				</hgroup>
 				<p class="hide-xs">Uzmanlarımız ile evinizin rahatlığında konuşun, sorunlarınızı ertelemeyin</p>
-				<nav class="row  pt-50 pt-40-sm pt-20-xs">
+				<nav class="row  pt-50 pt-40-sm pt-20-xs pt-10-ms">
 					<div><a href="#" class="btn b-1">Nasıl Çalışır</a></div>
 					<div><a href="#" class="btn b-2">Hemen Başla</a></div>
 				</nav>

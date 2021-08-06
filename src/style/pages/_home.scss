@@ -132,7 +132,7 @@
 	
 	.home 										{
 		
-		.sec-cover								{  background:#c2c8d8 url(img/cover-bg-dik.jpg) no-repeat center center; background-size:cover; height:60vh;
+		.sec-cover								{ background:#c2c8d8 url(img/cover-bg-dik.jpg) no-repeat center center; background-size:cover; height:60vh;  min-height:440px;
 			.btn 								{ min-width:158px}
 			.txt 								{ width:380px }
 			h2 									{ font-size:36px; }
@@ -147,11 +147,26 @@
 	
 	.home 										{
 		
-		.sec-cover								{ height:52vh;
+		.sec-cover								{ height:52vh; min-height:360px;
 			.btn 								{ min-width:158px}
 			.txt 								{ width:380px }
 			h2 									{ font-size:33px; }
 			h3 									{ width:74%; font-size:22px;}
+			p 									{ font-size:18px}
+		}
+	}
+}
+
+
+@media #{$gl-ms} {
+	
+	.home 										{
+		
+		.sec-cover								{ height:52vh;
+			.btn 								{ min-width:148px; height:42px}
+			.txt 								{ width:234px }
+			h2 									{ font-size:24px; }
+			h3 									{ width:88%; margin-top:10px; font-size:16px }
 			p 									{ font-size:18px}
 		}
 	}
