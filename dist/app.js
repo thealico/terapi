@@ -96,74 +96,6 @@ $(document).ready(function(){
 
 })
 
-function display(resize,newDocSize)
-{
-	if(newDocSize) doc_update();
-	
-	if(resize)
-	{
-	   
-	    waitForFinalEvent(function(){
-	   		tema(true);
-	   	},800, "some unique string");
-	}
-}
-
-
-/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-@ Resize Update   */
-
-function doc_update() {
-	
-	set.doc.y	= Math.round($(document).height());
-	set.doc.x	= Math.round($(document).width());	
-}
-/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-@ Tema Update   */
-
-function mediasizemod(resize){
-	
-		
-	var j = 'ms' ; 									// 0376
-	
-	j = set.win.x > set.media.ms ?  'xs' : j ;  	// 0568
-	j = set.win.x > set.media.xs ?  'sm' : j ;		// 0768
-	j = set.win.x > set.media.sm ?  'md' : j ;		// 1024
-	j = set.win.x > set.media.md ?  'lg' : j ;		// 1280
-	
-	set.user.media = j ;
-	//console.log(set.user.media);
-}
-/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-@ Tema Update   */
-
-function tema(time){
-
-	if(time)
-	{
-			
-		mediasizemod();
-		kit('RootStyle');
-		
-		return false
-	}
-	
-	kit('RootStyle');
-	mediasizemod();
-
-	$('#code-builds').removeClass('hidden');
-
-}
-
-function trig(){
-	
-	if( app.mods[app.mod].on ) return false;
-
-	console.log('trig');
-	
-	__ft_input_load();
-
-}
 class Context {
 	
 	constructor(){
@@ -745,6 +677,74 @@ function _tema_tost(){
 			
 		}
 	})
+
+}
+function display(resize,newDocSize)
+{
+	if(newDocSize) doc_update();
+	
+	if(resize)
+	{
+	   
+	    waitForFinalEvent(function(){
+	   		tema(true);
+	   	},800, "some unique string");
+	}
+}
+
+
+/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+@ Resize Update   */
+
+function doc_update() {
+	
+	set.doc.y	= Math.round($(document).height());
+	set.doc.x	= Math.round($(document).width());	
+}
+/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+@ Tema Update   */
+
+function mediasizemod(resize){
+	
+		
+	var j = 'ms' ; 									// 0376
+	
+	j = set.win.x > set.media.ms ?  'xs' : j ;  	// 0568
+	j = set.win.x > set.media.xs ?  'sm' : j ;		// 0768
+	j = set.win.x > set.media.sm ?  'md' : j ;		// 1024
+	j = set.win.x > set.media.md ?  'lg' : j ;		// 1280
+	
+	set.user.media = j ;
+	//console.log(set.user.media);
+}
+/* -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+@ Tema Update   */
+
+function tema(time){
+
+	if(time)
+	{
+			
+		mediasizemod();
+		kit('RootStyle');
+		
+		return false
+	}
+	
+	kit('RootStyle');
+	mediasizemod();
+
+	$('#code-builds').removeClass('hidden');
+
+}
+
+function trig(){
+	
+	if( app.mods[app.mod].on ) return false;
+
+	console.log('trig');
+	
+	__ft_input_load();
 
 }
 function unArry(arr,key,index){

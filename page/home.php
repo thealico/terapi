@@ -31,11 +31,11 @@
 	</div>
 </section>
 
-<div class="con py-70 py-60-xs">
+<div class="con py-70 py-60-xs py-40-ms">
 
 	<section class="sec-team f-1">
-		<h4 style="--fs-xs:24px">Alanında uzman psikologlarımız daima sizinle</h4>
-		<ul class="row-4 row-md-3 row-xs-2 row-ms-1 gut-1 gut-0-xs g pt-70 pb-95">
+		<h4 style="--fs-xs:22px;--fs-ms:17px">Alanında uzman psikologlarımız <br class="shov-sm"/>daima sizinle</h4>
+		<ul class="row-4 row-md-3 row-xs-2 row-ms-1 gut-1 gut-0-xs g pt-70 pt-30-ms pb-95">
 			<li class="col"><a href="#">Çift, Evlilik ve Aile Danişmanlığı</a></li>
 			<li class="col"><a href="#">Çocuk Danışmanlığı</a></li>
 			<li class="col"><a href="#">Ergenlik Danışmanlığı</a></li>
