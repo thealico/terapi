@@ -35,7 +35,7 @@
 
 	<section class="sec-team f-1">
 		<h4 style="--fs-xs:22px;--fs-ms:17px">Alanında uzman psikologlarımız <br class="shov-sm"/>daima sizinle</h4>
-		<ul class="row-4 row-md-3 row-xs-2 row-ms-1 gut-1 gut-0-xs g pt-70 pt-30-ms pb-95">
+		<ul class="row-4 row-md-3 row-xs-2 row-ms-1 gut-1 gut-0-xs g pt-70 pt-30-ms pb-95 pb-60-ms">
 			<li class="col"><a href="#">Çift, Evlilik ve Aile Danişmanlığı</a></li>
 			<li class="col"><a href="#">Çocuk Danışmanlığı</a></li>
 			<li class="col"><a href="#">Ergenlik Danışmanlığı</a></li>
@@ -78,7 +78,7 @@
 </div>
 
 
-<section class="sec-post mt-90 py-90 py-50-xs f-1" >
+<section class="sec-post mt-90 mt-60-xs mt-35-ms py-90 py-50-xs f-1" >
 	<div class="con txt-c">
 
 		<h3 class="mb-80 mb-50-xs" style="--fs-xs:24px">Psikolojik hastalıklar </h3>
