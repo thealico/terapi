@@ -112,14 +112,9 @@ address {
   line-height: inherit; }
 
 ol,
-ul {
-  padding-left: 2rem; }
-
-ol,
 ul,
 dl {
-  margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-top: 0; }
 
 ol ol,
 ul ul,
@@ -131,11 +126,7 @@ dt {
   font-weight: 700; }
 
 dd {
-  margin-bottom: .5rem;
   margin-left: 0; }
-
-blockquote {
-  margin: 0 0 1rem; }
 
 b,
 strong {
@@ -208,9 +199,6 @@ kbd {
     padding: 0;
     font-size: 1em;
     font-weight: 700; }
-
-figure {
-  margin: 0 0 1rem; }
 
 img,
 svg {
