@@ -15,7 +15,7 @@
 	}
 
 	.list-team 					{
-		figure 					{ aspect-ratio: 116 / 145; @include flex_mc() }
+		figure 					{ aspect-ratio: 227 / 262; @include flex_mc() }
 		li 						{ background:#ececec; padding: 10px 10px 0 10px; border-radius:16px;  
 			figure img 			{ filter:grayscale(1) ; transition:.3s }
 			&:hover figure img  { filter:grayscale(0) }

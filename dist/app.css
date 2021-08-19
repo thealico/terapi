@@ -47,6 +47,9 @@ fieldset {
 address {
   font-style: normal; }
 
+blockquote, figure {
+  margin: 0; }
+
 .hypens {
   hyphens: auto;
   -webkit-hyphens: auto;
@@ -9153,7 +9156,7 @@ blockquote.record {
     background: #2cae7a;
     color: white; }
 .meet .list-team figure {
-  aspect-ratio: 116 / 145;
+  aspect-ratio: 227 / 262;
   display: flex;
   align-items: center;
   justify-content: center; }
