@@ -6874,7 +6874,8 @@ body {
   /*min-width:1024px; min-height:768px*/ }
 
 body > main {
-  flex: 1; }
+  flex: 1;
+  z-index: 2; }
 
 html.query {
   pointer-events: none;
