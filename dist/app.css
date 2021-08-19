@@ -6849,7 +6849,7 @@ body.swal2-toast-column .swal2-toast {
 @ layout */
 /*  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
  @ temel layout olcu etikleri */
-html {
+body {
   font: 300 14px 'Poppins';
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%; }
@@ -6942,12 +6942,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: center; }
-  header .sag .usr a:hover {
-    background: #1e8a4b;
-    color: white; }
   header .sag .usr a i {
     font-size: 16px;
     top: 1px; }
+  header .sag .usr:hover {
+    background: #1e8a4b; }
+    header .sag .usr:hover a {
+      color: white; }
   header .sag .tst {
     background: #187b49;
     border-radius: 40px;
@@ -8239,7 +8240,6 @@ html.on-modal body {
 	&.load .modal-content 				{ background-image:url('img/loader.gif') }
 } */
 button.btn, input.btn {
-  padding: 0;
   text-align: center;
   display: block; }
 
@@ -9133,3 +9133,116 @@ blockquote.record {
     font-size: 25px; }
   .nasil .sec-navs ul li h3 {
     font-size: 24px; } }
+.meet .step-view {
+  height: 46px;
+  --svb:13px; }
+  .meet .step-view li {
+    height: 100%; }
+  .meet .step-view b {
+    padding: var(--svb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    tex-align: center;
+    font-weight: 400;
+    width: 100%;
+    clip-path: polygon(0 0, calc(100% - var(--svb)) 0%, 100% 50%, calc(100% - var(--svb)) 100%, 0 100%, var(--svb) 50%);
+    background: #ddd;
+    height: 100%; }
+  .meet .step-view li.on b {
+    background: #2cae7a;
+    color: white; }
+.meet .list-team figure {
+  aspect-ratio: 116 / 145;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+.meet .list-team li {
+  background: #ececec;
+  padding: 10px 10px 0 10px;
+  border-radius: 16px; }
+  .meet .list-team li figure img {
+    filter: grayscale(1);
+    transition: 0.3s; }
+  .meet .list-team li:hover figure img {
+    filter: grayscale(0); }
+  .meet .list-team li div div {
+    padding: 14px 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    color: white;
+    z-index: 3;
+    text-align: center; }
+  .meet .list-team li div div h4,
+  .meet .list-team li div div span {
+    z-index: 1; }
+  .meet .list-team li div span {
+    position: absolute;
+    right: 12px;
+    top: 15px;
+    background: red;
+    border-radius: 18px;
+    padding: 3px 7px;
+    font-size: 12px; }
+  .meet .list-team li.on div span {
+    background: #48b536; }
+  .meet .list-team li div div s {
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    clip-path: polygon(85% 22%, 100% 41%, 100% 100%, 0 100%, 0% 56%);
+    height: 100%; }
+  .meet .list-team li div h4 {
+    font-weight: 400;
+    font-size: 13px; }
+  .meet .list-team li img {
+    border-radius: 10px; }
+  .meet .list-team li nav {
+    display: flex;
+    height: 55px;
+    background: #ececec;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+    column-gap: 10px; }
+    .meet .list-team li nav a {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1 1 0%;
+      border-radius: 6px;
+      color: white; }
+      .meet .list-team li nav a.one {
+        background: #637c9c; }
+        .meet .list-team li nav a.one:hover {
+          background: #4d6a90; }
+      .meet .list-team li nav a.two {
+        background: #7ab17a; }
+        .meet .list-team li nav a.two:hover {
+          background: #66a066; }
+
+@media screen and (max-width: 54em) {
+  .meet .step-view {
+    --svb:10px; }
+    .meet .step-view b {
+      font-size: 12px;
+      flex-direction: column; }
+      .meet .step-view b i {
+        display: none; } }
+@media screen and (max-width: 35.5em) {
+  .meet .step-view {
+    --svb:10px; }
+    .meet .step-view b {
+      font-size: 13px;
+      flex-direction: column; }
+    .meet .step-view s {
+      display: none; } }

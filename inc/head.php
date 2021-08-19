@@ -20,6 +20,7 @@
 			<link rel="stylesheet" href="<?php path($value) ?>" />
 		<?php endforeach; endif ?>
 
+		<link rel="stylesheet" href="<?php path('bootstrap/css/_bootstrap.min.css') ?>" />
 		<link rel="stylesheet" href="<?php path('app.min.css') ?>" />
 	
 	</head>

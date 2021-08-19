@@ -1,4 +1,4 @@
-button.btn,input.btn  			{ padding:0; text-align:center; display:block }
+button.btn,input.btn  			{ text-align:center; display:block }
 
 .btn 							{ @include flex_mc(); text-align :center; cursor:pointer;
 
